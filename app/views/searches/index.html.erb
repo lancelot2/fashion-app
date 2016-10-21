@@ -1,0 +1,44 @@
+<div class="container-large">
+
+  <!-- Header -->
+  <div class="search-index-header">
+    <h1>Search index page</h1>
+    <p>You can create and save a new search directly from the product index page.</p>
+  </div>
+
+
+
+  <div class="search-index-body">
+    <!-- search library -->
+    <div class="search-library">
+      <div class="search-library-row">
+        <table class="table table-condensed table-hover">
+          <thead>
+            <tr>
+              <th>Search name</th>
+              <th>Last update</th>
+              <th>By</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @searches.each do |search| %>
+            <tr>
+              <td><strong><%= search.name  %></strong></td>
+              <td><%= search.updated_at %></td>
+              <td>Lancelot Salavert</td>
+              <td>
+                <a class="btn btn-primary" href="#">Download</a>
+                <a class="btn btn-primary" href="#">Duplicate</a>
+                <%#= link_to "Edit", edit_search_path(search), :class=>"btn btn-primary" %>
+                <%#= link_to "Delete", search_path(search), method: :delete, data: { confirm: "Are you sure?" }, :class=>"btn btn-danger" %>
+              </td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

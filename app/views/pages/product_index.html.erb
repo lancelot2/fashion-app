@@ -1,0 +1,116 @@
+<div class="container-large">
+
+  <!-- header -->
+  <div class="index-page-header">
+    <h1>Product main database</h1>
+    <div class="extraction-buttons">
+    <!-- <a class="btn btn-primary">Save search</a> -->
+      <%= link_to "Save search", product_index_path, method: :create, data: { confirm: "Give your search a name" }, :class=>"btn btn-primary" %>
+      <a class="btn btn-primary">Generate extraction</a>
+    </div>
+  </div>
+
+
+  <div class="flex-index">
+
+    <!-- #### FILTERING FEATURE #### -->
+    <div class="filtering-box">
+      <p><strong>Filtering feature</strong></p>
+
+        <div class="filtering-attributes">
+          <div class="form-group">
+            <label for="name">Name contains...</label>
+            <input type="text" class="form-control" id="name" placeholder="cotton shirt">
+          </div>
+          <div class="form-group">
+            <label for="brand">Brand</label>
+            <select id="brand" class="form-control">
+              <option>-</option>
+              {{ range $_, $brand := .Brands -}}
+              <option>{{ $brand }}</option>
+              {{- end }}
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" class="form-control">
+              <option>-</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Kids</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="categ1">Category 1</label>
+            <select id="categ1" class="form-control">
+              <option>-</option>
+              <option>Apparel & Accessories</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="categ2">Category 2</label>
+            <select id="categ2" class="form-control">
+              <option>-</option>
+              <option>Clothing</option>
+              <option>Clothing Accessories</option>
+              <option>Costumes & Accessories</option>
+              <option>Handbags, Wallets & Cases</option>
+              <option>Jewelry</option>
+              <option>Shoe Accessories</option>
+              <option>Shoes</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="categ3">Category 3</label>
+            <select id="categ3" class="form-control">
+              <option>-</option>
+              <option>Pants</option>
+              <option>Shirts & Tops</option>
+              <option>Shorts</option>
+              <option>Skirts</option>
+              <option>Suits</option>
+            </select>
+          </div>
+          <a id="filter" class="btn btn-primary">Filter</a>
+        </div>
+
+    </div>
+
+  </div>
+
+  <!-- # of results within the current search -->
+  <div class="search-result-title">
+    <p><strong>Search results:</strong> {{ .Count }} products</p>
+  </div>
+
+  <!-- Actual table of products -->
+  <table class="table table-condensed table-hover">
+    <thead>
+      <tr style="color: #1CAE97; font-size: 13px;">
+        <th><h5><input type="checkbox" id="checkAll"/> Check all</h5></th>
+        <th><h5>Cover</h5></th>
+        <th><h5>Name</h5></th>
+        <th><h5>Brand</h5></th>
+        <th><h5>Gender</h5></th>
+        <th><h5>Category 1</h5></th>
+        <th><h5>Category 2</h5></th>
+        <th><h5>Category 3</h5></th>
+      </tr>
+    </thead>
+
+    <tbody>
+        {{ range $_, $prod := .Prods }}
+        <tr onclick="document.location = 'products/{{ $prod.ID }}';">
+            <td><input type="checkbox" value=""></td>
+            <td><img src="/img/{{ index $prod.Images 0}}" style="width:70px;"></td>
+            <td><p>{{ $prod.Name }}</p></td>
+            <td><p>{{ $prod.Brand }}</p></td>
+            <td><p>{{ $prod.Gender }}</p></td>
+            <td><p>{{ $prod.Categ1 }}</p></td>
+            <td><p>{{ $prod.Categ2 }}</p></td>
+            <td><p>{{ $prod.Categ3 }}</p></td>
+        </tr>
+        {{ end }}
+    </tbody>
+  </table>
+</div>
