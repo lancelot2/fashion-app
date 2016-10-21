@@ -1,0 +1,62 @@
+.container-large {
+  width: 92%;
+  margin: auto;
+}
+
+.index-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;
+  margin-bottom: 10px;
+}
+
+.extraction-buttons {
+  margin-top: 15px;
+}
+
+.flex-index {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.filtering-box {
+  padding: 15px;
+  width: 100%;
+  border: 1px solid black;
+  background: #F1F1F1;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.filtering-attributes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.active-filters-tags {
+  padding: 15px 0px;
+}
+
+
+
+.field-width {
+  width: 25% !important;
+}
+
+.flex-search {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+
+.btn-index {
+  font-size: 11px;
+  height: 29px;
+}
+
+
+

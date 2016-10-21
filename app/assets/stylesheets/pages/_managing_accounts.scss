@@ -1,0 +1,44 @@
+.managing-accounts-index-body {
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.managing-accounts-creation-form {
+  padding: 15px;
+  border: 1px solid black;
+  background: #F1F1F1;
+  margin: 30px 0px 30px 0px;
+}
+
+.managing-accounts-creation-form h3 {
+  font-size: 22px;
+  margin: 0px;
+}
+
+.managing-accounts-creation-form p {
+  margin: 5px 0px 20px 0px;
+}
+
+
+.form-control {
+  max-width: 80%;
+}
+
+.columns-select-boxes {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 30px;
+}
+
+
+.managing-accounts-logs-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+.td {
+  vertical-align: middle;
+}

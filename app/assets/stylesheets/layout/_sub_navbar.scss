@@ -1,0 +1,31 @@
+.sub-navbar-box {
+  background-color: #484848;
+  padding-top: 10px;
+}
+
+.sub-navbar-content {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  color: #BBBBBB;
+}
+
+.sub-navbar-content :hover {
+  color: #FFFFFF;
+}
+
+.tabs a {
+  text-decoration: none;
+  color: #959695;
+}
+
+.tabs a:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.tab.active {
+  color: white;
+  text-decoration: none;
+}

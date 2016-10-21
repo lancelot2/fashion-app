@@ -1,0 +1,50 @@
+.template-index-body {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 30px;
+}
+
+.template-creation-form {
+  width: 35%;
+  padding: 15px;
+  border: 1px solid black;
+  background: #F1F1F1;
+  margin: 25px 30px 30px 0px;
+}
+
+
+.template-creation-form h3 {
+  font-size: 22px;
+  margin: 0px;
+}
+
+.template-creation-form p {
+  margin: 5px 0px 20px 0px;
+}
+
+
+.template-library {
+  width: 65%;
+}
+
+.form-control {
+  max-width: 80%;
+}
+
+.columns-select-boxes {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 30px;
+}
+
+
+.template-library-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+
