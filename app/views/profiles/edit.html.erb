@@ -1,0 +1,21 @@
+<% content_for(:title) do %>
+  Profile Editor
+<% end %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3 background-box-grey">
+      <div class="new-header"><h1>Edit profile</h1></div>
+      <div class="form-input">
+
+        <%= simple_form_for current_user, url: update_profile_path do |f| %>
+        <%= f.input :first_name, label: 'First Name' %>
+        <%= f.input :last_name, label: 'Last Name' %>
+        <%= f.input :profile_picture, label: 'Photo' %>
+        <%#= f.input :photo_cache, as: :hidden %>
+        <%= f.button :submit %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
