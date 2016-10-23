@@ -3,6 +3,7 @@ class SearchesController < ApplicationController
 
   def index         # GET /restaurants
     @searches = Search.all
+    @tab = "search"
   end
 
   def show          # GET /restaurants/:id

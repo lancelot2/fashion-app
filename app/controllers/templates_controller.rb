@@ -4,6 +4,7 @@ class TemplatesController < ApplicationController
   def index         # GET /restaurants
     @templates = Template.all
     @template = Template.new
+    @tab = "template"
   end
 
   def show          # GET /restaurants/:id
