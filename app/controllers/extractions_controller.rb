@@ -4,6 +4,7 @@ class ExtractionsController < ApplicationController
   def index         # GET /restaurants
     @extractions = Extraction.all
     @extraction = Extraction.new
+    @tab = "extraction"
   end
 
   def show          # GET /restaurants/:id

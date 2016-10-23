@@ -1,15 +1,15 @@
 <div class="sub-navbar-box">
   <div class="sub-navbar-content tabs">
-    <a class="tab active" data-target="#product" href="/product_index">
+    <a class="tab" id="product_index" data-target="#product" href="/product_index">
       <p>Product database</p>
     </a>
-    <a class="tab" data-target="#search" href="/searches">
+    <a class="tab" id="search" data-target="#search" href="/searches">
       <p>Searches</p>
     </a>
-    <a class="tab" data-target="#template" href="/templates">
+    <a class="tab" id="template" data-target="#template" href="/templates">
       <p>Templates</p>
     </a>
-    <a class="tab" data-target="#extraction" href="/extractions">
+    <a class="tab" id="extraction" data-target="#extraction" href="/extractions">
       <p>Extractions</p>
     </a>
     <a class="tab" data-target="#user" href="#">
@@ -19,3 +19,10 @@
 </div>
 
 
+<% content_for :after_js do %>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(<%= @tab %>).addClass("active");
+    })
+  </script>
+<% end %>

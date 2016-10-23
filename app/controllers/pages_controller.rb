@@ -9,5 +9,6 @@ class PagesController < ApplicationController
     # @search = Search.new(search_params)
     # @search.save
     # redirect_to searches_path
+    @tab = "product_index"
   end
 end
