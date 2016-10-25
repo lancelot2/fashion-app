@@ -5,7 +5,7 @@
     <h1>Product main database</h1>
     <div class="extraction-buttons">
     <!-- <a class="btn btn-primary">Save search</a> -->
-      <%= link_to "Save search", product_index_path, method: :create, data: { confirm: "Give your search a name" }, :class=>"btn btn-primary" %>
+      <button class="btn btn-primary" onclick="saveSearch()">Save search</button>
       <a class="btn btn-primary">Generate extraction</a>
     </div>
   </div>
@@ -71,7 +71,7 @@
               <option>Suits</option>
             </select>
           </div>
-          <a id="filter" class="btn btn-primary">Filter</a>
+          <a class="btn btn-primary product-filter">Filter</a>
         </div>
 
     </div>
@@ -80,7 +80,7 @@
 
   <!-- # of results within the current search -->
   <div class="search-result-title">
-    <p><strong>Search results:</strong> {{ .Count }} products</p>
+    <p><strong>Search results:</strong> XXX products</p>
   </div>
 
   <!-- Actual table of products -->
@@ -99,7 +99,6 @@
     </thead>
 
     <tbody>
-        {{ range $_, $prod := .Prods }}
         <tr onclick="document.location = 'products/{{ $prod.ID }}';">
             <td><input type="checkbox" value=""></td>
             <td><img src="/img/{{ index $prod.Images 0}}" style="width:70px;"></td>
@@ -110,11 +109,15 @@
             <td><p>{{ $prod.Categ2 }}</p></td>
             <td><p>{{ $prod.Categ3 }}</p></td>
         </tr>
-        {{ end }}
     </tbody>
   </table>
 </div>
 
 
 
-
+<script>
+function saveSearch() {
+  var name = prompt("Give a name to your search");
+  create_search(name);
+}
+</script>
