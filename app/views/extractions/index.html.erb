@@ -1,1 +1,54 @@
-  <h1>Hi Daniel. How are you ?</h1>
+<div class="container-large">
+
+  <!-- Header -->
+  <div class="index-page-header">
+    <h1>Extraction index page</h1>
+  </div>
+
+
+
+  <div class="extraction-index-body">
+
+    <!-- Extraction creation form -->
+    <div class="extraction-creation-form">
+      <h3>Generating a new extraction</h3>
+      <p>Extractions are simply a combinaison of a saved search and a template.</p>
+      <%= render 'form' %>
+    </div>
+
+
+    <!-- extraction library -->
+    <div class="extraction-library">
+      <h2>Extraction logs</h2>
+      <div class="extraction-library-row">
+        <table class="table table-condensed table-hover">
+          <thead>
+            <tr>
+              <th>Extraction name</th>
+              <th>Last update</th>
+              <th>By</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @extractions.each do |extraction| %>
+            <tr>
+              <td><strong><%= extraction.name  %></strong></td>
+              <td><%= extraction.updated_at %></td>
+              <td>Lancelot Salavert</td>
+              <td>
+                <a class="btn btn-primary" href="#">Download</a>
+                <a class="btn btn-primary" href="#">Duplicate</a>
+                <%= link_to "Edit", edit_extraction_path(extraction), :class=>"btn btn-primary" %>
+                <%= link_to "Delete", extraction_path(extraction), method: :delete, data: { confirm: "Are you sure?" }, :class=>"btn btn-danger" %>
+              </td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+

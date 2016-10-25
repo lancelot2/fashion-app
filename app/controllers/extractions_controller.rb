@@ -5,6 +5,21 @@ class ExtractionsController < ApplicationController
     @extractions = Extraction.all
     @extraction = Extraction.new
     @tab = "extraction"
+
+    # Getting all the extractions names
+    @searches = Search.all
+    @searches_name = []
+    @searches.each do |search|
+      @searches_name << search.name
+    end
+
+    # Getting all the templates names
+    @templates = Template.all
+    @templates_name = []
+    @templates.each do |template|
+      @templates_name << template.name
+    end
+
   end
 
   def show          # GET /restaurants/:id
@@ -49,6 +64,5 @@ private
   end
 
   def extraction_params
-    params.require(:extraction).permit(:name, :format, :column_1, :column_2, :column_3)
+    params.require(:extraction).permit(:search_id, :template_id)
   end
-
