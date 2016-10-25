@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161025115101) do
+ActiveRecord::Schema.define(version: 20161025115319) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20161025115101) do
 
   create_table "searches", force: :cascade do |t|
     t.string   "name_filter"
-    t.string   "brand"
+    t.string   "brand_filter"
     t.string   "collection_filter"
     t.string   "gender_filter"
     t.string   "category_1_filter"
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20161025115101) do
     t.string   "category_3_filter"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
-    t.string   "names"
+    t.string   "name"
   end
 
   create_table "templates", force: :cascade do |t|
