@@ -10,5 +10,14 @@ class PagesController < ApplicationController
     # @search.save
     # redirect_to searches_path
     @tab = "product_index"
+
+
+
+    # require 'json'
+    # filepath = 'beers.json'
+    # serialized_products = File.read(filepath)
+    # products = JSON.parse(serialized_products)
+
+
   end
 end
