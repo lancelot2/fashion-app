@@ -19,6 +19,13 @@ class SearchesController < ApplicationController
     redirect_to searches_path
   end
 
+  def create_search(name)        # POST /searches
+    @search = Search.new
+    @search.name = name
+    @search.save
+    redirect_to searches_path
+  end
+
   def edit          # GET /restaurants/:id/edit
   end
 
@@ -36,5 +43,5 @@ private
   end
 
   def search_params
-    params.require(:search).permit(:name_filter, :brand, :collection_filter, :gender_filter, :category_1_filter, :category_2_filter, :category_3_filter)
+    params.require(:search).permit(:name, :name_filter, :brand_filter, :collection_filter, :gender_filter, :category_1_filter, :category_2_filter, :category_3_filter)
   end

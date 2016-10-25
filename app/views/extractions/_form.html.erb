@@ -3,9 +3,13 @@
     <div class="row">
       <div class="form-group col-xs-5 col-md-5">
         <%= f.input :search_id, :collection => @searches_name %>
+        <%= options_from_collection_for_select(Search.all, :id, :name) %>
+        <%#= select_tag 'search[name]', options_from_collection_for_select(@searches, :id, :name) %>
       </div>
       <div class="form-group col-xs-5 col-md-5">
         <%= f.input :template_id, :collection => @templates_name %>
+        <%#= select_tag 'template[name]', options_from_collection_for_select(@templates, :id, :name) %>
+
       </div>
       <div class="col-xs-2 col-md-2 vcenter">
         <button type="submit" class="btn btn-primary">Generate</button>

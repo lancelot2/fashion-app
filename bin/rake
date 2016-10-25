@@ -1,9 +1,41 @@
 #!/usr/bin/env ruby
-begin
-  load File.expand_path('../spring', __FILE__)
-rescue LoadError => e
-  raise unless e.message.include?('spring')
+# begin
+#   load File.expand_path('../spring', __FILE__)
+# rescue LoadError => e
+#   raise unless e.message.include?('spring')
+# end
+# require_relative '../config/boot'
+# require 'rake'
+# Rake.application.run
+
+
+
+require 'json'
+require 'open-uri'
+
+product_name = []
+product_brand = []
+product_gender = []
+product_categ1 = []
+product_categ2 = []
+product_categ3 = []
+
+url = 'http://mvdan.cc:8081/api/v0/prods'
+product_serialized = open(url).read
+product_array = JSON.parse(product_serialized)
+
+product_array.each do |product|
+  product_name << product["name"]
+  product_brand << product["brand"]
+  product_gender << product["gender"]
+  product_categ1 << product["categ1"]
+  product_categ2 << product["categ2"]
+  product_categ3 << product["categ3"]
 end
-require_relative '../config/boot'
-require 'rake'
-Rake.application.run
+
+product_name = product_name.uniq
+product_brand = product_brand.uniq
+product_gender = product_gender.uniq
+product_categ1 = product_categ1.uniq
+product_categ2 = product_categ2.uniq
+product_categ3 = product_categ3.uniq
