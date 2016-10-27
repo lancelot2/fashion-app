@@ -12,9 +12,17 @@
     <a class="tab" id="extraction" data-target="#extraction" href="/extractions">
       <p>Extractions</p>
     </a>
-    <a class="tab" data-target="#user" href="#">
+    <a class="tab" id="user" href="#">
       <p>User profile</p>
     </a>
+
+    <!-- Displaying a company tab for admin only -->
+    <% if current_user.admin= true %>
+      <a class="tab" id="company" href="/companies">
+        <p>Companies</p>
+      </a>
+    <% end %>
+
   </div>
 </div>
 

@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
   get 'product_index', to: 'pages#product_index'
+  get 'product_show', to: 'pages#product_show'
+  resources :companies
   resources :searches
   resources :templates
   resources :extractions

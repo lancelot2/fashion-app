@@ -1,0 +1,11 @@
+<%= simple_form_for @company do |f| %>
+  <%= f.error_notification %>
+  <div class="form-inputs">
+    <%= f.input :name, :label => "Name" %>
+    <%= f.input :description, :label => "Description" %>
+    <%= f.input :supplier, :label => "Supplier", :collection => ["-", "True","False"], :selected => "-" %>
+    <%= f.input :retailer, :label => "Retailer", :collection => ["-", "True","False"], :selected => "-" %>
+    <%= f.input :logo, :label => "Logo" %>
+    <%= f.button :submit, "Save", :class => "btn btn-primary" %>
+  </div>
+<% end %>
