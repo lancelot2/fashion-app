@@ -1,12 +1,13 @@
-
-<%= simple_form_for @template do |f| %>
-  <%= f.error_notification %>
-  <div class="form-inputs">
-    <%= f.input :name, :label => "Name" %>
-    <%= f.input :format, :label => "Format", :collection => ["-", "Excel", "csv", "XML"], :selected => "-" %>
-    <%= f.input :column_1, :label => "Column 1", :collection => ["-", "Name","SKU", "Description", "Price", "Size", "Size", "Color"], :selected => "-" %>
-    <%= f.input :column_2, :label => "Column 2", :collection => ["-", "Name","SKU", "Description", "Price", "Size", "Size", "Color"], :selected => "-" %>
-    <%= f.input :column_3, :label => "Column 3", :collection => ["-", "Name","SKU", "Description", "Price", "Size", "Size", "Color"], :selected => "-" %>
-    <%= f.button :submit, "Save", :class => "btn btn-primary" %>
-  </div>
-<% end %>
+<div class="container">
+  <%= simple_form_for @template do |f| %>
+    <%= f.error_notification %>
+    <div class="form-inputs">
+      <%= f.input :name, :label => "Name" %>
+      <%= f.input :format, :label => "Format", :collection => ["-", "Excel", "csv", "XML"], :selected => "-" %>
+      <%= f.input :column_1, :label => "Column 1", :collection => ["-", "Name","SKU", "Description", "Price", "Size", "Size", "Color"], :selected => "-" %>
+      <%= f.input :column_2, :label => "Column 2", :collection => ["-", "Name","SKU", "Description", "Price", "Size", "Size", "Color"], :selected => "-" %>
+      <%= f.input :column_3, :label => "Column 3", :collection => ["-", "Name","SKU", "Description", "Price", "Size", "Size", "Color"], :selected => "-" %>
+      <%= f.button :submit, "Save", :class => "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
