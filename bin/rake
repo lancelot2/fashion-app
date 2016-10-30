@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 # begin
 #   load File.expand_path('../spring', __FILE__)
 # rescue LoadError => e
@@ -7,8 +8,6 @@
 # require_relative '../config/boot'
 # require 'rake'
 # Rake.application.run
-
-
 
 require 'json'
 require 'open-uri'
@@ -25,12 +24,12 @@ product_serialized = open(url).read
 product_array = JSON.parse(product_serialized)
 
 product_array.each do |product|
-  product_name << product["name"]
-  product_brand << product["brand"]
-  product_gender << product["gender"]
-  product_categ1 << product["categ1"]
-  product_categ2 << product["categ2"]
-  product_categ3 << product["categ3"]
+  product_name << product['name']
+  product_brand << product['brand']
+  product_gender << product['gender']
+  product_categ1 << product['categ1']
+  product_categ2 << product['categ2']
+  product_categ3 << product['categ3']
 end
 
 product_name = product_name.uniq

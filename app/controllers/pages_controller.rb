@@ -1,5 +1,6 @@
+# frozen_string_literal: true
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home ]
+  skip_before_action :authenticate_user!, only: [:home]
 
   def home
   end
@@ -9,15 +10,11 @@ class PagesController < ApplicationController
     # @search = Search.new(search_params)
     # @search.save
     # redirect_to searches_path
-    @tab = "product_index"
-
-
+    @tab = 'product_index'
 
     # require 'json'
     # filepath = 'beers.json'
     # serialized_products = File.read(filepath)
     # products = JSON.parse(serialized_products)
-
-
   end
 end

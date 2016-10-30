@@ -1,10 +1,11 @@
+# frozen_string_literal: true
 class TemplatesController < ApplicationController
   before_action :set_template, except: [:create, :index, :new]
 
   def index         # GET /restaurants
     @templates = Template.all
     @template = Template.new
-    @tab = "template"
+    @tab = 'template'
   end
 
   def show          # GET /restaurants/:id
@@ -31,21 +32,18 @@ class TemplatesController < ApplicationController
     redirect_to templates_path
   end
 
-  def destroy       # DELETE /restaurants/:id
+  def destroy # DELETE /restaurants/:id
     @template.destroy
     redirect_to templates_path
   end
 end
 
-
-
 private
 
-  def set_template
-    @template = Template.find(params[:id])
-  end
+def set_template
+  @template = Template.find(params[:id])
+end
 
-  def template_params
-    params.require(:template).permit(:name, :format, :column_1, :column_2, :column_3)
-  end
-
+def template_params
+  params.require(:template).permit(:name, :format, :column_1, :column_2, :column_3)
+end

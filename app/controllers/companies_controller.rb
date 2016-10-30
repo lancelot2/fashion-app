@@ -1,9 +1,10 @@
+# frozen_string_literal: true
 class CompaniesController < ApplicationController
   before_action :set_company, except: [:create, :index, :new]
 
   def index         # GET /restaurants
     @companies = Company.all
-    @tab = "company"
+    @tab = 'company'
   end
 
   def show          # GET /restaurants/:id
@@ -36,10 +37,10 @@ end
 
 private
 
-  def set_company
-    @company = Company.find(params[:id])
-  end
+def set_company
+  @company = Company.find(params[:id])
+end
 
-  def company_params
-    params.require(:company).permit(:name, :retailer, :supplier, :logo, :description)
-  end
+def company_params
+  params.require(:company).permit(:name, :retailer, :supplier, :logo, :description)
+end

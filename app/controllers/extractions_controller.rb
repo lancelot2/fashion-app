@@ -1,10 +1,11 @@
+# frozen_string_literal: true
 class ExtractionsController < ApplicationController
   before_action :set_extraction, except: [:create, :index, :new]
 
-  def index         # GET /restaurants
+  def index # GET /restaurants
     @extractions = Extraction.all
     @extraction = Extraction.new
-    @tab = "extraction"
+    @tab = 'extraction'
 
     # Getting all the extractions names
     @searches = Search.all
@@ -19,7 +20,6 @@ class ExtractionsController < ApplicationController
     @templates.each do |template|
       @templates_name << template.name
     end
-
   end
 
   def show          # GET /restaurants/:id
@@ -48,21 +48,19 @@ class ExtractionsController < ApplicationController
     redirect_to extractions_path
   end
 
-  def destroy       # DELETE /restaurants/:id
+  def destroy # DELETE /restaurants/:id
     @extraction = Extraction.find(params[:id])
     @extraction.destroy
     redirect_to extractions_path
   end
 end
 
-
-
 private
 
-  def set_extraction
-    @extraction = Extraction.find(params[:id])
-  end
+def set_extraction
+  @extraction = Extraction.find(params[:id])
+end
 
-  def extraction_params
-    params.require(:extraction).permit(:search_id, :template_id)
-  end
+def extraction_params
+  params.require(:extraction).permit(:search_id, :template_id)
+end
