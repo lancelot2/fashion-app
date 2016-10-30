@@ -75,6 +75,7 @@ GEM
       rest-client
     coderay (1.1.1)
     concurrent-ruby (1.0.2)
+    curb (0.9.3)
     debug_inspector (0.0.2)
     domain_name (0.5.20160826)
       unf (>= 0.0.5, < 1.0.0)
@@ -214,6 +215,7 @@ DEPENDENCIES
   bootstrap-sass
   carrierwave
   cloudinary (= 1.1.0)
+  curb
   devise!
   figaro
   font-awesome-sass
@@ -232,5 +234,8 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   uglifier
 
+RUBY VERSION
+   ruby 2.3.0p0
+
 BUNDLED WITH
-   1.11.2
+   1.13.6
