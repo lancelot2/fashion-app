@@ -1,39 +1,35 @@
 .banner {
-  color: white;
-  text-align: center;
-  height: 100vh;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
-  background-size: cover !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.banner h1 {
-  font-size: 50px;
-  font-weight: bold;
-  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
-}
-.banner p {
-  font-size: 20px;
-  font-weight: lighter;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 20px;
-}
+    background-image: linear-gradient(-225deg, rgba(203,79,79,0.6) 0%, rgba(0,36,61,0.6) 50%), url('home_page_banner.jpeg');
+    color: white;
+    text-align: center;
+    height: calc(100vh - 50px);
+    background-size: cover !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-.banner-content {
-  width: 950px;
-}
+    h1 {
+        font-size: 50px;
+        font-weight: 500;
+        text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+    }
 
-.banner-buttons {
-  display: flex;
-  width: 500px;
-  justify-content: space-around;
-  padding-top: 50px;
-  margin: auto;
-}
-/*
-.btn-primary {
-  background-color: #1CAE97 !important;
-  border-color: #1CAE97 !important;
-}*/
+    p {
+        font-size: 20px;
+        font-weight: lighter;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 20px;
+    }
 
+    .banner-content {
+        width: 950px;
+    }
+
+    .banner-buttons {
+        display: flex;
+        width: 500px;
+        justify-content: space-around;
+        padding-top: 50px;
+        margin: auto;
+    }
+}
