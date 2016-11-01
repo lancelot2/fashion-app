@@ -1,4 +1,4 @@
-  <div class="container-large">
+  <div class="container">
 
     <!-- header -->
     <div class="index-page-header">
@@ -12,13 +12,6 @@
     <div class="flex-index">
 
       <div class="product-description-top">
-        <div class="thumbnail-images-carousel">
-
-          <div class="thumbnail-img">
-
-          </div>
-
-        </div>
         <div class="active-image">
 
         </div>
@@ -37,26 +30,31 @@
               <tbody>
                   <tr>
                     <td><strong>Name</strong></td>
-                    <td>{{ .Name }}</td>
+                    <td><%= @item['full_name'] %></td>
                   </tr>
                   <tr>
                     <td><strong>Gender</strong></td>
-                    <td>{{ .Gender }}</td>
+                    <td>Female</td>
                   </tr>
                   <tr>
-                    <td><strong>Color(s)</strong></td>
-                    <td>{{ .Color }}</td>
+                    <td><strong>Color Family</strong></td>
+                    <td><%= @item['color'] %></td>
                   </tr>
                   <tr>
-                    <td><strong>Short product description</strong></td>
-                    <td>TODO: short desc</td>
+                    <td><strong>In Stock?</strong></td>
+                    <td><%= @item['in_stock'] ? 'Yes' : 'No' %></td>
                   </tr>
                   <tr>
-                    <td><strong>Long product description</strong></td>
-                    <td>{{ range $i, $line := .Details -}}
-                      {{ if ne $i 0 }}<br/>{{ end }}{{ $line }}
-                    {{- end}}</td>
+                    <td><strong>Details</strong></td>
+                    <td>
+                      <ul style="list-style: none;padding-left:0;">
+                        <% @item['details'].each do |d| %>
+                          <li><%= d %></li>
+                        <% end %>
+                      </ul>
+                    </td>
                   </tr>
+
               </tbody>
 
             </table>
@@ -73,12 +71,12 @@
 
               <tbody>
                   <tr>
-                    <td><strong>Product ID</strong></td>
-                    <td>TODO: figure out</td>
+                    <td><strong>SKU</strong></td>
+                    <td><%= @item['sku'] %></td>
                   </tr>
                   <tr>
-                    <td><strong>{{ .Orig }} SKU</strong></td>
-                    <td><a href="{{ .OrigUrl }}">TODO: fill</a></td>
+                    <td><strong>Product Code</strong></td>
+                    <td><%= @item['product_code'] %></td>
                   </tr>
               </tbody>
 
@@ -86,13 +84,6 @@
           </div>
         </div>
       </div>
-
-
-
-
-
-
-
 
 
       <div class="product-secondary-attributes-boxes">
@@ -108,15 +99,15 @@
           <tbody>
               <tr>
                 <td><strong>Primary image</strong></td>
-                <td><a href="/img/{{ index .Images 0 }}">{{ index .Images 0 }}</a></td>
+                <td><%= image_tag @item['photo_urls'][0], :style => "width: 220px" %></td>
               </tr>
               <tr>
                 <td><strong>Secondary images</strong></td>
-                <td>{{ range $i, $img := .Images -}}
-                  {{- if ne $i 0 -}}
-                  <a href="/img/{{ $img }}">{{ $img }}</a><br/>
-                  {{- end -}}
-                {{ end }}</td>
+                <td>
+                  <% @item['photo_urls'].drop(1).each do |img|%>
+                    <%= image_tag img, :style => "width: 160px" %>
+                  <% end %>
+                </td>
               </tr>
           </tbody>
         </table>
@@ -132,15 +123,15 @@
           <tbody>
               <tr>
                 <td><strong>Brand name</strong></td>
-                <td>{{ .Brand }}</td>
+                <td><%= @item['brand'] %></td>
               </tr>
               <tr>
                 <td><strong>Brand logo</strong></td>
-                <td>TODO: image?</td>
+                <td></td>
               </tr>
               <tr>
                 <td><strong>Brand description</strong></td>
-                <td>TODO: desc?</td>
+                <td></td>
               </tr>
           </tbody>
         </table>
@@ -155,16 +146,12 @@
           </thead>
           <tbody>
               <tr>
-                <td><strong>Category 1</strong></td>
-                <td>{{ .Categ1 }}</td>
+                <td><strong>Main Category</strong></td>
+                <td><%= @item['category_1'] %></td>
               </tr>
               <tr>
-                <td><strong>Category 2</strong></td>
-                <td>{{ .Categ2 }}</td>
-              </tr>
-              <tr>
-                <td><strong>Category 3</strong></td>
-                <td>{{ .Categ3 }}</td>
+                <td><strong>Secondary Categories</strong></td>
+                <td></td>
               </tr>
           </tbody>
         </table>
@@ -180,9 +167,7 @@
           <tbody>
               <tr>
                 <td><strong>UK Sizes</strong></td>
-                <td>{{ range $i, $size := .Sizes -}}
-                  {{ if ne $i 0 }}, {{ end}}{{ $size }}
-                {{- end }}</td>
+                <td><%= @item['sizes'].join(', ') %></td>
               </tr>
               <tr>
                 <td><strong>EU Sizes</strong></td>
@@ -230,7 +215,7 @@
           <tbody>
               <tr>
                 <td><strong>External material</strong></td>
-                <td></td>
+                <td><%= @item['materials'] %></td>
               </tr>
           </tbody>
           <tbody>
@@ -320,7 +305,7 @@
           <tbody>
               <tr>
                 <td><strong>Washing recommandation</strong></td>
-                <td></td>
+                <td><%= @item['washing_instructions'] %></td>
               </tr>
               <tr>
                 <td><strong>Ironing recommandation</strong></td>
@@ -340,7 +325,7 @@
           <tbody>
               <tr>
                 <td><strong>Recommanded retail prices in UK</strong></td>
-                <td></td>
+                <td><%= '£' + @item['price'].to_s %></td>
               </tr>
               <tr>
                 <td><strong>Recommanded retail prices in France</strong></td>
