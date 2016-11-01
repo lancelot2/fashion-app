@@ -27,113 +27,115 @@
           <label for="brand">Brand</label>
           <select id="brand" class="form-control">
             <option>-</option>
-            {{ range $_, $brand := .Brands -}}
-              <option>{{ $brand }}</option>
-              {{- end }}
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="gender">Gender</label>
-            <select id="gender" class="form-control">
-              <option>-</option>
-              <option>Male</option>
-              <option>Female</option>
-              <option>Kids</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="categ1">Category 1</label>
-            <select id="categ1" class="form-control">
-              <option>-</option>
-              <option>Apparel & Accessories</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="categ2">Category 2</label>
-            <select id="categ2" class="form-control">
-              <option>-</option>
-              <option>Clothing</option>
-              <option>Clothing Accessories</option>
-              <option>Costumes & Accessories</option>
-              <option>Handbags, Wallets & Cases</option>
-              <option>Jewelry</option>
-              <option>Shoe Accessories</option>
-              <option>Shoes</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="categ3">Category 3</label>
-            <select id="categ3" class="form-control">
-              <option>-</option>
-              <option>Pants</option>
-              <option>Shirts & Tops</option>
-              <option>Shorts</option>
-              <option>Skirts</option>
-              <option>Suits</option>
-            </select>
-          </div>
-          <a class="btn btn-primary product-filter">Filter</a>
+            <option>ASOS</option>
+            <option>Nike</option>
+            <option>Adidas</option>
+            <option>Mango</option>
+            <option>Hollister</option>
+            <option>Pimkie</option>
+          </select>
         </div>
-
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <select id="gender" class="form-control">
+            <option>-</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Kids</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="categ1">Category</label>
+          <select id="categ1" class="form-control">
+            <option>-</option>
+            <option>Top</option>
+            <option>Jeans</option>
+            <option>Coats</option>
+            <option>Jumpers</option>
+            <option>Socks</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="categ2">Color</label>
+          <select id="categ2" class="form-control">
+            <option>-</option>
+            <option>Black</option>
+            <option>White</option>
+            <option>Grey</option>
+            <option>Navy</option>
+            <option>Khaki</option>
+            <option>Cream</option>
+            <option>Ivory</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="categ3">Price</label>
+          <select id="categ3" class="form-control">
+            <option>-</option>
+          </select>
+        </div>
+        <a class="btn btn-primary product-filter">Filter</a>
       </div>
 
     </div>
 
-    <!-- # of results within the current search -->
-    <div class="search-result-title">
-      <p>
-        <strong>Search results:</strong>
-        <%= @items.size %> products</p>
-    </div>
+  </div>
 
-    <!-- Actual table of products -->
-    <table class="table table-condensed table-hover">
-      <col class="col-check">
-      <col class="col-photo">
-      <col class="col-name">
-      <col class="col-brand">
-      <col class="col-sku">
-      <col class="col-price">
-      <col class="col-stock">
-      <col class="col-color">
-      <col class="col-category">
-      <thead>
-        <tr class="first-tr">
-          <th>
-            <h5>
-              <input type="checkbox">
-            </h5>
-          </th>
-          <th>
-            <h5>Cover</h5>
-          </th>
-          <th>
-            <h5>Name</h5>
-          </th>
-          <th>
-            <h5>Brand</h5>
-          </th>
-          <th>
-            <h5>SKU</h5>
-          </th>
-          <th>
-            <h5>Price</h5>
-          </th>
-          <th>
-            <h5>Stock</h5>
-          </th>
-          <th>
-            <h5>Color</h5>
-          </th>
-          <th>
-            <h5>Category</h5>
-          </th>
-        </tr>
-      </thead>
+  <!-- # of results within the current search -->
+  <div class="search-result-title">
+    <p>
+      <strong>Search results:</strong>
+      <%= @items.size %> products</p>
+  </div>
 
-      <tbody>
-        <% @items.each do |item| %>
-        <tr>
+  <!-- Actual table of products -->
+  <table class="table table-condensed table-hover">
+    <col class="col-check">
+    <col class="col-photo">
+    <col class="col-name">
+    <col class="col-brand">
+    <col class="col-sku">
+    <col class="col-price">
+    <col class="col-stock">
+    <col class="col-color">
+    <col class="col-category">
+    <thead>
+      <tr class="first-tr">
+        <th>
+          <h5>
+            <input type="checkbox">
+          </h5>
+        </th>
+        <th>
+          <h5>Cover</h5>
+        </th>
+        <th>
+          <h5>Name</h5>
+        </th>
+        <th>
+          <h5>Brand</h5>
+        </th>
+        <th>
+          <h5>SKU</h5>
+        </th>
+        <th>
+          <h5>Price</h5>
+        </th>
+        <th>
+          <h5>Stock</h5>
+        </th>
+        <th>
+          <h5>Color</h5>
+        </th>
+        <th>
+          <h5>Category</h5>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @items.each do |item| %>
+        <tr class='clickable-row' data-href='<%= product_show_path(id: item["id"]) %>' style="cursor: pointer;">
           <td><input type="checkbox" value=""></td>
           <td>
             <%= image_tag (item['photo_urls'][0]) %>
@@ -160,7 +162,18 @@
             <p><%= item['category_1'] %></p>
           </td>
         </tr>
-        <% end %>
-      </tbody>
-    </table>
-  </div>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+
+<%= content_for(:after_js) do %>
+  <%= javascript_tag defer: 'defer' do %>
+    $(document).ready(function() {
+      $(".clickable-row").click(function() {
+        window.document.location = $(this).data("href");
+      });
+    });
+  <% end %>
+<% end %>

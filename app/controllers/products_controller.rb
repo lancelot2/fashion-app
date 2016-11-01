@@ -17,6 +17,7 @@ class ProductsController < ApplicationController
   end
 
   def show
-
+    client = DataApiClient.new
+    @item = client.call_one_item(params[:id])
   end
 end
