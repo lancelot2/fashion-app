@@ -1,4 +1,7 @@
 fr:
+  pages:
+    home:
+      home_tagline: "Connecte les marques de mode et leurs distributeurs autour d'une meilleure donnée produit"
   searches:
     index:
       search_index_title: "Index des recherches"

@@ -90,6 +90,7 @@ GEM
     concurrent-ruby (1.0.2)
     curb (0.9.3)
     debug_inspector (0.0.2)
+    devise-i18n (1.1.1)
     domain_name (0.5.20160826)
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
@@ -175,6 +176,9 @@ GEM
       nokogiri (~> 1.6.0)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails-i18n (5.0.1)
+      i18n (~> 0.7)
+      railties (~> 5.0)
     rails_admin (1.1.0)
       builder (~> 3.1)
       coffee-rails (~> 4.0)
@@ -256,6 +260,7 @@ DEPENDENCIES
   cloudinary (= 1.1.0)
   curb
   devise!
+  devise-i18n
   figaro
   font-awesome-sass
   jbuilder (~> 2.0)
@@ -266,6 +271,7 @@ DEPENDENCIES
   pry-rails
   puma
   rails (= 5.0.0)
+  rails-i18n (~> 5.0.0)
   rails_admin (>= 1.0.0.rc)
   redis
   remotipart!
