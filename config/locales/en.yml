@@ -23,6 +23,7 @@ en:
   pages:
     home:
       home_tagline: "Connecting lifestyle brands and retailers through smarter product data"
+      pain_point: "With more products sold through more channels and more product information required to meet shopper demand, brands and retailers need to work together around data that is accurate, structured and synchronized."
   searches:
     index:
       search_index_title: "Search index page"
