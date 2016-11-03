@@ -20,6 +20,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  pages:
+    home:
+      home_tagline: "Connecting lifestyle brands and retailers through smarter product data"
   searches:
     index:
       search_index_title: "Search index page"

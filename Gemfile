@@ -26,8 +26,10 @@ gem 'curb'
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
 
-# # In order to translate devise automatically
-# gem 'devise-i18n'
+# i18n
+gem 'rails-i18n', '~> 5.0.0'
+gem 'devise-i18n'
+
 
 
 
