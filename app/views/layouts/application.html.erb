@@ -10,7 +10,7 @@
   </head>
   <body>
     <%= render 'shared/navbar' %>
-    <%= render 'shared/sub_navbar' if @show_nav %>
+    <%= render 'shared/sub_navbar' unless @hide_nav %>
     <%= render 'shared/flashes' %>
     <%= yield %>
     <%= javascript_include_tag 'application' %>

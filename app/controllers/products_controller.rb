@@ -1,7 +1,6 @@
 class ProductsController < ApplicationController
   def index
-    @show_nav = true
-
+    @tab = 'product_index'
     client = DataApiClient.new
     @items = client.call_all_items
 
