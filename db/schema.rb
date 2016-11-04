@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161025115319) do
+ActiveRecord::Schema.define(version: 20161104203415) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,8 +21,9 @@ ActiveRecord::Schema.define(version: 20161025115319) do
     t.string   "supplier"
     t.string   "logo"
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "email_domain"
   end
 
   create_table "extractions", force: :cascade do |t|
@@ -75,9 +76,10 @@ ActiveRecord::Schema.define(version: 20161025115319) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "profile_picture"
-    t.string   "level"
     t.boolean  "admin",                  default: false
     t.integer  "companies_id"
+    t.boolean  "access_validated",       default: false, null: false
+    t.integer  "access_level",           default: 1,     null: false
     t.index ["companies_id"], name: "index_users_on_companies_id", using: :btree
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree

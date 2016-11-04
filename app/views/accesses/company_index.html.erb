@@ -1,0 +1,12 @@
+<div class="container-large">
+
+  <!-- header -->
+  <div class="index-page-header">
+    <h1>Users from my company</h1>
+  </div>
+
+  <% @company_users.each do |company_user| %>
+    <% company_user.email %>
+  <% end %>
+
+</div>
