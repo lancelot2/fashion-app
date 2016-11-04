@@ -1,0 +1,59 @@
+.pain-point-banner {
+  display: flex;
+  justify-content: space-around;
+  height: 100vh;
+  align-items: center;
+}
+
+.illustration {
+  padding: 50px;
+}
+
+.slogan {
+  padding: 50px;
+}
+
+.slogan h2 {
+  line-height: 2.1;
+}
+
+.benefits-banner {
+  background-color: #F4F4F4;
+  height: 70vh;
+  padding: 20px 100px 20px 100px;
+  text-align: center;
+}
+
+.benefits {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.brand-benefits {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+}
+
+.distributor-benefits {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+}
+
+.machine-learning-banner {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  align-items: center;
+  padding: 50px;
+}
