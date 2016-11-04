@@ -3,6 +3,7 @@ fr:
     home:
       home_tagline: "Connecte les marques de mode et leurs distributeurs autour d'une meilleure donnée produit"
       pain_point: "Avec de plus en plus de produits vendus via de plus en plus de canaux corrélé à la demande croissante d'information des consommateurs, les marques et les distributeurs doivent collaborer autour de données fiables, strucuturées et synchronisées."
+      machine-learning: "Nous consolidons et standardisons des centaines de source de données en utilisant des algorithmes de machine learning afin de ne retenir que l'information la plus pertinente."
   searches:
     index:
       search_index_title: "Index des recherches"
