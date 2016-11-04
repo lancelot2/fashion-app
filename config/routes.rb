@@ -8,10 +8,9 @@ Rails.application.routes.draw do
   get '/users/:id', to: 'profiles#show', as: :profile
   get '/profile/edit', to: 'profiles#edit', as: :edit_profile
   patch '/profile', to: 'profiles#update', as: :update_profile
+
   get '/set_locale/:locale', to: 'application#set_locale', as: :set_locale
-  #get '/change_locale/:locale', to: 'settings#change_locale', as: :change_locale
   get '/change_locale/:locale', to: 'application#change_locale', as: :change_locale
- # get '//change_locale/en', to: 'application#change_locale', as: :change_locale
 
   root to: 'pages#home'
   get 'product_index', to: 'products#index', as: :product_index
