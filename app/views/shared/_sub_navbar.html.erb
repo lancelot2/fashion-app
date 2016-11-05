@@ -12,7 +12,7 @@
         <a class="tab" id="extraction" data-target="#extraction" href="/extractions">
           <p>Extractions</p>
         </a>
-        <% if current_user.access_level == 2 %>
+        <% if current_user != nil && current_user.access_level == 2 %>
           <a class="tab" id="accesses" data-target="#accesses" href="/accesses">
             <p>Manage accesses</p>
           </a>
