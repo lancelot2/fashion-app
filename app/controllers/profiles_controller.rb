@@ -3,7 +3,7 @@ class ProfilesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show]
 
   def company_index
-    @company_users = User.find(:all, :conditions => { :company_id = current_user.company_id })
+    @company_users = User.find(:all, conditions: { company_id: current_user.company_id })
   end
 
   def show
@@ -20,10 +20,10 @@ class ProfilesController < ApplicationController
   end
 
   def adding_company_to_user_profile_at_creation
-    domain_name = current_user.email.split("@")[1]
+    domain_name = current_user.email.split('@')[1]
     @companies = Company.all
     @companies.each do |company|
-      if domain_name = company.domain_name
+      if domain_name == company.domain_name
         user.company_id = company.id
       end
     end
