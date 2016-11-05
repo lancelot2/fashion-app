@@ -30,9 +30,6 @@ gem 'rails_admin', '>= 1.0.0.rc'
 gem 'rails-i18n', '~> 5.0.0'
 gem 'devise-i18n'
 
-
-
-
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'

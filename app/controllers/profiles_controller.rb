@@ -23,14 +23,11 @@ class ProfilesController < ApplicationController
     domain_name = current_user.email.split('@')[1]
     @companies = Company.all
     @companies.each do |company|
-      if domain_name == company.domain_name
-        user.company_id = company.id
-      end
+      user.company_id = company.id if domain_name == company.domain_name
     end
   end
 
   def sending_approval_pending_notification
-
   end
 
   private

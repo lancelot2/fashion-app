@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # Client that calls the data api
 class DataApiClient
   def call_all_items
