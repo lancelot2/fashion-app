@@ -1,59 +1,58 @@
-.pain-point-banner {
+.info-banner {
+  height: 75vh;
+  background-color: #F9F9F9;
   display: flex;
-  justify-content: space-around;
-  height: 100vh;
   align-items: center;
+
+  .info-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  h2 {
+    line-height: 1.3;
+  }
+
+  img {
+    height: 300px;
+    width: auto;
+  }
 }
 
-.illustration {
-  padding: 50px;
+#pain-point {
+  h2 {
+    padding-left: 60px;
+  }
 }
 
-.slogan {
-  padding: 50px;
-}
-
-.slogan h2 {
-  line-height: 1.5;
+#machine-learning {
+  h2 {
+    text-align: right;
+    padding-right: 60px;
+  }
 }
 
 .benefits-banner {
+  display: flex;
+  align-items: center;
   background-color: #F4F4F4;
-  height: 70vh;
-  padding: 20px 100px 20px 100px;
-  text-align: center;
+  height: 75vh;
+
+  h2, h3 {
+    text-align: center;
+  }
+
+  .benefits {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+      list-style-type: none;
+    }
+  }
 }
 
-.benefits {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-ul {
-  list-style-type: none;
-}
 
-.brand-benefits {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 300px;
-}
-
-.distributor-benefits {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 300px;
-}
-
-.machine-learning-banner {
-  display: flex;
-  justify-content: space-between;
-  height: 100vh;
-  align-items: center;
-  padding: 50px;
-}

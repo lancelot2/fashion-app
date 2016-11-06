@@ -1,8 +1,10 @@
 <div class="footer text-center">
-  <div class="demo">
-    <p>Request a demo</p>
-    <a class="btn-home" href="#">Get started</a>
+  <div class="container">
+    <ul class="list-inline">
+      <li> <%= link_to 'Request a Demo', '#', class: "btn datagami-button-empty" %> </li>
+      <li> <%= link_to 'Get Started', '#', class: "btn datagami-button-filled" %> </li>
+    </ul>
     <hr>
-    logo
+    <%= image_tag "logo.png" %>
   </div>
 </div>
