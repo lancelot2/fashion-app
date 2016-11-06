@@ -17,16 +17,19 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
+
+# Cloudinary Integration
 gem 'cloudinary', '1.1.0'
 gem 'carrierwave'
 
+# API callls
 gem 'curb'
 
-# For rails admin
+# Rails admin
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
 
-# i18n
+# i18n Integration
 gem 'rails-i18n', '~> 5.0.0'
 gem 'devise-i18n'
 
