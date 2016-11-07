@@ -85,7 +85,7 @@
   <div class="search-result-title">
     <p>
       <strong>Search results:</strong>
-      <%= @items.size %> products</p>
+      <%= @items.headers[:total] %> products</p>
   </div>
 
   <!-- Actual table of products -->
@@ -134,7 +134,7 @@
     </thead>
 
     <tbody>
-      <% @items.each do |item| %>
+      <% (JSON.parse @items.body).each do |item| %>
         <tr class='clickable-row' data-href='<%= product_show_path(id: item["id"]) %>' style="cursor: pointer;">
           <td><input type="checkbox" value=""></td>
           <td>

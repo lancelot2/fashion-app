@@ -23,7 +23,7 @@ gem 'cloudinary', '1.1.0'
 gem 'carrierwave'
 
 # API callls
-gem 'curb'
+gem 'rest-client'
 
 # Rails admin
 gem 'remotipart', github: 'mshibuya/remotipart'
