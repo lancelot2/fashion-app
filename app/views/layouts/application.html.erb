@@ -16,6 +16,7 @@
 
     <% if @home_subnavar  %>
       <%= render 'shared/home-navbar' %>
+    <% elsif @devise_header %>
     <% else  %>
       <%= render 'shared/navbar'%>
     <% end  %>
