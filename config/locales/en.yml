@@ -62,7 +62,7 @@ en:
       lancelot_description_1: "ESSEC Entrepreneur & Full stack developper"
       lancelot_description_2: "Former Head of Lazada Vietnam operations"
       lancelot_description_3: "Founded a large online distribution venture"
-      sign_up_for_free: "Signup for a 30 days <em>free</em> trial account."
+      sign_up_for_free_html: "Signup for a 30 days <em>free</em> trial account."
       features: "Not convinced yet?"
       features_tagline: "Check out these awesome features"
       feature_1_title: "Machine Learning"
@@ -74,8 +74,15 @@ en:
       get_started_for_free: "Start a free trial"
   shared:
     navbar:
-      en: 'English'
-      fr: 'Francais'
+      how_it_works_section_header: "How it works"
+      brands: "Brands"
+      retailers: "Retailers"
+      about_us: "About us"
+    home-navbar:
+      how_it_works_section_header: "How it works"
+      brands: "Brands"
+      retailers: "Retailers"
+      about_us: "About us"
   searches:
     index:
       search_index_title: "Search index page"
