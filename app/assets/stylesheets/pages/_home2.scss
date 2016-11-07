@@ -219,7 +219,6 @@ strong { font-weight: 700; }
 .navbar-brand > .logo-nav { display: none; }
 
 .navbar-default .navbar-nav > li > a {
-  color: #fff;
   font-size: 16px;
   font-weight: 700;
   padding: 10px 20px;
@@ -248,8 +247,8 @@ strong { font-weight: 700; }
 
 .navbar-nav { margin: 6.5px -15px!important; }
 
-.affix {
-  position: fixed;
+.affix-customized {
+  // position: relative;
   background-color: rgba(255, 255, 255, 0.98);
   z-index: 1000;
   padding: .75em 0;
@@ -257,46 +256,20 @@ strong { font-weight: 700; }
   -webkit-animation: slideInDown 1s both;
   animation: slideInDown 1s both;
 }
- @-webkit-keyframes slideInDown {
- from {
- -webkit-transform: translate3d(0, -100%, 0);
- transform: translate3d(0, -100%, 0);
- visibility: visible;
- padding: 1.5em 0;
-}
- to {
- -webkit-transform: translate3d(0, 0, 0);
- transform: translate3d(0, 0, 0);
- padding: .75em 0;
-}
-}
- @keyframes slideInDown {
- from {
- -webkit-transform: translate3d(0, -100%, 0);
- transform: translate3d(0, -100%, 0);
- visibility: visible;
- padding: 1.5em 0;
-}
- to {
- -webkit-transform: translate3d(0, 0, 0);
- transform: translate3d(0, 0, 0);
- padding: .75em 0;
-}
-}
 
-.navbar-default.affix .logo { display: none; }
+.navbar-default.affix-customized .logo { display: none; }
 
-.navbar-default.affix .logo-nav { display: block; }
+.navbar-default.affix-customized .logo-nav { display: block; }
 
-.navbar-default.affix .navbar-nav > li > a,
-.navbar-default.affix .navbar-nav > li > a:focus {
+.navbar-default.affix-customized .navbar-nav > li > a,
+.navbar-default.affix-customized .navbar-nav > li > a:focus {
   color: #526066;
   font-weight: 600;
   background-color: transparent;
 }
 
-.navbar-default.affix .navbar-nav > li > a:hover,
-.navbar-default.affix .navbar-nav > li > a:active,
+.navbar-default.affix-customized .navbar-nav > li > a:hover,
+.navbar-default.affix-customized .navbar-nav > li > a:active,
  .mobile-nav-overlay ul li a:hover,
 .mobile-nav-overlay ul li a:active,
 .mobile-nav-overlay ul li a:focus,
@@ -307,14 +280,14 @@ strong { font-weight: 700; }
   background-color: transparent;
 }
 
-.affix .navbar-nav > li > a.btn-nav {
+.affix-customized .navbar-nav > li > a.btn-nav {
   background: #31aff5;
   color: #fff;
 }
 
-.navbar-default.affix .navbar-nav > li > .btn-nav:hover,
-.navbar-default.affix .navbar-nav > li > .btn-nav:active,
-.navbar-default.affix .navbar-nav > li > .btn-nav:focus {
+.navbar-default.affix-customized .navbar-nav > li > .btn-nav:hover,
+.navbar-default.affix-customized .navbar-nav > li > .btn-nav:active,
+.navbar-default.affix-customized .navbar-nav > li > .btn-nav:focus {
   background: #30a7e9;
   color: #fff;
 }
