@@ -1,107 +1,103 @@
 .container-large {
-    width: 92%;
-    margin: auto;
+  width: 92%;
+  margin: auto;
+}
+
+#filtering-box {
+  padding: 15px;
+  width: 100%;
+  border: 1px solid black;
+  background-color: #F1F1F1;
+  margin: 15px 0;
+
+  label {
+    margin-bottom: 0;
+  }
+
+  input {
+    max-width: 100%;
+  }
 }
 
 .index-page-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 800px;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .extraction-buttons {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .flex-index {
-    display: flex;
-    justify-content: space-around;
-}
-
-.filtering-box {
-    padding: 15px;
-    width: 100%;
-    border: 1px solid black;
-    background: #F1F1F1;
-    margin-bottom: 15px;
-}
-
-.filtering-attributes {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
 }
 
 .active-filters-tags {
-    padding: 15px 0;
+  padding: 15px 0;
 }
 
 .field-width {
-    width: 25% !important;
+  width: 25% !important;
 }
 
 .flex-search {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .btn-index {
-    font-size: 11px;
-    height: 29px;
+  font-size: 11px;
+  height: 29px;
 }
 
 .product-filter {
-    height: 35px;
-    margin-top: 26px;
+  height: 35px;
 }
 
 table {
-    img {
-        width: 120px;
-        height: auto;
-    }
+  img {
+    width: 120px;
+    height: auto;
+  }
 
-    // .first-tr {
-    //     color: $brand-color;
-    //     font-size: 13px;
-    // }
+  .col-check {
+    width: 2%;
+  }
 
-    .col-check {
-        width: 2%;
-    }
+  .col-photo {
+    width: 10%;
+  }
 
-    .col-photo {
-        width: 10%;
-    }
+  .col-name {
+    width: 25%;
+  }
 
-    .col-name {
-        width: 25%;
-    }
+  .col-brand {
+    width: 10%;
+  }
 
-    .col-brand {
-        width: 10%;
-    }
+  .col-sku {
+    width: 5%;
+  }
 
-    .col-sku {
-        width: 5%;
-    }
+  .col-price {
+    width: 5%;
+  }
 
-    .col-price {
-        width: 5%;
-    }
+  .col-stock {
+    width: 5%;
+  }
 
-    .col-stock {
-        width: 5%;
-    }
+  .col-color {
+    width: 10%;
+  }
 
-    .col-color {
-        width: 10%;
-    }
-
-    .col-category {
-        width: 8%;
-    }
+  .col-category {
+    width: 8%;
+  }
 }
