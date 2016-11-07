@@ -1,170 +1,221 @@
-<div class="container-large">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-3">
 
-  <!-- header -->
-  <div class="index-page-header">
-    <h1>Product main database</h1>
-    <div class="extraction-buttons">
-      <!-- <a class="btn btn-primary">Save search</a> -->
-      <button class="btn btn-primary" onclick="saveSearch()">Save search</button>
-      <a class="btn btn-primary">Generate extraction</a>
-    </div>
-  </div>
 
-  <div class="flex-index">
-
-    <!-- #### FILTERING FEATURE #### -->
-    <div class="filtering-box">
-      <p>
-        <strong>Filtering feature</strong>
-      </p>
-
-      <div class="filtering-attributes">
+      <!-- #### FILTERING FEATURE #### -->
+      <div id="filtering-box">
+        <h3>Filters</h3>
+        <form action="<%= product_index_path %>" method="get">
         <div class="form-group">
-          <label for="name">Name contains...</label>
-          <input type="text" class="form-control" id="name" placeholder="cotton shirt">
+          <%= label :full_name, 'Item Name' %>
+          <%= text_field_tag :full_name, params[:full_name], class: "form-control" %>
         </div>
         <div class="form-group">
-          <label for="brand">Brand</label>
-          <select id="brand" class="form-control">
-            <option>-</option>
-            <option>ASOS</option>
-            <option>Nike</option>
-            <option>Adidas</option>
-            <option>Mango</option>
-            <option>Hollister</option>
-            <option>Pimkie</option>
-          </select>
+          <%= label :brand, 'Brand' %>
+          <%= text_field_tag :brand, params[:brand], class: "form-control" %>
         </div>
         <div class="form-group">
-          <label for="gender">Gender</label>
-          <select id="gender" class="form-control">
-            <option>-</option>
-            <option>Male</option>
-            <option>Female</option>
-            <option>Kids</option>
-          </select>
+          <%= label :sku, 'SKU' %>
+          <%= text_field_tag :sku, params[:sku], class: "form-control" %>
         </div>
         <div class="form-group">
-          <label for="categ1">Category</label>
-          <select id="categ1" class="form-control">
-            <option>-</option>
-            <option>Top</option>
-            <option>Jeans</option>
-            <option>Coats</option>
-            <option>Jumpers</option>
-            <option>Socks</option>
-          </select>
+          <%= label :category_1, 'Main Category' %>
+          <%= text_field_tag :category_1, params[:category_1], class: "form-control" %>
         </div>
         <div class="form-group">
-          <label for="categ2">Color</label>
-          <select id="categ2" class="form-control">
-            <option>-</option>
-            <option>Black</option>
-            <option>White</option>
-            <option>Grey</option>
-            <option>Navy</option>
-            <option>Khaki</option>
-            <option>Cream</option>
-            <option>Ivory</option>
-          </select>
+          <%= label :product_code, 'Product Code' %>
+          <%= text_field_tag :product_code, params[:product_code], class: "form-control" %>
         </div>
         <div class="form-group">
-          <label for="categ3">Price</label>
-          <select id="categ3" class="form-control">
-            <option>-</option>
-          </select>
+          <%= label :in_stock, 'In Stock' %>
+          <%= text_field_tag :in_stock, params[:in_stock], class: "form-control" %>
         </div>
-        <a class="btn btn-primary product-filter">Filter</a>
+        <div class="form-group">
+          <%= label :details, 'Item Details' %>
+          <%= text_field_tag :details, params[:details], class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= label :color, 'Color' %>
+          <%= text_field_tag :color, params[:color], class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= label :price_under, 'Price' %>
+          <%= range_field :price_under, params[:price_under], in: 0..100000, class: "form-control" %>
+          <%= range_field :price_over, params[:price_over], in: 0..100000, class: "form-control" %>
+        </div>
+        <%= submit_tag "Search", name: nil, class: "btn btn-default" %>
+        </form>
+          <!-- <div class="form-group">
+            <label for="name">Name contains...</label>
+            <input type="text" class="form-control" id="name" placeholder="cotton shirt">
+          </div>
+          <div class="form-group">
+            <label for="brand">Brand</label>
+            <select id="brand" class="form-control">
+              <option>-</option>
+              <option>ASOS</option>
+              <option>Nike</option>
+              <option>Adidas</option>
+              <option>Mango</option>
+              <option>Hollister</option>
+              <option>Pimkie</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" class="form-control">
+              <option>-</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Kids</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="categ1">Category</label>
+            <select id="categ1" class="form-control">
+              <option>-</option>
+              <option>Top</option>
+              <option>Jeans</option>
+              <option>Coats</option>
+              <option>Jumpers</option>
+              <option>Socks</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="categ2">Color</label>
+            <select id="categ2" class="form-control">
+              <option>-</option>
+              <option>Black</option>
+              <option>White</option>
+              <option>Grey</option>
+              <option>Navy</option>
+              <option>Khaki</option>
+              <option>Cream</option>
+              <option>Ivory</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="categ3">Price</label>
+            <select id="categ3" class="form-control">
+              <option>-</option>
+            </select>
+          </div>
+          <a class="btn btn-primary product-filter">Filter</a> -->
       </div>
 
+
+    </div>
+    <div class="col-xs-9">
+
+      <!-- header -->
+      <div class="index-page-header">
+        <h1>Product main database</h1>
+        <div class="extraction-buttons">
+          <!-- <a class="btn btn-primary">Save search</a> -->
+          <button class="btn btn-primary" onclick="saveSearch()">Save search</button>
+          <a class="btn btn-primary">Generate extraction</a>
+        </div>
+      </div>
+
+      <div class="flex-index">
+
+
+
+      </div>
+
+      <!-- # of results within the current search -->
+      <div class="search-result-title">
+        <span>
+          <strong>Search results:</strong>
+          <%= @items.headers[:total] %> items,
+        </span>
+        <span>
+          <strong>Results per page:</strong>
+          <%= p @items.headers[:per_page] %> items
+        </span>
+      </div>
+
+      <!-- Actual table of products -->
+      <table class="table table-condensed table-hover">
+        <col class="col-check">
+        <col class="col-photo">
+        <col class="col-name">
+        <col class="col-brand">
+        <col class="col-sku">
+        <col class="col-price">
+        <col class="col-stock">
+        <col class="col-color">
+        <col class="col-category">
+        <thead>
+          <tr class="first-tr">
+            <th>
+              <stong>
+                <input type="checkbox">
+              </stong>
+            </th>
+            <th>
+              <stong>Cover</stong>
+            </th>
+            <th>
+              <stong>Name</stong>
+            </th>
+            <th>
+              <stong>Brand</stong>
+            </th>
+            <th>
+              <stong>SKU</stong>
+            </th>
+            <th>
+              <stong>Price</stong>
+            </th>
+            <th>
+              <stong>Stock</stong>
+            </th>
+            <th>
+              <stong>Color</stong>
+            </th>
+            <th>
+              <stong>Category</stong>
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% (JSON.parse @items.body).each do |item| %>
+            <tr class='clickable-row' data-href='<%= product_show_path(id: item["id"]) %>' style="cursor: pointer;">
+              <td><input type="checkbox" value=""></td>
+              <td>
+                <%= image_tag (item['photo_urls'][0]) %>
+              </td>
+              <td>
+                <p><%= item['full_name'] %></p>
+              </td>
+              <td>
+                <p><%= item['brand'] %></p>
+              </td>
+              <td>
+                <p><%= item['sku'] %></p>
+              </td>
+              <td>
+                <p><%= item['price'] %></p>
+              </td>
+              <td>
+                <p><%= item['in_stock'] ? "Yes" : "No" %></p>
+              </td>
+              <td>
+                <p><%= item['color'] %></p>
+              </td>
+              <td>
+                <p><%= item['category_1'] %></p>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
     </div>
 
-  </div>
-
-  <!-- # of results within the current search -->
-  <div class="search-result-title">
-    <p>
-      <strong>Search results:</strong>
-      <%= @items.size %> products</p>
-  </div>
-
-  <!-- Actual table of products -->
-  <table class="table table-condensed table-hover">
-    <col class="col-check">
-    <col class="col-photo">
-    <col class="col-name">
-    <col class="col-brand">
-    <col class="col-sku">
-    <col class="col-price">
-    <col class="col-stock">
-    <col class="col-color">
-    <col class="col-category">
-    <thead>
-      <tr class="first-tr">
-        <th>
-          <h5>
-            <input type="checkbox">
-          </h5>
-        </th>
-        <th>
-          <h5>Cover</h5>
-        </th>
-        <th>
-          <h5>Name</h5>
-        </th>
-        <th>
-          <h5>Brand</h5>
-        </th>
-        <th>
-          <h5>SKU</h5>
-        </th>
-        <th>
-          <h5>Price</h5>
-        </th>
-        <th>
-          <h5>Stock</h5>
-        </th>
-        <th>
-          <h5>Color</h5>
-        </th>
-        <th>
-          <h5>Category</h5>
-        </th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @items.each do |item| %>
-        <tr class='clickable-row' data-href='<%= product_show_path(id: item["id"]) %>' style="cursor: pointer;">
-          <td><input type="checkbox" value=""></td>
-          <td>
-            <%= image_tag (item['photo_urls'][0]) %>
-          </td>
-          <td>
-            <p><%= item['full_name'] %></p>
-          </td>
-          <td>
-            <p><%= item['brand'] %></p>
-          </td>
-          <td>
-            <p><%= item['sku'] %></p>
-          </td>
-          <td>
-            <p><%= item['price'] %></p>
-          </td>
-          <td>
-            <p><%= item['in_stock'] ? "Yes" : "No" %></p>
-          </td>
-          <td>
-            <p><%= item['color'] %></p>
-          </td>
-          <td>
-            <p><%= item['category_1'] %></p>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+    </div>
 </div>
 
 
