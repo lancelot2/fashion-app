@@ -3,10 +3,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
 
   def home
-    @hide_nav = true
+    @hide_nav = false
   end
 
-  def home2
-    @hide_nav = true
-  end
 end
