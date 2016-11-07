@@ -5,4 +5,8 @@ class PagesController < ApplicationController
   def home
     @hide_nav = true
   end
+
+  def home2
+    @hide_nav = true
+  end
 end

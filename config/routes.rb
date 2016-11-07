@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     patch '/profile', to: 'profiles#update', as: :update_profile
 
     root to: 'pages#home'
+    get 'home2', to: 'pages#home2', as: :home2
     get 'product_index', to: 'products#index', as: :product_index
     get 'product_show/:id', to: 'products#show', as: :product_show
     resources :companies
