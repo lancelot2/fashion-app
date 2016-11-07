@@ -10,7 +10,6 @@
         <h1><%= t('.home_tagline') %></h1>
         <h2><%= t('.home_sub_tagline') %></h2>
         <a href="" class="btn btn-cta-hero" data-toggle="modal" data-target="#modal-demo-form"><%= t('.get_started') %></a> </div>
-<!--         <a href="" class="chat-btn" data-toggle="modal" data-target="#modal-contact-form"> -->
     </div>
   </section>
 
@@ -211,21 +210,21 @@
       <div class="col-sm-4">
         <div class="pricing-table-container">
           <div class="plan-type">
-            <h4><%= t('.gold') %>GOLD</h4>
+            <h4><%= t('.gold') %></h4>
           </div>
           <div class="plan-price">
-            <h5><span class="plan-currency"><%= t('.currency') %>£</span>750<span class="plan-duration">P/M</span></h5>
+            <h5><span class="plan-currency"><%= t('.currency') %></span>750<span class="plan-duration">P/M</span></h5>
           </div>
-          <div class="plan-cta"> <span><%= t('.limited_offer_20') %>Limited time 20% off</span> <a href="" class="btn"><%= t('.get_started') %>GET STARTED</a> </div>
+          <div class="plan-cta"> <span><%= t('.limited_offer_20') %></span> <a href="" class="btn"><%= t('.get_started') %>GET STARTED</a> </div>
           <div class="plan-details">
             <ul>
-              <li><strong><%= t('.unlimited') %>Unlimited</strong> <%= t('.users') %>user</li>
-              <li><strong><%= t('.unlimited') %>Unlimited</strong> <%= t('.views') %>Views per/m</li>
-              <li><strong><%= t('.unlimited') %>Unlimited</strong> <%= t('.projects') %>Projects</li>
-              <li><strong>50</strong> <%= t('.agents') %>agent per account</li>
-              <li><%= t('.api') %>API access</li>
-              <li><%= t('.storage') %>Free Storage</li>
-              <li><%= t('.analytics') %>Analytics<i class="fa fa-exclamation-circle" data-toggle="tooltip" title="Some tooltip text"></i></li>
+              <li><strong><%= t('.unlimited') %></strong> <%= t('.users') %></li>
+              <li><strong><%= t('.unlimited') %></strong> <%= t('.views') %></li>
+              <li><strong><%= t('.unlimited') %></strong> <%= t('.projects') %></li>
+              <li><strong>50</strong> <%= t('.agents') %></li>
+              <li><%= t('.api') %></li>
+              <li><%= t('.storage') %></li>
+              <li><%= t('.analytics') %><i class="fa fa-exclamation-circle" data-toggle="tooltip" title="Some tooltip text"></i></li>
               <li><%= t('.security') %></li>
               <li><%= t('.logs') %><i class="fa fa-exclamation-circle" data-toggle="tooltip" title="Some tooltip text"></i></li>
               <li><%= t('.support') %></li>
@@ -247,8 +246,8 @@
 <section class="about-us section-spacing" id="team">
   <div class="container">
     <header class="section-header text-center">
-      <h2>About us</h2>
-      <h3>Strong mix of Engineering & Creative team behind our product</h3>
+      <h2><%= t('.about_us') %></h2>
+      <h3><%= t('.about_us_tagline') %></h3>
     </header>
     <div class="row about-us-img-grid text-center">
       <div class="col-md-3">
@@ -273,14 +272,14 @@
         <div class="row">
           <div class="col-md-6">
             <article>
-              <h4>About archer</h4>
-              <p>Archer is a young team of online entrepreneurs passionate about data management and willing to bring the latest technologies and collaboration technics to the lifestyle industry.</p>
+              <h4><%= t('.about_archer') %></h4>
+              <p><%= t('.archer_description') %></p>
             </article>
           </div>
           <div class="col-md-6">
             <article>
-              <h4>Our mission</h4>
-              <p>We are determinated to eradiquate excel, csv and xml files sharing when it comes to product data management, which leads to errors and where end customers only see 90% of the data.</p>
+              <h4><%= t('.mission') %></h4>
+              <p><%= t('.mission_description') %></p>
             </article>
           </div>
         </div>
@@ -288,16 +287,16 @@
     </div>
     <div class="row text-center team-details">
       <div class="col-md-11 center-block">
-        <h4>Our founders</h4>
+        <h4><%= t('.founders') %></h4>
         <div class="row">
           <div class="col-md-6">
 
             <!--Team 1-->
             <div class="item"> <img class="img-circle" src="/assets/team-1-d4a3f7009f74eb61428a3ecfd99f8169b1d308fcdd6bfcd74dc43481413e2623.jpg" alt="Team 1" />
               <h5 style="margin-bottom: 20px;"><span class="bold">Alexandre Benoit</span></h5>
-              <p>Ms from Imperial College in Electronic engineering</p>
-              <p>Award winner at Entrepreneurship Competition</p>
-              <p>Systems Engineer at VMware</p>
+              <p><%= t('.alex_description_1') %></p>
+              <p><%= t('.alex_description_2') %></p>
+              <p><%= t('.alex_description_3') %></p>
             </div>
             <!--Team 1 end-->
           </div>
@@ -307,9 +306,9 @@
             <!--Team 2-->
             <div class="item"> <img class="img-circle" src="/assets/team-2-d4a3f7009f74eb61428a3ecfd99f8169b1d308fcdd6bfcd74dc43481413e2623.jpg" alt="Team 2" />
               <h5 style="margin-bottom: 20px;"><span class="bold">Lancelot Salavert</span></h5>
-              <p>ESSEC Entrepreneur & Full stack developper</p>
-              <p>Head of Lazada Vietnam operations</p>
-              <p>Founded a large online distribution venture</p>
+              <p><%= t('.lancelot_description_1') %></p>
+              <p><%= t('.lancelot_description_2') %></p>
+              <p><%= t('.lancelot_description_3') %></p>
             </div>
             <!--Team 2 end-->
 
@@ -328,7 +327,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2>Signup for a 30 days <em>free</em> trial account.<a href="" class="btn btn-secondary" data-toggle="modal" data-target="#modal-demo-form">GET STARTED</a> </div></h2>
+        <h2><%= t('.sign_up_for_free') %><a href="" class="btn btn-secondary" data-toggle="modal" data-target="#modal-demo-form"><%= t('.get_started') %>GET STARTED</a> </div></h2>
       </div>
     </div>
   </div>
@@ -341,8 +340,8 @@
 <section class="features-cta section-spacing" id="features">
   <div class="container">
     <header class="section-header text-center">
-      <h2>Not convinced yet?</h2>
-      <h3>Check out these awesome features</h3>
+      <h2><%= t('.features') %></h2>
+      <h3><%= t('.features_tagline') %></h3>
     </header>
     <div class="row">
       <div class="col-md-6"> <img class="feature-cta-big-img" src="/assets/features-cta-7e2f2fd4e5eb6a7fa78ec5af2463e53513bcb87df67061a2e7204d050965ee79.jpg" alt="Features cta" /></div>
@@ -351,27 +350,28 @@
 
           <!--feature 1-->
           <li> <img src="/assets/feature-cta-1-5aa28c2b354e91bf5d37f1b1b49e7788ecbba0f165d4b6b7ec003c1eb7514639.svg" alt="Feature cta 1" />
-            <h4>Machine Learning</h4>
-            <p>We consolidate and standardize hundreds of data source using Machine Learning algorithms.</p>
+            <h4><%= t('.feature_1_title') %></h4>
+            <p><%= t('.feature_1_description') %></p>
           </li>
           <!--feature 1 end-->
 
           <!--feature 2-->
           <li> <img src="/assets/feature-cta-2-bb2245955c3c0a541dd15ae010f422cb33fb1e82892ff2383ed6463809f9c387.svg" alt="Feature cta 2" />
-            <h4>Content curation</h4>
-            <p>We constantly rate our data sources in order to push only the most accurate ones to our customers and flag inconsistancies.</p>
+            <h4><%= t('.feature_2_title') %></h4>
+            <p><%= t('.feature_2_description') %></p>
           </li>
           <!--feature 2 end-->
 
           <!--feature 3-->
           <li> <img src="/assets/feature-cta-3-af5284e3e3a7b7ca7b6388fb4b5f305ccd7605b1339b7709da541dba8c4739bb.svg" alt="Feature cta 3" />
-            <h4>Media file editing</h4>
-            <p>You can edit images directly through our API call in order to maintain consistency across your products.</p>
+            <h4><%= t('.feature_3_title') %></h4>
+            <p><%= t('.feature_3_description') %></p>
           </li>
           <!--feature 3 end-->
 
         </ul>
-        <a href="signup.html" class="btn">Start a free trial</a> </div>
+        <a href="" class="btn btn-cta-hero" data-toggle="modal" data-target="#modal-demo-form"><%= t('.get_started_for_free') %></a>
+      </div>
     </div>
   </div>
 </section>
