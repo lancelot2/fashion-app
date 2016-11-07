@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 class ExtractionsController < ApplicationController
   before_action :set_extraction, except: [:create, :index, :new]
+  before_action :display_subnavbar
 
   def index # GET /restaurants
     @extractions = Extraction.all
@@ -56,6 +57,10 @@ class ExtractionsController < ApplicationController
 end
 
 private
+
+def display_subnavbar
+  @display_subnavbar = true
+end
 
 def set_extraction
   @extraction = Extraction.find(params[:id])

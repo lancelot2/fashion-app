@@ -13,8 +13,14 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
   <body>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/sub_navbar' unless @hide_nav %>
+
+    <% if @home_subnavar  %>
+      <%= render 'shared/home-navbar' %>
+    <% elsif @devise_header %>
+    <% else  %>
+      <%= render 'shared/navbar'%>
+    <% end  %>
+    <%= render 'shared/sub_navbar' if @display_subnavbar %>
     <%= render 'shared/flashes' %>
     <%= yield %>
     <%= render 'shared/footer' %>

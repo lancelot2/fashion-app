@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 class SearchesController < ApplicationController
   before_action :set_search, except: [:create, :index, :new]
+  before_action :display_subnavbar
 
   def index         # GET /restaurants
     @searches = Search.all
@@ -38,6 +39,10 @@ class SearchesController < ApplicationController
 end
 
 private
+
+def display_subnavbar
+  @display_subnavbar = true
+end
 
 def set_search
   @search = Search.find(params[:id])

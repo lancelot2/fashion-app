@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 class TemplatesController < ApplicationController
   before_action :set_template, except: [:create, :index, :new]
+  before_action :display_subnavbar
 
   def index         # GET /restaurants
     @templates = Template.all
@@ -39,6 +40,10 @@ class TemplatesController < ApplicationController
 end
 
 private
+
+def display_subnavbar
+  @display_subnavbar = true
+end
 
 def set_template
   @template = Template.find(params[:id])

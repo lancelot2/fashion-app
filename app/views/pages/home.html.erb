@@ -1,56 +1,396 @@
-<div class="banner">
-  <div class="banner-content">
-    <h1><%= t('.home_tagline') %></h1>
-    <div class="banner-buttons">
-      <%= link_to "Brands", '#', class: "btn-home" %>
-      <%= link_to "Retailers", product_index_path, class: "btn-home" %>
-    </div>
-  </div>
-</div>
+<!--hero section-->
 
-<div class="info-banner" id="pain-point">
-  <div class="container">
-    <div class="info-flex">
-      <%= image_tag("origami_1.png") %>
-      <h2><%= t('.pain_point') %></h2>
-    </div>
-  </div>
-</div>
+<header class="hero-section">
 
-<div class="benefits-banner">
+  <!--welcome message-->
+
+  <section class="container text-center welcome-message">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Smarter data collaboration between brands and retailers</h1>
+        <h2>The new generation of Product Information Management software</h2>
+        <a href="signup.html" class="btn btn-cta-hero">GET STARTED</a> </div>
+    </div>
+  </section>
+
+  <!--welcome message end-->
+
+</header>
+
+<!--hero section end-->
+
+
+<!--How it works-->
+
+<section class="how-it-works section-spacing" id="how-it-works">
   <div class="container">
-    <h2>Benefits</h2>
-    <div class="benefits">
-      <div>
-        <h3>For brands</h3>
-        <ul>
-          <li>Manage all product data through a single platform</li>
-          <li>Stop wasting your time with each and every distributor format</li>
-          <li>Let us do the work for you</li>
-          <li>While giving you a better control on your data</li>
-        </ul>
-      </div>
-      <div>
-        <h3>For distributors</h3>
-        <ul>
-          <li>Plug into the best lifestyle product database</li>
-          <li>Automate data collection from your suppliers</li>
-          <li>Handle all types of content from logistics to rich media</li>
-          <li>Accelerate content updates to your commercial and analytics systems</li>
-        </ul>
+    <header class="section-header text-center">
+      <h2>How it works</h2>
+      <h3>Understanding our easy to use product</h3>
+    </header>
+    <div class="row">
+      <div class="col-md-11 center-block">
+        <%= image_tag ("alkemics.png") %>
       </div>
     </div>
   </div>
-</div>
+</section>
 
+<!--How it works end-->
 
-<div class="info-banner" id="machine-learning">
-  <div class="container">
-    <div class="info-flex">
-      <h2><%= t('.machine-learning') %></h2>
-      <%= image_tag("machine-learning-icon.png") %>
+<!--features-->
+
+<section class="features brands" id="brands">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 text-center feature-bg"><%= image_tag ("features.jpg"), :class => 'hidden-md hidden-lg' %></div>
+      <div class="col-md-7 col-md-offset-1">
+        <div class="section-spacing row-margin">
+          <header class="section-header">
+            <h2>Key features for Brands</h2>
+            <h3>The easiest way to share your content</h3>
+          </header>
+          <div class="row">
+            <!--features 1-->
+            <div class="col-sm-6"> <%= image_tag ("feature-1.svg") %>
+              <h4>Easy to use</h4>
+              <p>Drag and drop interface with zero coding skills required.</p>
+            </div>
+            <!--features 1 end-->
+            <!--features 2-->
+            <div class="col-sm-6"> <%= image_tag ("feature-2.svg") %>
+              <h4>Direct integration</h4>
+              <p>We developed plugins for most of the existing IT frameworks.</p>
+            </div>
+            <!--features 2 end-->
+          </div>
+          <div class="row">
+            <!--features 3-->
+            <div class="col-sm-6"> <%= image_tag ("feature-3.svg") %>
+              <h4>Increased accuracy</h4>
+              <p>Our algorithm immediately spot inconsistencies within your data sources. </p>
+            </div>
+            <!--features 3 end-->
+            <!--features 4-->
+            <div class="col-sm-6"> <%= image_tag ("feature-4.svg") %>
+              <h4>Control oriented</h4>
+              <p>Manage which retailers has access to which data. </p>
+            </div>
+            <!--features 4 end-->
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</section>
+
+<!--features end-->
+
+<!--CTA footer-->
+
+<section class="cta-footer section-spacing text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>With more products sold through more channels and more product information required to meet shopper demand, brands and retailers need to work together around data that is accurate, structured and synchronized.</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--CTA footer end-->
+
+<!--features-->
+
+<section class="features retailers" id="retailers">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-7 col-md-offset-1">
+        <div class="section-spacing row-margin">
+          <header class="section-header">
+            <h2>Key features for retailers</h2>
+            <h3>Increase the quality of your content while automating your content process</h3>
+          </header>
+          <div class="row">
+            <!--features 1-->
+            <div class="col-sm-6"> <%= image_tag ("feature-1.svg") %>
+              <h4>Highly flexible</h4>
+              <p>You can access our database through an API, specifying the exact format for each field</p>
+            </div>
+            <!--features 1 end-->
+            <!--features 2-->
+            <div class="col-sm-6"> <%= image_tag ("feature-2.svg") %>
+              <h4>Time to market</h4>
+              <p>Reduce your content creation lead time by 90%</p>
+            </div>
+            <!--features 2 end-->
+          </div>
+          <div class="row">
+            <!--features 3-->
+            <div class="col-sm-6"> <%= image_tag ("feature-3.svg") %>
+              <h4>Enriched content</h4>
+              <p>Benefit from extra data valuable for your whole organization</p>
+            </div>
+            <!--features 3 end-->
+            <!--features 4-->
+            <div class="col-sm-6"> <%= image_tag ("feature-4.svg") %>
+              <h4>Tracking</h4>
+              <p>Track every single changes and make sure you benefit from the latest content</p>
+            </div>
+            <!--features 4 end-->
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 text-center feature-bg"><%= image_tag ("features.jpg"), :class => 'hidden-md hidden-lg' %></div>
+    </div>
+  </div>
+</section>
+
+<!--features end-->
 
 
+<!--Pricing-->
+
+<section class="pricing section-spacing text-center" id="pricing">
+  <div class="container">
+    <header class="section-header">
+      <h2>Plans &amp; Pricing</h2>
+      <h3>30 day money back guarantee.</h3>
+    </header>
+    <div class="row">
+
+      <!--pricing tabel 1-->
+      <div class="col-sm-4">
+        <div class="pricing-table-container">
+          <div class="plan-type">
+            <h4>Basic</h4>
+          </div>
+          <div class="plan-price">
+            <h5>Free</h5>
+          </div>
+          <div class="plan-cta"> <span>Try first, upgrade later</span> <a href="" class="btn">TRY FOR FREE</a> </div>
+          <div class="plan-details">
+            <ul>
+              <li><strong>1</strong> user</li>
+              <li><strong>5000</strong> Views per/m</li>
+              <li><strong>12</strong> Projects</li>
+              <li><strong>5</strong> agent per account<i class="fa fa-exclamation-circle" data-toggle="tooltip" title="Some tooltip text"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--pricing tabel 1 end-->
+
+      <!--pricing tabel 2-->
+      <div class="col-sm-4">
+        <div class="pricing-table-container plan-popular">
+          <div class="plan-type">
+            <h4>Premium</h4>
+          </div>
+          <div class="plan-price">
+            <h5><span class="plan-currency">£</span>250<span class="plan-duration">P/M</span></h5>
+          </div>
+          <div class="plan-cta"> <span>Limited time 10% off</span> <a href="" class="btn">GET STARTED</a> </div>
+          <div class="plan-details">
+            <ul>
+              <li><strong>5</strong> user</li>
+              <li><strong>10,000</strong> Views per/m</li>
+              <li><strong>30</strong> Projects</li>
+              <li><strong>15</strong> agent per account</li>
+              <li>API access</li>
+              <li>Free Storage<i class="fa fa-exclamation-circle" data-toggle="tooltip" title="Some tooltip text"></i></li>
+              <li>Analytics</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--pricing tabel 2 end-->
+
+      <!--pricing tabel 3-->
+      <div class="col-sm-4">
+        <div class="pricing-table-container">
+          <div class="plan-type">
+            <h4>GOLD</h4>
+          </div>
+          <div class="plan-price">
+            <h5><span class="plan-currency">£</span>750<span class="plan-duration">P/M</span></h5>
+          </div>
+          <div class="plan-cta"> <span>Limited time 20% off</span> <a href="" class="btn">GET STARTED</a> </div>
+          <div class="plan-details">
+            <ul>
+              <li><strong>Unlimited</strong> user</li>
+              <li><strong>Unlimited</strong> Views per/m</li>
+              <li><strong>Unlimited</strong> Projects</li>
+              <li><strong>50</strong> agent per account</li>
+              <li>API access</li>
+              <li>Free Storage</li>
+              <li>Analytics<i class="fa fa-exclamation-circle" data-toggle="tooltip" title="Some tooltip text"></i></li>
+              <li>Addon security</li>
+              <li>Activity logs<i class="fa fa-exclamation-circle" data-toggle="tooltip" title="Some tooltip text"></i></li>
+              <li>Priority support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--pricing tabel 3 end-->
+
+    </div>
+  </div>
+</section>
+
+<!--Pricing end-->
+
+
+<!--About us -->
+
+<section class="about-us section-spacing" id="team">
+  <div class="container">
+    <header class="section-header text-center">
+      <h2>About us</h2>
+      <h3>Strong mix of Engineering & Creative team behind our product</h3>
+    </header>
+    <div class="row about-us-img-grid text-center">
+      <div class="col-md-3">
+        <%= image_tag ("about-us-grid-1-mobile.jpg"), :class => 'visible-xs-inline-block' %>
+        <%= image_tag ("about-us-grid-1-tablet.jpg"), :class => 'visible-xs-inline-block' %>
+        <%= image_tag ("about-us-grid-1.jpg"), :class => 'hidden-xs hidden-sm' %>
+      </div>
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col-sm-6"> <%= image_tag ("about-us-grid-2.jpg") %></div>
+          <div class="col-sm-6"> <%= image_tag ("about-us-grid-3.jpg") %></div>
+        </div>
+        <div class="row">
+          <div class="col-xs-4"> <%= image_tag ("about-us-grid-4.jpg") %></div>
+          <div class="col-xs-4"> <%= image_tag ("about-us-grid-5.jpg") %></div>
+          <div class="col-xs-4"> <%= image_tag ("about-us-grid-6.jpg") %></div>
+        </div>
+      </div>
+    </div>
+    <div class="row about-us-into">
+      <div class="col-md-10 center-block">
+        <div class="row">
+          <div class="col-md-6">
+            <article>
+              <h4>About archer</h4>
+              <p>Archer is a young team of online entrepreneurs passionate about data management and willing to bring the latest technologies and collaboration technics to the lifestyle industry.</p>
+            </article>
+          </div>
+          <div class="col-md-6">
+            <article>
+              <h4>Our mission</h4>
+              <p>We are determinated to eradiquate excel, csv and xml files sharing when it comes to product data management, which leads to errors and where end customers only see 90% of the data.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center team-details">
+      <div class="col-md-11 center-block">
+        <h4>Our founders</h4>
+        <div class="row">
+          <div class="col-md-6">
+
+            <!--Team 1-->
+            <div class="item"> <img class="img-circle" src="/assets/team-1-d4a3f7009f74eb61428a3ecfd99f8169b1d308fcdd6bfcd74dc43481413e2623.jpg" alt="Team 1" />
+              <h5 style="margin-bottom: 20px;"><span class="bold">Alexandre Benoit</span></h5>
+              <p>Msc from Imperial College in Electronic ingeneering</p>
+              <p>Award winner at Entrepreneurship Competition</p>
+              <p>Systems Engineer at VMware</p>
+            </div>
+            <!--Team 1 end-->
+          </div>
+
+          <div class="col-md-6">
+
+            <!--Team 2-->
+            <div class="item"> <img class="img-circle" src="/assets/team-2-d4a3f7009f74eb61428a3ecfd99f8169b1d308fcdd6bfcd74dc43481413e2623.jpg" alt="Team 2" />
+              <h5 style="margin-bottom: 20px;"><span class="bold">Lancelot Salavert</span></h5>
+              <p>ESSEC Entrepreneur & Full stack developper</p>
+              <p>Head of Lazada Vietnam operations</p>
+              <p>Founded a large online distribution venture</p>
+            </div>
+            <!--Team 2 end-->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--About us end-->
+
+<!--CTA footer-->
+
+<section class="cta-footer section-spacing text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Signup for a 30 days <em>free</em> trial account.<a href="signup.html" class="btn btn-secondary">Get Started</a></h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--CTA footer end-->
+
+<!--Features cta-->
+
+<section class="features-cta section-spacing">
+  <div class="container">
+    <header class="section-header text-center">
+      <h2>Not convinced yet?</h2>
+      <h3>Check out these awesome features</h3>
+    </header>
+    <div class="row">
+      <div class="col-md-6"> <img class="feature-cta-big-img" src="/assets/features-cta-7e2f2fd4e5eb6a7fa78ec5af2463e53513bcb87df67061a2e7204d050965ee79.jpg" alt="Features cta" /></div>
+      <div class="col-md-6">
+        <ul class="feature-cta-list">
+
+          <!--feature 1-->
+          <li> <img src="/assets/feature-cta-1-5aa28c2b354e91bf5d37f1b1b49e7788ecbba0f165d4b6b7ec003c1eb7514639.svg" alt="Feature cta 1" />
+            <h4>Machine Learning</h4>
+            <p>We consolidate and standardize hundreds of data source using Machine Learning algorithms.</p>
+          </li>
+          <!--feature 1 end-->
+
+          <!--feature 2-->
+          <li> <img src="/assets/feature-cta-2-bb2245955c3c0a541dd15ae010f422cb33fb1e82892ff2383ed6463809f9c387.svg" alt="Feature cta 2" />
+            <h4>Content curation</h4>
+            <p>We constantly rate our data sources in order to push only the most accurate ones to our customers and flag inconsistancies.</p>
+          </li>
+          <!--feature 2 end-->
+
+          <!--feature 3-->
+          <li> <img src="/assets/feature-cta-3-af5284e3e3a7b7ca7b6388fb4b5f305ccd7605b1339b7709da541dba8c4739bb.svg" alt="Feature cta 3" />
+            <h4>Media file editing</h4>
+            <p>You can edit images directly through our API call in order to maintain consistency across your products.</p>
+          </li>
+          <!--feature 3 end-->
+
+        </ul>
+        <a href="signup.html" class="btn">Start a free trial</a> </div>
+    </div>
+  </div>
+</section>
+
+<!--Features cta end-->
+
+
+<script src="js/jquery-2.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="js/tweetie.min.js"></script>
+<!--[if IE 9]>
+<script src="js/placeholders.min.js"></script>
+<![endif]-->
+<script src="js/main.js"></script>
+<script async src="http://platform.twitter.com/widgets.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+<script src="js/gmap.js"></script>
+<script src="js/retina.min.js"></script>

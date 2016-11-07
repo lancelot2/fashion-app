@@ -1,22 +1,60 @@
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-md-6 col-md-offset-3">
-            <h2>Sign up</h2>
+<!--content wrapper-->
+<div class="content-wrapper">
 
-            <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-            <%= f.error_notification %>
+  <!--cta signin form-->
 
-            <div class="form-inputs">
-                <%= f.input :email, required: true, autofocus: true %>
-                <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-            </div>
+  <section class="cta-form cta-light section-spacing">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-5 center-block">
 
-            <div class="form-actions">
-                <%= f.button :submit, "Sign up" %>
-            </div>
-            <% end %>
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <header class="section-header text-center">
+          <h2>Sign up</h2>
+        </header>
+        <%= f.error_notification %>
 
-            <%= render "devise/shared/links" %>
+        <div class="form-inputs">
+            <%= f.input :email, required: true, autofocus: true %>
+            <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
         </div>
+
+        <div class="form-actions">
+            <%= f.button :submit, "Sign up" %>
+        </div>
+        <% end %>
+
+        <%= render "devise/shared/links" %>
+        </div>
+      </div>
     </div>
+  </section>
+
+  <!--cta signin form end-->
+
+  <!--chat btn-->
+  <a href="" class="chat-btn" data-toggle="modal" data-target="#modal-contact-form"></a>
+  <!--chat btn-->
+
+  <!--Copyright terms-->
+
+  <footer class="copyright-terms">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-5 col-md-6"> <small> &copy; 2016 Archer. All rights reserved.</small> </div>
+        <div class="col-sm-7 col-md-6">
+          <ul class="terms-privacy">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="" data-toggle="modal" data-target="#modal-terms">Terms</a></li>
+            <li><a href="" data-toggle="modal" data-target="#modal-terms">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!--Copyright terms end-->
+
 </div>
+
+<!--content wrapper end-->
