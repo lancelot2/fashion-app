@@ -1,0 +1,41 @@
+<!--contact form modal-->
+
+<div class="modal fade" id="modal-demo-form" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+
+        <!--contact form-->
+
+        <div class="contact-form text-center">
+          <header class="section-header"> <%= image_tag "support-icon.svg" %>
+            <h2>Request Demo</h2>
+            <h3>Just drop us a few line about your organization and we'll get back to you shortly.</h3>
+          </header>
+          <form class="cta-form cta-light" action="php/contact.php" method="post">
+            <div class="form-group">
+              <input  type="text" name="name" class="contact-name form-control input-lg" placeholder="Name *" id="contact-name">
+            </div>
+            <div class="form-group">
+              <input  type="text"  name="email" class="contact-email form-control input-lg" placeholder="Email address *" id="contact-email">
+            </div>
+            <div class="form-group">
+              <textarea name="message" class="contact-message form-control input-lg" rows="4" placeholder="Message *" id="contact-message"></textarea>
+            </div>
+            <div class="form-group">
+              <input type="text" name="antispam" placeholder="Antispam question: 7 + 5 = ?" class="contact-antispam form-control input-lg" id="contact-antispam">
+            </div>
+            <button type="submit" class="btn">SEND MESSAGE</button>
+          </form>
+        </div>
+
+        <!--contact form end-->
+
+        <p class="contact-form-success"><i class="fa fa-check"></i><span>Thanks for contacting us!</span> We will get back to you very soon.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--contact form modal end-->
