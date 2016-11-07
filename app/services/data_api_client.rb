@@ -11,8 +11,7 @@ class DataApiClient
   end
 
   def call_one_item(id)
-    base_url = 'https://smartdata-api.herokuapp.com/v1/items/'
-    return JSON.parse Curl::Easy.perform(base_url + id.to_s).body_str
+    return RestClient.get url("/v1/items/#{id}")
   rescue => e
     puts "*** ! Error making API call, error msg: #{e} ! ***"
   end
