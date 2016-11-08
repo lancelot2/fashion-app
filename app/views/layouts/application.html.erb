@@ -17,12 +17,12 @@
     <% if @home_subnavar  %>
       <%= render 'shared/home-navbar' %>
     <% else %>
-      <%= render 'shared/navbar' unless current_page? ("/users/#{'sign_in' || 'sign_out' || 'password/new' || 'password/edit'}") %>
+      <%= render 'shared/navbar' unless current_page? ("/users/#{'sign_in' || 'sign_up' || 'password/new' || 'password/edit'}") %>
     <% end %>
     <%= render 'shared/sub_navbar' if @display_subnavbar %>
     <%# render 'shared/flashes' %>
     <%= yield %>
-    <%= render 'shared/footer' unless current_page? ("/users/#{'sign_in' || 'sign_out' || 'password/new' || 'password/edit'}") %>
+    <%= render 'shared/footer' unless current_page? ("/users/#{'sign_in' || 'sign_up' || 'password/new' || 'password/edit'}") %>
     <%= javascript_include_tag 'application' %>
     <%= yield :after_js %>
   </body>
