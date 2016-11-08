@@ -17,14 +17,15 @@
         <div class="form-inputs">
             <%= f.input :email, required: true, autofocus: true %>
             <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+
+          <div class="form-actions">
+              <%= f.button :submit, "Sign up" %>
+          </div>
+          <% end %>
+
+          <%= render "devise/shared/links" %>
         </div>
 
-        <div class="form-actions">
-            <%= f.button :submit, "Sign up" %>
-        </div>
-        <% end %>
-
-        <%= render "devise/shared/links" %>
         </div>
       </div>
     </div>
@@ -38,7 +39,7 @@
 
   <!--Copyright terms-->
 
-  <footer class="copyright-terms">
+<!--   <footer class="copyright-terms">
     <div class="container">
       <div class="row">
         <div class="col-sm-5 col-md-6"> <small> &copy; 2016 Scalia. All rights reserved.</small> </div>
@@ -51,7 +52,7 @@
         </div>
       </div>
     </div>
-  </footer>
+  </footer> -->
 
   <!--Copyright terms end-->
 
