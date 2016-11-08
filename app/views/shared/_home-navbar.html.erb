@@ -65,8 +65,8 @@
               <li><%= link_to t(".top_call_to_action", default: "Sign up"), new_user_registration_path, class: "btn btn-nav" %></li>
               <li class="hidden-md hidden-lg"><a id="toggle"><i class="fa fa-bars fa-2x"></i><i class="fa fa-times fa-2x"></i></a></li>
               <!-- Change Locale -->
-              <li class="navbar-item" style="padding-right: 0px;"> <%= link_to "En", { locale: '' }, style: "padding-right: 5px;" %></li>
-              <li class="navbar-item" style="padding-left: 0px;"> <%= link_to "/ Fr", { locale: 'fr' }, style: "padding-left: 0px;" %>
+              <li class="hidden-xs hidden-sm" style="padding-right: 0px;"> <%= link_to "En", { locale: '' }, style: "padding-right: 5px;" %></li>
+              <li class="hidden-xs hidden-sm" style="padding-left: 0px;"> <%= link_to "/ Fr", { locale: 'fr' }, style: "padding-left: 0px;" %>
               </li>
             </ul>
           </div>
@@ -80,8 +80,8 @@
           <nav class="mobile-nav">
             <ul>
               <li><a href="#features"><%= t('.how_it_works_section_header') %></a></li>
-              <li><a href="#pricing"><%= t('.brands_section_header') %></a></li>
-              <li><a href="#reviews"><%= t('.retailers_section_header') %></a></li>
+              <li><a href="#pricing"><%= t('.brands') %></a></li>
+              <li><a href="#reviews"><%= t('.retailers') %></a></li>
               <li><a href="#faq"><%= t('.about_us') %></a></li>
               <li class="hidden-sm"><a href="signin.html">Sign In</a></li>
             </ul>
