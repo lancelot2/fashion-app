@@ -19,7 +19,6 @@
 
 <!--hero section end-->
 
-
 <!--How it works-->
 
 <section class="how-it-works section-spacing" id="how-it-works">
@@ -43,8 +42,9 @@
 <section class="features brands" id="brands">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-4 text-center feature-bg"><%= image_tag ("brands_2.jpg"), :class => 'hidden-md hidden-lg' %></div>
-      <div class="col-md-7 col-md-offset-1">
+      <div class="col-md-4 text-center feature-bg"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-6">
         <div class="section-spacing row-margin">
           <header class="section-header">
             <h2><%= t('.brands_section_header') %></h2>
@@ -80,6 +80,7 @@
           </div>
         </div>
       </div>
+      <div class="col-md-1"></div>
     </div>
   </div>
 </section>
@@ -105,43 +106,46 @@
 <section class="features retailers" id="retailers">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-7 col-md-offset-1">
-        <div class="section-spacing row-margin">
-          <header class="section-header">
-            <h2><%= t('.retailers_section_header') %></h2>
-            <h3><%= t('.retailers_section_tagline') %></h3>
-          </header>
-          <div class="row">
-            <!--features 1-->
-            <div class="col-sm-6"> <%= image_tag ("feature-new-3.svg") %>
-              <h4><%= t('.retailers_feature_1_title') %></h4>
-              <p><%= t('.retailers_feature_1_description') %></p>
-            </div>
-            <!--features 1 end-->
-            <!--features 2-->
-            <div class="col-sm-6"> <%= image_tag ("feature-2.svg") %>
-              <h4><%= t('.retailers_feature_2_title') %></h4>
-              <p><%= t('.retailers_feature_2_description') %></p>
-            </div>
-            <!--features 2 end-->
+    <div class="col-md-1"></div>
+    <div class="col-md-6">
+      <div class="section-spacing row-margin">
+        <header class="section-header">
+          <h2><%= t('.retailers_section_header') %></h2>
+          <h3><%= t('.retailers_section_tagline') %></h3>
+        </header>
+        <div class="row">
+          <!--features 1-->
+          <div class="col-sm-6"> <%= image_tag ("feature-new-3.svg") %>
+            <h4><%= t('.retailers_feature_1_title') %></h4>
+            <p><%= t('.retailers_feature_1_description') %></p>
           </div>
-          <div class="row">
-            <!--features 3-->
-            <div class="col-sm-6"> <%= image_tag ("feature-new-2.svg") %>
-              <h4><%= t('.retailers_feature_3_title') %></h4>
-              <p><%= t('.retailers_feature_3_description') %></p>
-            </div>
-            <!--features 3 end-->
-            <!--features 4-->
-            <div class="col-sm-6"> <%= image_tag ("feature-new-1.svg") %>
-              <h4><%= t('.retailers_feature_4_title') %></h4>
-              <p><%= t('.retailers_feature_4_description') %></p>
-            </div>
-            <!--features 4 end-->
+          <!--features 1 end-->
+          <!--features 2-->
+          <div class="col-sm-6"> <%= image_tag ("feature-2.svg") %>
+            <h4><%= t('.retailers_feature_2_title') %></h4>
+            <p><%= t('.retailers_feature_2_description') %></p>
           </div>
+          <!--features 2 end-->
+        </div>
+        <div class="row">
+          <!--features 3-->
+          <div class="col-sm-6"> <%= image_tag ("feature-new-2.svg") %>
+            <h4><%= t('.retailers_feature_3_title') %></h4>
+            <p><%= t('.retailers_feature_3_description') %></p>
+          </div>
+          <!--features 3 end-->
+          <!--features 4-->
+          <div class="col-sm-6"> <%= image_tag ("feature-new-1.svg") %>
+            <h4><%= t('.retailers_feature_4_title') %></h4>
+            <p><%= t('.retailers_feature_4_description') %></p>
+          </div>
+          <!--features 4 end-->
         </div>
       </div>
-      <div class="col-md-5 text-center feature-bg"><%= image_tag ("retailer_banner.jpeg"), :class => 'hidden-md hidden-lg' %></div>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-4 text-center feature-bg"></div>
+
     </div>
   </div>
 </section>
@@ -378,10 +382,3 @@
 
 <!--Features cta end-->
 
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/jquery.animateNumber.min.js"></script>
-<script src="js/jquery.ajaxchimp.min.js"></script>
-
-<script src="js/main.js"></script>
-<script src="js/retina.min.js"></script>
