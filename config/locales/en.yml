@@ -1,11 +1,11 @@
 en:
   pages:
     home:
-      home_tagline: "Smarter data collaboration between brands and retailers"
+      home_tagline: "Smarter data collaboration between lifestyle brands and retailers"
       home_sub_tagline: "A new generation of Product Information Management software"
       get_started: "GET STARTED"
       how_it_works_section_header: "How it works"
-      how_it_works_tagline: "The whole ecosystem collaborate around one central database"
+      how_it_works_tagline: "The whole ecosystem collaborate around one central platform where everyone can customize the flow to its exact needs."
       brands_section_header: "Key features for Brands"
       brands_section_tagline: "The easiest way to share your content"
       brands_feature_1_title: "Easy to use"
@@ -52,7 +52,7 @@ en:
       about_us: "About us"
       about_us_tagline: "Strong mix of Engineering & Creative team behind our product"
       about_scalia: "About Scalia"
-      scalia_description: "Scalia is a young team of online entrepreneurs passionate about data management and willing to bring the latest technologies and collaboration technics to the lifestyle industry."
+      scalia_description: "Scalia is a young team of online entrepreneurs passionate about data management and willing to bring the latest technologies and collaboration technics to the fashion world. We want to be the Github for the lifestyle industry."
       mission: "Our mission"
       mission_description: "We are determinated to eradiquate excel, csv and xml files sharing when it comes to product data management, which leads to errors and where end customers only see 90% of the data."
       founders: "Our founders"
