@@ -121,11 +121,6 @@ strong { font-weight: 700; }
   background: url(http://res.cloudinary.com/dpy7x8rgs/image/upload/v1478511619/bg-hero_liqpuy.jpg) center center no-repeat;
   background-size: cover;
   position: relative;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -o-crisp-edges;
-  image-rendering: crisp-edges;
-  image-rendering: pixelated;
-  -ms-interpolation-mode: nearest-neighbor;
 }
 
 .hero-section::before,
@@ -153,13 +148,13 @@ strong { font-weight: 700; }
 
 .welcome-message h1 {
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 24px;
 }
 
 .welcome-message h2 {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 .btn {
