@@ -30,7 +30,7 @@
     </header>
     <div class="row">
       <div class="center-block">
-        <%= image_tag ("scalia_graph_4.png") %>
+        <%= image_tag ("scalia_graph_5.png") %>
       </div>
     </div>
   </div>
@@ -38,12 +38,12 @@
 
 <!--How it works end-->
 
-<!--features-->
+<!--Brands-->
 
 <section class="features brands" id="brands">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-4 text-center feature-bg"><%= image_tag ("features.jpg"), :class => 'hidden-md hidden-lg' %></div>
+      <div class="col-md-4 text-center feature-bg"><%= image_tag ("brands_2.jpg"), :class => 'hidden-md hidden-lg' %></div>
       <div class="col-md-7 col-md-offset-1">
         <div class="section-spacing row-margin">
           <header class="section-header">
@@ -84,7 +84,7 @@
   </div>
 </section>
 
-<!--features end-->
+<!--Brands end-->
 
 <!--CTA footer-->
 
@@ -100,7 +100,7 @@
 
 <!--CTA footer end-->
 
-<!--features-->
+<!--Retailers-->
 
 <section class="features retailers" id="retailers">
   <div class="container-fluid">
@@ -141,12 +141,12 @@
           </div>
         </div>
       </div>
-      <div class="col-md-5 text-center feature-bg"><%= image_tag ("features.jpg"), :class => 'hidden-md hidden-lg' %></div>
+      <div class="col-md-5 text-center feature-bg"><%= image_tag ("retailer_banner.jpeg"), :class => 'hidden-md hidden-lg' %></div>
     </div>
   </div>
 </section>
 
-<!--features end-->
+<!--Retailers end-->
 
 
 <!--Pricing-->
@@ -166,7 +166,7 @@
             <h4><%= t('.basic') %></h4>
           </div>
           <div class="plan-price">
-            <h5><%= t('.free') %></h5>
+            <h5><span class="plan-currency"><%= t('.currency') %></span>250<span class="plan-duration">P/M</span></h5>
           </div>
           <div class="plan-cta"> <span><%= t('.try_first') %></span> <a href="" class="btn"><%= t('.try_for_free') %></a> </div>
           <div class="plan-details">
@@ -188,7 +188,7 @@
             <h4><%= t('.premium') %></h4>
           </div>
           <div class="plan-price">
-            <h5><span class="plan-currency"><%= t('.currency') %></span>250<span class="plan-duration">P/M</span></h5>
+            <h5><span class="plan-currency"><%= t('.currency') %></span>750<span class="plan-duration">P/M</span></h5>
           </div>
           <div class="plan-cta"> <span><%= t('.limited_offer_10') %></span> <a href="" class="btn"><%= t('.get_started') %></a> </div>
           <div class="plan-details">
@@ -213,9 +213,9 @@
             <h4><%= t('.gold') %></h4>
           </div>
           <div class="plan-price">
-            <h5><span class="plan-currency"><%= t('.currency') %></span>750<span class="plan-duration">P/M</span></h5>
+            <h5><span class="plan-currency"><%= t('.currency') %></span>2,000<span class="plan-duration">P/M</span></h5>
           </div>
-          <div class="plan-cta"> <span><%= t('.limited_offer_20') %></span> <a href="" class="btn"><%= t('.get_started') %>GET STARTED</a> </div>
+          <div class="plan-cta"> <span><%= t('.limited_offer_20') %></span> <a href="" class="btn"><%= t('.get_started') %></a> </div>
           <div class="plan-details">
             <ul>
               <li><strong><%= t('.unlimited') %></strong> <%= t('.users') %></li>
@@ -252,7 +252,7 @@
     <div class="row about-us-img-grid text-center">
       <div class="col-md-3">
         <%= image_tag ("about-us-grid-1-mobile.jpg"), :class => 'visible-xs-inline-block' %>
-        <%= image_tag ("about-us-grid-1-tablet.jpg"), :class => 'visible-xs-inline-block' %>
+        <%= image_tag ("about-us-grid-1-tablet.jpg"), :class => 'visible-sm-inline-block' %>
         <%= image_tag ("about-us-grid-1.jpg"), :class => 'hidden-xs hidden-sm' %>
       </div>
       <div class="col-md-9">
@@ -344,7 +344,7 @@
       <h3><%= t('.features_tagline') %></h3>
     </header>
     <div class="row">
-      <div class="col-md-6"> <img class="feature-cta-big-img" src="/assets/features-cta-7e2f2fd4e5eb6a7fa78ec5af2463e53513bcb87df67061a2e7204d050965ee79.jpg" alt="Features cta" /></div>
+      <div class="col-md-6"> <%= image_tag ("features-cta.jpg"), class: "feature-cta-big-img" %></div>
       <div class="col-md-6">
         <ul class="feature-cta-list">
 
@@ -370,7 +370,7 @@
           <!--feature 3 end-->
 
         </ul>
-        <a href="" class="btn btn-cta-hero" data-toggle="modal" data-target="#modal-demo-form"><%= t('.get_started_for_free') %></a>
+        <a href="" class="btn" data-toggle="modal" data-target="#modal-demo-form"><%= t('.get_started_for_free') %></a>
       </div>
     </div>
   </div>
