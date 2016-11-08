@@ -1,14 +1,3 @@
-
-/* ==========================================================================
-   Style sheet for Archer - Responsive Landing Page
-   ==========================================================================
-
-   Version: 1.0
-   Author: Pixininja
-   Website: http://csmthemes.com/themes/archer/
-
-*/
-
 /* ==========================================================================
    Table Of Content
    ==========================================================================
@@ -1011,11 +1000,6 @@ blockquote cite i { font-weight: 400; }
   background: url(../img/bg-testimonial.jpg) center center no-repeat;
   background-size: cover;
   position: relative;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -o-crisp-edges;
-  image-rendering: crisp-edges;
-  image-rendering: pixelated;
-  -ms-interpolation-mode: nearest-neighbor;
 }
 
 .testimonial::before { background: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(125,185,232,0) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#007db9e8', GradientType=1 );
@@ -1268,11 +1252,6 @@ blockquote cite i { font-weight: 400; }
   background: url(../img/bg-video-tour.jpg) center center no-repeat;
   background-size: cover;
   position: relative;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -o-crisp-edges;
-  image-rendering: crisp-edges;
-  image-rendering: pixelated;
-  -ms-interpolation-mode: nearest-neighbor;
   height: 330px;
   overflow: hidden;
   -webkit-perspective: 1000;
@@ -1493,11 +1472,6 @@ blockquote cite i { font-weight: 400; }
 .app-download {
   background: url(../img/bg-app.jpg) right center no-repeat;
   background-size: cover;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -o-crisp-edges;
-  image-rendering: crisp-edges;
-  image-rendering: pixelated;
-  -ms-interpolation-mode: nearest-neighbor;
 }
 
 .app-download h2 {
@@ -1854,11 +1828,6 @@ blockquote cite i { font-weight: 400; }
   background: url(http://res.cloudinary.com/dpy7x8rgs/image/upload/v1478535307/bg-form-page_ysjirf.jpg) center center no-repeat;
   background-size: cover;
   position: relative;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -o-crisp-edges;
-  image-rendering: crisp-edges;
-  image-rendering: pixelated;
-  -ms-interpolation-mode: nearest-neighbor;
   min-height: 100%;
 }
 
@@ -1946,9 +1915,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.welcome-message h1,
-.welcome-message h2 { line-height: 1.7; }
+h6 { line-height: 1.1; }
 
 .welcome-message { padding: 14.25em 0 13.5em; }
 
@@ -2162,19 +2129,11 @@ h6,
 .brands .feature-bg {
   background: url(http://res.cloudinary.com/dpy7x8rgs/image/upload/v1478603347/brands_2_xwfqhu.jpg) center center no-repeat;
   background-size: cover;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -o-crisp-edges;
-  image-rendering: crisp-edges;
-  -ms-interpolation-mode: nearest-neighbor;
 }
 
 .retailers .feature-bg {
   background: url(http://res.cloudinary.com/dpy7x8rgs/image/upload/v1477059040/fashion-app/home_page_banner_2.jpg) center center no-repeat;
   background-size: cover;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -o-crisp-edges;
-  image-rendering: crisp-edges;
-  -ms-interpolation-mode: nearest-neighbor;
 }
 
 .user-reviews .owl-theme .owl-controls { margin-top: 3em; }
@@ -2220,11 +2179,6 @@ h6,
   background-size: cover;
   overflow: hidden;
   width: auto;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -o-crisp-edges;
-  image-rendering: crisp-edges;
-  image-rendering: pixelated;
-  -ms-interpolation-mode: nearest-neighbor;
 }
 
 .pricing .section-header { margin-bottom: 5.4375em; }
