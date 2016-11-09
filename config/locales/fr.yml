@@ -49,6 +49,8 @@ fr:
       security: "Addon de sécurité"
       logs: "Accès aux logs"
       supports: "Accès privilégié au service client"
+      open_source_title: "Nous encourageons l'Open Source"
+      open_source_description: "Nous pensons que le partage des données prime sur leur possession. Quelques soit à la taille de votre organisation, l'upload and l'hébergement de votre catalogue produit sur Scalia est gratuit si vos collections sont publiques."
       about_us: "Qui sommes-nous?"
       about_us_tagline: "Une équipe aux expertises techniques et créative fortes"
       about_scalia: "A propos de Scalia"

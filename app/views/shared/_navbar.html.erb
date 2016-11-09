@@ -60,8 +60,8 @@
             <div class="navbar-header"> <a class="navbar-brand" href="/"><%= image_tag "logo.svg", :class => "logo" %><%= image_tag "logo-nav.svg", :class => "logo-nav" %></a> </div>
             <ul class="nav navbar-nav navbar-right">
               <li class="hidden-xs hidden-sm"><a href="#how-it-works"><%= t('.how_it_works_section_header') %></a></li>
-              <li class="hidden-xs hidden-sm"><a href="#brands"><%= t('.brands_section_header') %></a></li>
-              <li class="hidden-xs hidden-sm"><a href="#retailers"><%= t('.retailers_section_header') %></a></li>
+              <li class="hidden-xs hidden-sm"><a href="#brands"><%= t('.brands') %></a></li>
+              <li class="hidden-xs hidden-sm"><a href="#retailers"><%= t('.retailers') %></a></li>
               <li class="hidden-xs hidden-sm"><a href="#team"><%= t('.about_us') %></a></li>
               <li class="hidden-xs"><%= link_to t(".sign_in", default: "Login"), new_user_session_path %></li>
               <li><%= link_to t(".top_call_to_action", default: "Sign up"), new_user_registration_path, class: "btn btn-nav" %></li>
@@ -81,10 +81,10 @@
         <div class="mobile-nav-overlay hidden-md hidden-lg" id="mobile-nav-overlay">
           <nav class="mobile-nav">
             <ul>
-              <li><a href="#features"><%= t('.how_it_works_section_header') %></a></li>
-              <li><a href="#pricing"><%= t('.brands_section_header') %></a></li>
-              <li><a href="#reviews"><%= t('.retailers_section_header') %></a></li>
-              <li><a href="#faq"><%= t('.about_us') %></a></li>
+              <li><a href="#how-it-works"><%= t('.how_it_works_section_header') %></a></li>
+              <li><a href="#brands"><%= t('.brands_section_header') %></a></li>
+              <li><a href="#retailers"><%= t('.retailers_section_header') %></a></li>
+              <li><a href="#team"><%= t('.about_us') %></a></li>
               <li class="hidden-sm"><a href="signin.html">Sign In</a></li>
             </ul>
           </nav>
