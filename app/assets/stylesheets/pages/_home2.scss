@@ -994,13 +994,7 @@ blockquote cite i { font-weight: 400; }
 
 /* ==========================================================================
    14.Testimonial
-   ========================================================================== */
-
-.testimonial {
-  background: url(/assets/opensource.jpg) center center no-repeat;
-  background-size: cover;
-  position: relative;
-}
+   ========================================================================== */s
 
 .testimonial::before { background: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(125,185,232,0) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#007db9e8', GradientType=1 );
 }
