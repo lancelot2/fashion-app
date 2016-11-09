@@ -77,7 +77,6 @@
 
       <!-- Actual table of products -->
       <table class="table table-condensed table-hover">
-        <col class="col-check">
         <col class="col-photo">
         <col class="col-name">
         <col class="col-brand">
@@ -88,11 +87,6 @@
         <col class="col-category">
         <thead>
           <tr class="first-tr">
-            <th>
-              <stong>
-                <input type="checkbox">
-              </stong>
-            </th>
             <th>
               <stong>Cover</stong>
             </th>
@@ -123,7 +117,6 @@
         <tbody>
           <% (JSON.parse @items.body).each do |item| %>
             <tr class='clickable-row' data-href='<%= product_show_path(id: item["id"]) %>' style="cursor: pointer;">
-              <td><input type="checkbox" value=""></td>
               <td>
                 <%= image_tag (item['photo_urls'][0]) %>
               </td>
