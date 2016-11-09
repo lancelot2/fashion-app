@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     get 'product_show/:id', to: 'products#show', as: :product_show
 
     resources :companies, only: [:index, :new, :create]
-    resources :searches, only: [:index, :new, :create]
+    resources :searches, only: [:index, :create]
     resources :templates, only: [:index, :new, :create]
     resources :extractions, only: [:index, :new, :create]
   end
