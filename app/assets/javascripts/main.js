@@ -5,7 +5,7 @@ $(function() {
 
 
     /* ==========================================================================
-       Sub Form   
+       Sub Form
        ========================================================================== */
 
 
@@ -24,30 +24,6 @@ $(function() {
             $('#mc-error').slideDown();
         }
     }
-
-
-
-    /* ==========================================================================
-   Tweet
-   ========================================================================== */
-
-
-    $('.tweet').twittie({
-        username: 'envatomarket', // change username here
-        dateFormat: '%b. %d, %Y',
-        template: '{{tweet}} {{user_name}}',
-        count: 10
-    }, function() {
-        var item = $('.tweet ul');
-
-        item.children('li').first().show().siblings().hide();
-        setInterval(function() {
-            item.find('li:visible').fadeOut(500, function() {
-                $(this).appendTo(item);
-                item.children('li').first().fadeIn(500);
-            });
-        }, 8000);
-    });
 
 
 
@@ -150,21 +126,21 @@ $(function() {
 
 
     /* ==========================================================================
-   Tooltip 
+   Tooltip
    ========================================================================== */
 
     $("[data-toggle=tooltip]").tooltip();
-		
+
 
 
 	 /* ==========================================================================
 		 Popover
 	 ========================================================================== */
-	
+
 	 $('[data-toggle="popover"]').popover({
 			 placement: 'auto',
 			 trigger: 'hover focus'
-	
+
 	 });
 
 

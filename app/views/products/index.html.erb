@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-xs-3">
+    <div class="col-xs-12 col-md-3">
 
       <!-- #### FILTERING FEATURE #### -->
       <div id="filtering-box">
@@ -52,7 +52,7 @@
       </div>
 
     </div>
-    <div class="col-xs-9">
+    <div class="col-xs-12 col-md-9">
 
       <!-- header -->
       <div class="index-page-header">
@@ -81,6 +81,7 @@
         <col class="col-name">
         <col class="col-brand">
         <col class="col-sku">
+        <col class="col-complete">
         <col class="col-price">
         <col class="col-stock">
         <col class="col-color">
@@ -98,6 +99,9 @@
             </th>
             <th>
               <stong>SKU</stong>
+            </th>
+            <th>
+              <stong>Complete</stong>
             </th>
             <th>
               <stong>Price</stong>
@@ -128,6 +132,9 @@
               </td>
               <td>
                 <p><%= item['sku'] %></p>
+              </td>
+              <td>
+                <p>80%</p>
               </td>
               <td>
                 <p><%= item['price'] %></p>

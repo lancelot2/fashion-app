@@ -70,7 +70,7 @@ table {
   }
 
   .col-name {
-    width: 22%;
+    width: 26%;
   }
 
   .col-brand {
@@ -78,7 +78,11 @@ table {
   }
 
   .col-sku {
-    width: 10%;
+    width: 8%;
+  }
+
+  .col-complete {
+    width: 8%;
   }
 
   .col-price {
@@ -86,7 +90,7 @@ table {
   }
 
   .col-stock {
-    width: 5%;
+    width: 8%;
   }
 
   .col-color {
@@ -94,6 +98,6 @@ table {
   }
 
   .col-category {
-    width: 8%;
+    width: 10%;
   }
 }
