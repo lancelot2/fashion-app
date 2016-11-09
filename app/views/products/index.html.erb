@@ -2,7 +2,6 @@
   <div class="row">
     <div class="col-xs-3">
 
-
       <!-- #### FILTERING FEATURE #### -->
       <div id="filtering-box">
         <h3>Filters</h3>
@@ -40,9 +39,12 @@
           <%= text_field_tag :color, params[:color], class: "form-control" %>
         </div>
         <div class="form-group">
-          <%= label :price_under, 'Price' %>
-          <%= range_field :price_under, params[:price_under], in: 0..100000, class: "form-control" %>
-          <%= range_field :price_over, params[:price_over], in: 0..100000, class: "form-control" %>
+          <%= label :price_under, 'Min Price' %>
+          <%= text_field_tag :price_under, params[:price_under], class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= label :price_over, 'Max Price' %>
+          <%= text_field_tag :price_over, params[:price_over], class: "form-control" %>
         </div>
         <%= submit_tag "Search", name: nil, class: "btn btn-default" %>
         </form>
@@ -104,7 +106,6 @@
           <a class="btn btn-primary product-filter">Filter</a> -->
       </div>
 
-
     </div>
     <div class="col-xs-9">
 
@@ -112,27 +113,20 @@
       <div class="index-page-header">
         <h1>Product main database</h1>
         <div class="extraction-buttons">
-          <!-- <a class="btn btn-primary">Save search</a> -->
-          <button class="btn btn-primary" onclick="saveSearch()">Save search</button>
+          <a class="btn btn-primary">Save search</a>
           <a class="btn btn-primary">Generate extraction</a>
         </div>
-      </div>
-
-      <div class="flex-index">
-
-
-
       </div>
 
       <!-- # of results within the current search -->
       <div class="search-result-title">
         <span>
           <strong>Search results:</strong>
-          <%= @items.headers[:total] %> items,
+          <%= @items.headers[:total] || 0 %> items,
         </span>
         <span>
           <strong>Results per page:</strong>
-          <%= p @items.headers[:per_page] %> items
+          <%= p @items.headers[:per_page] || 0 %>
         </span>
       </div>
 

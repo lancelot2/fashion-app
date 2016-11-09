@@ -4,8 +4,8 @@ class DataApiClient
     @base_url = 'https://smartdata-api.herokuapp.com'
   end
 
-  def call_all_items(params = {})
-    return RestClient.get url('/v1/items'), params: params
+  def call_all_items(api_params)
+    return RestClient.get url("/v1/items#{api_params}")
   rescue => e
     puts "*** ! Error making API call, error msg: #{e} ! ***"
   end
