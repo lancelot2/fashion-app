@@ -13,7 +13,7 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
   <body>
-    <% if current_page?('/') %>
+    <% if current_page?('/') || current_page?('/fr') %>
       <%= render 'shared/home-navbar' %>
     <% else %>
       <%= render 'shared/navbar' %>
