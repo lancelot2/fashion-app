@@ -47,6 +47,7 @@
           <%= text_field_tag :price_over, params[:price_over], class: "form-control" %>
         </div>
         <%= submit_tag "Search", name: nil, class: "btn btn-default" %>
+        <%= link_to "Reset", product_index_path, class: "btn btn-default" %>
         </form>
           <!-- <div class="form-group">
             <label for="name">Name contains...</label>
