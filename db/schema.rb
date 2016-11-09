@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161104203415) do
+ActiveRecord::Schema.define(version: 20161109045620) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,16 +38,12 @@ ActiveRecord::Schema.define(version: 20161104203415) do
   end
 
   create_table "searches", force: :cascade do |t|
-    t.string   "name_filter"
-    t.string   "brand_filter"
-    t.string   "collection_filter"
-    t.string   "gender_filter"
-    t.string   "category_1_filter"
-    t.string   "category_2_filter"
-    t.string   "category_3_filter"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string   "name"
+    t.string   "url"
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_searches_on_user_id", using: :btree
   end
 
   create_table "templates", force: :cascade do |t|
@@ -88,5 +84,6 @@ ActiveRecord::Schema.define(version: 20161104203415) do
   add_foreign_key "extractions", "searches"
   add_foreign_key "extractions", "templates"
   add_foreign_key "extractions", "users"
+  add_foreign_key "searches", "users"
   add_foreign_key "users", "companies", column: "companies_id"
 end
