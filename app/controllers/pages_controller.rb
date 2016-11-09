@@ -6,5 +6,4 @@ class PagesController < ApplicationController
     @home_subnavar = true
     @hide_nav = false
   end
-
 end

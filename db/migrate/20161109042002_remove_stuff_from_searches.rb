@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class RemoveStuffFromSearches < ActiveRecord::Migration[5.0]
   def change
     remove_column :searches, :name_filter, :string
