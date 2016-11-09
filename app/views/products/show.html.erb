@@ -167,7 +167,12 @@
           <tbody>
               <tr>
                 <td><strong>UK Sizes</strong></td>
-                <td><%= @item['sizes'].join(', ') %></td>
+                <td>
+                  <ul style="list-style: none;padding-left:0;">
+                    <% @item['sizes'].each do |size, availability| %>
+                      <li><%= "#{size}: #{availability ? 'In Stock' : 'Out of Stock'}" %></li>
+                    <% end %>
+                  </ul>
               </tr>
               <tr>
                 <td><strong>EU Sizes</strong></td>
@@ -215,7 +220,14 @@
           <tbody>
               <tr>
                 <td><strong>External material</strong></td>
-                <td><%= @item['materials'] %></td>
+                <td>
+                  <ul style="list-style: none;padding-left:0;">
+                    <% @item['materials'].each do |part, materials| %>
+                      <% part_materials_str = materials.map{|material, percentage| "#{material.capitalize}: #{percentage}%" }.join(', ') %>
+                      <li><%= "#{part.capitalize}: #{part_materials_str}" %></li>
+                    <% end %>
+                  </ul>
+                </td>
               </tr>
           </tbody>
           <tbody>
@@ -304,11 +316,11 @@
           </thead>
           <tbody>
               <tr>
-                <td><strong>Washing recommandation</strong></td>
+                <td><strong>Washing recommendation</strong></td>
                 <td><%= @item['washing_instructions'] %></td>
               </tr>
               <tr>
-                <td><strong>Ironing recommandation</strong></td>
+                <td><strong>Ironing recommendation</strong></td>
                 <td></td>
               </tr>
           </tbody>
@@ -324,16 +336,36 @@
           </thead>
           <tbody>
               <tr>
-                <td><strong>Recommanded retail prices in UK</strong></td>
+                <td><strong>Recommended retail prices in UK</strong></td>
                 <td><%= '£' + @item['price'].to_s %></td>
               </tr>
               <tr>
-                <td><strong>Recommanded retail prices in France</strong></td>
+                <td><strong>Recommended retail prices in France</strong></td>
                 <td></td>
               </tr>
               <tr>
-                <td><strong>Recommanded retail prices in Spain</strong></td>
+                <td><strong>Recommended retail prices in Spain</strong></td>
                 <td></td>
+              </tr>
+          </tbody>
+        </table>
+
+        <!-- Table for Prices attributes -->
+        <table class="table table-condensed table-hover">
+          <thead>
+            <tr>
+              <th>Product Data Info</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <td><strong>Input Method</strong></td>
+                <td>Retailers website scrapping</td>
+              </tr>
+              <tr>
+                <td><strong>Product URL</strong></td>
+                <td><%= link_to @item['product_url'], @item['product_url'], target: "_blank" %></td>
               </tr>
           </tbody>
         </table>

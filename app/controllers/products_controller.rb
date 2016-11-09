@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
   def show
     @display_subnavbar = true
     client = DataApiClient.new
-    @item = client.call_one_item(params[:id])
+    @item = JSON.parse client.call_one_item(params[:id]).body
   end
 
   private

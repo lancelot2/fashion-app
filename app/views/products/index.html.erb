@@ -2,55 +2,53 @@
   <div class="row">
     <div class="col-xs-12 col-md-3">
 
-      <!-- #### FILTERING FEATURE #### -->
       <div id="filtering-box">
         <h3>Filters</h3>
         <form action="<%= product_index_path %>" method="get">
-        <div class="form-group">
-          <%= label :full_name, 'Item Name' %>
-          <%= text_field_tag :full_name, params[:full_name], class: "form-control" %>
-        </div>
-        <div class="form-group">
-          <%= label :brand, 'Brand' %>
-          <%= text_field_tag :brand, params[:brand], class: "form-control" %>
-        </div>
-        <div class="form-group">
-          <%= label :sku, 'SKU' %>
-          <%= text_field_tag :sku, params[:sku], class: "form-control" %>
-        </div>
-        <div class="form-group">
-          <%= label :category_1, 'Main Category' %>
-          <%= text_field_tag :category_1, params[:category_1], class: "form-control" %>
-        </div>
-        <div class="form-group">
-          <%= label :product_code, 'Product Code' %>
-          <%= text_field_tag :product_code, params[:product_code], class: "form-control" %>
-        </div>
-        <div class="form-group">
-          <%= label :in_stock, 'In Stock' %>
-          <%= text_field_tag :in_stock, params[:in_stock], class: "form-control" %>
-        </div>
-        <div class="form-group">
-          <%= label :details, 'Item Details' %>
-          <%= text_field_tag :details, params[:details], class: "form-control" %>
-        </div>
-        <div class="form-group">
-          <%= label :color, 'Color' %>
-          <%= text_field_tag :color, params[:color], class: "form-control" %>
-        </div>
-        <div class="form-group">
-          <%= label :price_under, 'Min Price' %>
-          <%= text_field_tag :price_under, params[:price_under], class: "form-control" %>
-        </div>
-        <div class="form-group">
-          <%= label :price_over, 'Max Price' %>
-          <%= text_field_tag :price_over, params[:price_over], class: "form-control" %>
-        </div>
-        <%= submit_tag "Search", name: nil, class: "btn btn-default" %>
-        <%= link_to "Reset", product_index_path, class: "btn btn-default" %>
+          <div class="form-group">
+            <%= label :full_name, 'Item Name' %>
+            <%= text_field_tag :full_name, params[:full_name], class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= label :brand, 'Brand' %>
+            <%= text_field_tag :brand, params[:brand], class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= label :sku, 'SKU' %>
+            <%= text_field_tag :sku, params[:sku], class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= label :category_1, 'Main Category' %>
+            <%= text_field_tag :category_1, params[:category_1], class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= label :product_code, 'Product Code' %>
+            <%= text_field_tag :product_code, params[:product_code], class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= label :in_stock, 'In Stock' %>
+            <%= text_field_tag :in_stock, params[:in_stock], class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= label :details, 'Item Details' %>
+            <%= text_field_tag :details, params[:details], class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= label :color, 'Color' %>
+            <%= text_field_tag :color, params[:color], class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= label :price_under, 'Min Price' %>
+            <%= text_field_tag :price_under, params[:price_under], class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= label :price_over, 'Max Price' %>
+            <%= text_field_tag :price_over, params[:price_over], class: "form-control" %>
+          </div>
+          <%= submit_tag "Filter", class: "btn btn-default" %>
+          <%= link_to "Reset", product_index_path, class: "btn btn-default" %>
         </form>
       </div>
-
     </div>
     <div class="col-xs-12 col-md-9">
 
@@ -87,7 +85,7 @@
         <col class="col-color">
         <col class="col-category">
         <thead>
-          <tr class="first-tr">
+          <tr>
             <th>
               <stong>Cover</stong>
             </th>
@@ -153,13 +151,13 @@
         </tbody>
       </table>
     </div>
-
-    </div>
+  </div>
 </div>
 
 
 <%= content_for(:after_js) do %>
-  <%= javascript_tag defer: 'defer' do %>
+  <%# javascript_include_tag "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js" %>
+  <%= javascript_tag do %>
     $(document).ready(function() {
       $(".clickable-row").click(function() {
         window.document.location = $(this).data("href");
