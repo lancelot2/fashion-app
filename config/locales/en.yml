@@ -49,6 +49,8 @@ en:
       security: "Addon security"
       logs: "Activity logs"
       supports: "Priority support"
+      open_source_title: "We believe in Open Source"
+      open_source_description: "Sharing your product data with the world is far more valuable then owning it. Regardless of the size of your organization, uploading and hosting your product catalogue on Scalia is free if you make your collections public."
       about_us: "About us"
       about_us_tagline: "Strong mix of Engineering & Creative team behind our product"
       about_scalia: "About Scalia"

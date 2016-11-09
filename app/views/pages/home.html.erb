@@ -29,7 +29,7 @@
     </header>
     <div class="row">
       <div class="center-block">
-        <%= image_tag ("scalia_graph_6.png") %>
+        <%= image_tag ("scalia_graph_7.png") %>
       </div>
     </div>
   </div>
@@ -171,7 +171,10 @@
           <div class="plan-price">
             <h5><span class="plan-currency"><%= t('.currency') %></span>250<span class="plan-duration">P/M</span></h5>
           </div>
-          <div class="plan-cta"> <span><%= t('.try_first') %></span> <a href="" class="btn"><%= t('.try_for_free') %></a> </div>
+          <div class="plan-cta">
+            <span><%= t('.try_first') %></span>
+            <a href="" class="btn" data-toggle="modal" data-target="#modal-demo-form"><%= t('.try_for_free') %></a>
+          </div>
           <div class="plan-details">
             <ul>
               <li><strong>1</strong> <%= t('.users') %></li>
@@ -193,7 +196,10 @@
           <div class="plan-price">
             <h5><span class="plan-currency"><%= t('.currency') %></span>750<span class="plan-duration">P/M</span></h5>
           </div>
-          <div class="plan-cta"> <span><%= t('.limited_offer_10') %></span> <a href="" class="btn"><%= t('.get_started') %></a> </div>
+          <div class="plan-cta">
+            <span><%= t('.limited_offer_10') %></span>
+            <a href="" class="btn" data-toggle="modal" data-target="#modal-demo-form"><%= t('.get_started') %></a>
+          </div>
           <div class="plan-details">
             <ul>
               <li><strong>5</strong><%= t('.users') %></li>
@@ -218,7 +224,10 @@
           <div class="plan-price">
             <h5><span class="plan-currency"><%= t('.currency') %></span>2,000<span class="plan-duration">P/M</span></h5>
           </div>
-          <div class="plan-cta"> <span><%= t('.limited_offer_20') %></span> <a href="" class="btn"><%= t('.get_started') %></a> </div>
+          <div class="plan-cta">
+            <span><%= t('.limited_offer_10') %></span>
+            <a href="" class="btn" data-toggle="modal" data-target="#modal-demo-form"><%= t('.get_started') %></a>
+          </div>
           <div class="plan-details">
             <ul>
               <li><strong><%= t('.unlimited') %></strong> <%= t('.users') %></li>
@@ -251,8 +260,8 @@
     <div class="row">
       <div class="col-sm-8 col-md-7">
         <blockquote>
-          <h1 style="color: white; padding-bottom: 50px;">We believe in open source</h1>
-          <p>Sharing your product data with the world is far more valuable then owning it. Regardless of the size of your organization, our services are entirely free as long as your collections remain public.</p>
+          <h1 style="color: white; padding-bottom: 50px;"><%= t('.open_source_title') %></h1>
+          <p><%= t('.open_source_description') %></p>
         </blockquote>
       </div>
     </div>
