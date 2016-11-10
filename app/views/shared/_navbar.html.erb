@@ -1,93 +1,23 @@
-
-      <!-- Different navigation if login or not -->
-      <% if user_signed_in? %>
-
-      <nav class="navbar navbar-default affix" data-spy="affix" data-offset-top="450">
-        <div class="container">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="/"><%= image_tag "logo.svg", class: "logo" %><%= image_tag "logo.svg", class: "logo-nav" %></a>
+<div class="navbar-main">
+  <div class="container">
+    <div class="navbar-main-flex">
+      <div>
+        <%= link_to root_path, class: "navbar-main-brand" do %>
+          <%= image_tag "logo-nav.svg" %>
+        <% end %>
+      </div>
+      <div class="navbar-main-flex">
+        <% if user_signed_in? %>
+          <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+          <div class="badge-container" style="margin-left:20px">
+            <i class="fa fa-bell-o"></i>
+            <div class="badge badge-brand">3</div>
           </div>
-            <ul class="nav navbar-nav navbar-right">
-
-              <!-- Notification -->
-              <li>
-                <%= link_to "#", class: "navbar-item navbar-link" do %>
-                  <div class="badge-container">
-                    <i class="fa fa-bell-o"></i>
-                    <div class="badge badge-brand">3</div>
-                  </div>
-                <% end %>
-              </li>
-              <!-- Profile picture and dropdown -->
-              <li>
-                <div class="navbar-item">
-                  <div class="dropdown">
-                    <% if current_user.profile_picture? %>
-                      <%= cl_image_tag(current_user.profile_picture, width: 30, height: 30, crop: :thumb, gravity: :face, class: "avatar", id: "navbar-menu", "data-toggle" => "dropdown" ) %>
-                    <% else %>
-                      <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-menu", "data-toggle" => "dropdown" %>
-                    <% end %>
-                    <ul class="dropdown-menu dropdown-menu-right navbar-dropdown-menu">
-                      <li>
-                        <%= link_to profile_path(current_user) do %>
-                          <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
-                        <% end %>
-                      </li>
-                      <li>
-                        <%= link_to root_path do %>
-                          <i class="fa fa-home"></i>  <%= t(".profile", default: "Home") %>
-                        <% end %>
-                      </li>
-                      <li>
-                        <%= link_to destroy_user_session_path, method: :delete do %>
-                          <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
-                        <% end %>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </nav>
-
-      <% else %>
-
-        <!--navigation-->
-
-        <nav class="navbar navbar-default affix-customized">
-          <div class="container">
-            <div class="navbar-header"> <a class="navbar-brand" href="/"><%= image_tag "logo.svg", :class => "logo" %><%= image_tag "logo-nav.svg", :class => "logo-nav" %></a> </div>
-            <ul class="nav navbar-nav navbar-right">
-              <li class="hidden-xs hidden-sm"><a href="#how-it-works"><%= t('.how_it_works_section_header') %></a></li>
-              <li class="hidden-xs hidden-sm"><a href="#brands"><%= t('.brands') %></a></li>
-              <li class="hidden-xs hidden-sm"><a href="#retailers"><%= t('.retailers') %></a></li>
-              <li class="hidden-xs hidden-sm"><a href="#team"><%= t('.about_us') %></a></li>
-              <li class="hidden-xs"><%= link_to t(".sign_in", default: "Login"), new_user_session_path %></li>
-              <li><%= link_to t(".top_call_to_action", default: "Sign up"), new_user_registration_path, class: "btn btn-nav" %></li>
-              <li class="hidden-md hidden-lg"><a id="toggle"><i class="fa fa-bars fa-2x"></i><i class="fa fa-times fa-2x"></i></a></li>
-              <!-- Change Locale -->
-              <li class="navbar-item" style="padding-right: 0px;"> <%= link_to "En", { locale: '' }, style: "padding-right: 5px;" %></li>
-              <li class="navbar-item" style="padding-left: 0px;"> <%= link_to "/ Fr", { locale: 'fr' }, style: "padding-left: 0px;" %>
-              </li>
-            </ul>
-          </div>
-        </nav>
-
-        <!--navigation end-->
-
-        <!--mobile navigation-->
-
-        <div class="mobile-nav-overlay hidden-md hidden-lg" id="mobile-nav-overlay">
-          <nav class="mobile-nav">
-            <ul>
-              <li><a href="#how-it-works"><%= t('.how_it_works_section_header') %></a></li>
-              <li><a href="#brands"><%= t('.brands_section_header') %></a></li>
-              <li><a href="#retailers"><%= t('.retailers_section_header') %></a></li>
-              <li><a href="#team"><%= t('.about_us') %></a></li>
-              <li class="hidden-sm"><a href="signin.html">Sign In</a></li>
-            </ul>
-          </nav>
-        </div>
-
-      <% end %>
+        <% else %>
+          <!-- Login text link -->
+          <%= link_to "Login", new_user_session_path %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

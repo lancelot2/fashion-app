@@ -17,6 +17,18 @@
   input {
     max-width: 100%;
   }
+
+  select {
+    max-width: 100%;
+  }
+
+  .form-group {
+    margin-bottom: 6px;
+  }
+
+  a, input.btn {
+    margin-top: 8px;
+  }
 }
 
 .index-page-header {
