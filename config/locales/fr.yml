@@ -2,7 +2,7 @@ fr:
   pages:
     home:
       home_tagline: "Connecte les marques et leurs distributeurs autour d'une meilleure donnée produit"
-      home_sub_tagline: "Un logiciel de gestion de donnée nouvelle génération"
+      home_sub_tagline: "Découvrez une nouvelle approche de la gestion de donnée produit"
       get_started: "En savoir plus"
       how_it_works_section_header: "Solution"
       how_it_works_tagline: "Tout l'écosystème collabore autour d'une plateforme centrale, où chacun peut personnaliser les flux à ses besoins."
@@ -50,7 +50,7 @@ fr:
       logs: "Accès aux logs"
       supports: "Accès privilégié au service client"
       open_source_title: "Nous encourageons l'Open Source"
-      open_source_description: "Nous pensons que le partage des données prime sur leur possession. Quelques soit à la taille de votre organisation, l'upload and l'hébergement de votre catalogue produit sur Scalia est gratuit si vos collections sont publiques."
+      open_source_description: "Nous pensons que le partage des données prime sur leur possession. Quelques soit à la taille de votre organisation, l'uploade et l'hébergement de votre catalogue produit sur Scalia est gratuit si vos collections sont publiques."
       about_us: "Qui sommes-nous?"
       about_us_tagline: "Une équipe aux expertises techniques et créative fortes"
       about_scalia: "A propos de Scalia"
@@ -80,11 +80,15 @@ fr:
       brands: "Marques"
       retailers: "Distributeurs"
       about_us: "Qui sommes-nous?"
+      login: "S'identifier"
+      sign_up: "S'inscrire"
     home-navbar:
       how_it_works_section_header: "Solution"
       brands: "Marques"
       retailers: "Distributeurs"
       about_us: "Qui sommes-nous?"
+      login: "S'identifier"
+      sign_up: "S'inscrire"
   searches:
     index:
       search_index_title: "Index des recherches"
