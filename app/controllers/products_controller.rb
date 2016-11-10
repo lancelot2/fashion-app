@@ -5,7 +5,8 @@ class ProductsController < ApplicationController
     @tab = 'product_index'
     client = DataApiClient.new
     api_params = filter_params
-    @items = client.call_all_items(api_params)
+    rest_reponse = client.call_all_items(api_params)
+    @items = (rest_reponse ? [JSON.parse(rest_reponse.body), rest_reponse.headers] : nil)
   end
 
   def show

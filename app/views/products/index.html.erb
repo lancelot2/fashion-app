@@ -4,7 +4,7 @@
 
       <div id="filtering-box">
         <h3>Filters</h3>
-        <form action="<%= product_index_path %>" method="get">
+        <form action="<%= product_index_path %>" method="get" id="filterForm">
           <div class="form-group">
             <%= label :full_name, 'Item Name' %>
             <%= text_field_tag :full_name, params[:full_name], class: "form-control" %>
@@ -45,7 +45,7 @@
             <%= label :price_over, 'Max Price' %>
             <%= text_field_tag :price_over, params[:price_over], class: "form-control" %>
           </div>
-          <%= submit_tag "Filter", class: "btn btn-default" %>
+          <%= submit_tag "Filter", name: nil, class: "btn btn-default", id: "filterFormBtn" %>
           <%= link_to "Reset", product_index_path, class: "btn btn-default" %>
         </form>
       </div>
@@ -65,11 +65,11 @@
       <div class="search-result-title">
         <span>
           <strong>Search results:</strong>
-          <%= @items.headers[:total] || 0 %> items,
+          <%= @items ? @items[1][:total] : 0 %> items,
         </span>
         <span>
           <strong>Results per page:</strong>
-          <%= p @items.headers[:per_page] || 0 %>
+          <%= @items ? @items[1][:per_page] : 0 %>
         </span>
       </div>
 
@@ -117,7 +117,8 @@
         </thead>
 
         <tbody>
-          <% (JSON.parse @items.body).each do |item| %>
+
+          <% (@items ? @items[0] : []).each do |item| %>
             <tr class='clickable-row' data-href='<%= product_show_path(id: item["id"]) %>' style="cursor: pointer;">
               <td>
                 <%= image_tag (item['photo_urls'][0]) %>
@@ -156,11 +157,17 @@
 
 
 <%= content_for(:after_js) do %>
-  <%# javascript_include_tag "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js" %>
   <%= javascript_tag do %>
-    $(document).ready(function() {
+    $(function() {
       $(".clickable-row").click(function() {
         window.document.location = $(this).data("href");
+      });
+
+      $('#filterFormBtn').on( "click", function(e) {
+        e.preventDefault();
+        $('#filterForm').find('input').each(function(i, e) {
+          if ($(e).val() == "") {$(e).attr("disabled", "disabled")}  });
+        $('#filterForm').submit();
       });
     });
   <% end %>

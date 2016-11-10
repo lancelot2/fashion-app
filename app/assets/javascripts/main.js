@@ -33,36 +33,34 @@ $(function() {
    ========================================================================== */
 
 
-    $('.product-statistics').waypoint(function() {
+    // $('.product-statistics').waypoint(function() {
 
+    //     $('.counter-1').animateNumber({
+    //         number: 50, //change value here
 
+    //     }, 2000);
 
-        $('.counter-1').animateNumber({
-            number: 50, //change value here
+    //     $('.counter-2').animateNumber({
+    //         number: 70, //change value here
 
-        }, 2000);
+    //     }, 2000);
 
-        $('.counter-2').animateNumber({
-            number: 70, //change value here
+    //     $('.counter-3').animateNumber({
+    //         number: 90, //change value here
 
-        }, 2000);
+    //     }, 2000);
 
-        $('.counter-3').animateNumber({
-            number: 90, //change value here
+    //     $('.counter-4').animateNumber({
+    //         number: 60, //change value here
 
-        }, 2000);
+    //     }, 2000);
 
-        $('.counter-4').animateNumber({
-            number: 60, //change value here
+    //     this.destroy();
 
-        }, 2000);
+    // }, {
+    //     offset: '80%'
 
-        this.destroy();
-
-    }, {
-        offset: '80%'
-
-    });
+    // });
 
 
     /* ==========================================================================
@@ -70,13 +68,9 @@ $(function() {
        ========================================================================== */
 
 
-
-
     var btnCon = $('.navbar-nav #toggle, .mobile-nav a');
 
     $(btnCon).on("click", function() {
-
-
 
 
         if ($(btnCon).hasClass('active')) {
@@ -97,11 +91,9 @@ $(function() {
    litebox
    ========================================================================== */
 
-    $('.video-intro .play-btn, .video-tour .play-btn').magnificPopup({
-        type: 'iframe'
-    });
-
-
+    // $('.video-intro .play-btn, .video-tour .play-btn').magnificPopup({
+    //     type: 'iframe'
+    // });
 
 
     /* ==========================================================================
@@ -111,17 +103,16 @@ $(function() {
 
 
 
-    $('.reviews-slider').owlCarousel({
+    // $('.reviews-slider').owlCarousel({
 
-        navigation: false,
-        slideSpeed: 300,
-        paginationSpeed: 400,
-        singleItem: true,
-        transitionStyle: "fade",
-        autoPlay: 7000
+    //     navigation: false,
+    //     slideSpeed: 300,
+    //     paginationSpeed: 400,
+    //     singleItem: true,
+    //     transitionStyle: "fade",
+    //     autoPlay: 7000
 
-
-    });
+    // });
 
 
 
@@ -130,7 +121,6 @@ $(function() {
    ========================================================================== */
 
     $("[data-toggle=tooltip]").tooltip();
-
 
 
 	 /* ==========================================================================
@@ -143,22 +133,21 @@ $(function() {
 
 	 });
 
-
     /* ==========================================================================
    Play btn animation
    ========================================================================== */
 
 
 
-    $('.video-intro .play-btn i, .video-tour .play-btn i').waypoint(function() {
-        $(this.element).addClass('play-btn-animation');
+    // $('.video-intro .play-btn i, .video-tour .play-btn i').waypoint(function() {
+    //     $(this.element).addClass('play-btn-animation');
 
 
-        this.destroy();
+    //     this.destroy();
 
-    }, {
-        offset: '60%'
-    });
+    // }, {
+    //     offset: '60%'
+    // });
 
 
 
@@ -167,53 +156,28 @@ $(function() {
    ========================================================================== */
 
 
-    var owlTeam = $('.team-slider');
+    // var owlTeam = $('.team-slider');
 
-    owlTeam.owlCarousel({
+    // owlTeam.owlCarousel({
 
-        itemsCustom: [
-            [0, 1],
-            [450, 1],
-            [600, 1],
-            [700, 2],
-            [1000, 3],
-            [1200, 3],
-            [1400, 3],
-            [1600, 3]
-        ],
-        navigation: true,
-        pagination: false,
-        navigationText: [
-            "<i class='fa fa-angle-left fa-2x'></i>",
-            "<i class='fa fa-angle-right fa-2x'></i>"
-        ]
+    //     itemsCustom: [
+    //         [0, 1],
+    //         [450, 1],
+    //         [600, 1],
+    //         [700, 2],
+    //         [1000, 3],
+    //         [1200, 3],
+    //         [1400, 3],
+    //         [1600, 3]
+    //     ],
+    //     navigation: true,
+    //     pagination: false,
+    //     navigationText: [
+    //         "<i class='fa fa-angle-left fa-2x'></i>",
+    //         "<i class='fa fa-angle-right fa-2x'></i>"
+    //     ]
 
-    });
-
-
-
-
-    /* ==========================================================================
-   twitter reviews slider
-   ========================================================================== */
-
-    var owl = $('.twitter-reviews-slider');
-
-    owl.owlCarousel({
-
-        itemsCustom: [
-            [0, 1],
-            [450, 1],
-            [600, 1],
-            [700, 2],
-            [1000, 3],
-            [1200, 3],
-            [1400, 3],
-            [1600, 3]
-        ],
-        navigation: false
-
-    });
+    // });
 
 
 
@@ -300,8 +264,5 @@ $(function() {
             }
         }
     });
-
-
-
 
 });

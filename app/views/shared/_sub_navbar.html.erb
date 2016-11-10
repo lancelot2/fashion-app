@@ -21,9 +21,9 @@
 </div>
 
 <% content_for :after_js do %>
-<script type="text/javascript">
+  <%= javascript_tag do %>
     $(document).ready(function () {
-        $(<%= @tab %>).addClass("active");
+      $(<%= @tab %>).addClass("active");
     })
-</script>
+  <% end %>
 <% end %>
