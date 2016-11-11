@@ -18,7 +18,7 @@ class ProductsController < ApplicationController
   private
 
   def filter_params
-    filters = [:full_name, :brand, :sku, :category_1, :product_code, :in_stock, :details, :color, :price_under, :price_over]
+    filters = [:full_name, :brand, :sku, :category_1, :product_code, :in_stock, :details, :color, :min_price, :max_price]
     api_params = '?'
     filters.each { |f| api_params += "#{f}=#{params[f]}&" if params[f] }
     api_params
