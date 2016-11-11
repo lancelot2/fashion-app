@@ -27,9 +27,9 @@
           <tbody>
             <% @searches.each do |search| %>
             <tr>
-              <td><strong><%= search.name  %></strong></td>
-              <td><%= search.updated_at %></td>
-              <td>Lancelot Salavert</td>
+              <td><strong><%= search.name %></strong></td>
+              <td><%= search.updated_at.strftime('%e %b %Y %H:%M') %></td>
+              <td><%= search.user.email %></td>
               <td>
                 <a class="btn btn-primary" href="#">Download</a>
                 <a class="btn btn-primary" href="#">Duplicate</a>
@@ -44,3 +44,5 @@
     </div>
   </div>
 </div>
+
+

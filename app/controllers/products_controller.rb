@@ -7,6 +7,7 @@ class ProductsController < ApplicationController
     api_params = filter_params
     rest_reponse = client.call_all_items(api_params)
     @items = (rest_reponse ? [JSON.parse(rest_reponse.body), rest_reponse.headers] : nil)
+    @search = Search.new
   end
 
   def show

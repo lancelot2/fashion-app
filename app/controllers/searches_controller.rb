@@ -17,6 +17,8 @@ class SearchesController < ApplicationController
 
   def create        # POST /searches
     @search = Search.new(search_params)
+    @search.user = current_user
+    binding.pry
     @search.save
     redirect_to searches_path
   end
@@ -36,18 +38,18 @@ class SearchesController < ApplicationController
 
   def destroy       # DELETE /restaurants/:id
   end
-end
 
-private
+  private
 
-def display_subnavbar
-  @display_subnavbar = true
-end
+  def display_subnavbar
+    @display_subnavbar = true
+  end
 
-def set_search
-  @search = Search.find(params[:id])
-end
+  def set_search
+    @search = Search.find(params[:id])
+  end
 
-def search_params
-  params.require(:search).permit(:name, :name_filter, :brand_filter, :collection_filter, :gender_filter, :category_1_filter, :category_2_filter, :category_3_filter)
+  def search_params
+    params.require(:search).permit(:name, :url)
+  end
 end
