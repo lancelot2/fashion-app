@@ -26,5 +26,7 @@
     <%= javascript_include_tag 'application' %>
 
     <%= yield :after_js %>
+
+    <%= render 'shared/drift' if current_page?('/') || current_page?('/fr') %>
   </body>
 </html>

@@ -187,13 +187,13 @@ $(function() {
    ========================================================================== */
 
 
-    $('.site-footer').waypoint(function() {
-        $('.chat-btn').addClass('fixed');
+    // $('.site-footer').waypoint(function() {
+    //     $('.chat-btn').addClass('fixed');
 
-    }, {
-        offset: '80%'
+    // }, {
+    //     offset: '80%'
 
-    });
+    // });
 
 
 
