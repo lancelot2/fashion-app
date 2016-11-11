@@ -40,7 +40,12 @@
 }
 
 .extraction-buttons {
+  display: flex;
   margin-top: 15px;
+
+  input {
+    margin-left: 5px;
+  }
 }
 
 .flex-index {
