@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161111154613) do
+ActiveRecord::Schema.define(version: 20161104203415) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,11 +38,11 @@ ActiveRecord::Schema.define(version: 20161111154613) do
   end
 
   create_table "searches", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string   "name"
     t.string   "url"
     t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_searches_on_user_id", using: :btree
   end
 
@@ -76,11 +76,9 @@ ActiveRecord::Schema.define(version: 20161111154613) do
     t.integer  "companies_id"
     t.boolean  "access_validated",       default: false, null: false
     t.integer  "access_level",           default: 1,     null: false
-    t.integer  "search_id"
     t.index ["companies_id"], name: "index_users_on_companies_id", using: :btree
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-    t.index ["search_id"], name: "index_users_on_search_id", using: :btree
   end
 
   add_foreign_key "extractions", "searches"
@@ -88,5 +86,4 @@ ActiveRecord::Schema.define(version: 20161111154613) do
   add_foreign_key "extractions", "users"
   add_foreign_key "searches", "users"
   add_foreign_key "users", "companies", column: "companies_id"
-  add_foreign_key "users", "searches"
 end
