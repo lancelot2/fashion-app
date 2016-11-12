@@ -17,12 +17,40 @@ class ProfilesController < ApplicationController
      @user = User.find(params[:id])
      @user.access_validated = true
      @user.save
+     redirect_to :back
+  end
+
+  def freeze
+     @user = User.find(params[:id])
+     @user.access_validated = false
+     @user.save
+     redirect_to :back
+  end
+
+  def upgrade
+     @user = User.find(params[:id])
+     @user.access_level = 2
+     @user.save
+     redirect_to :back
+  end
+
+  def downgrade
+     @user = User.find(params[:id])
+     @user.access_level = 1
+     @user.save
+     redirect_to :back
   end
 
   def update
     current_user.update(user_params)
     current_user.save
     redirect_to profile_path(current_user)
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to :back
   end
 
   def sending_approval_pending_notification
