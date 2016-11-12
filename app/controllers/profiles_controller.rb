@@ -13,18 +13,16 @@ class ProfilesController < ApplicationController
   def edit
   end
 
+  def validate
+     @user = User.find(params[:id])
+     @user.access_validated = true
+     @user.save
+  end
+
   def update
     current_user.update(user_params)
     current_user.save
     redirect_to profile_path(current_user)
-  end
-
-  def adding_company_to_user_profile_at_creation
-    domain_name = current_user.email.split('@')[1]
-    @companies = Company.all
-    @companies.each do |company|
-      user.company_id = company.id if domain_name == company.domain_name
-    end
   end
 
   def sending_approval_pending_notification
