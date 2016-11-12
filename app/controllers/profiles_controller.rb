@@ -19,14 +19,6 @@ class ProfilesController < ApplicationController
     redirect_to profile_path(current_user)
   end
 
-  def adding_company_to_user_profile_at_creation
-    domain_name = current_user.email.split('@')[1]
-    @companies = Company.all
-    @companies.each do |company|
-      user.company_id = company.id if domain_name == company.domain_name
-    end
-  end
-
   def sending_approval_pending_notification
   end
 

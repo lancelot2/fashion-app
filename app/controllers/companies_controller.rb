@@ -35,6 +35,15 @@ class CompaniesController < ApplicationController
   end
 end
 
+def adding_company_to_user_profile_at_creation
+  current_user_domain_name = current_user.email.split('@')[1]
+  @companies = Company.all
+  @companies.each do |company|
+    current_user.company = company if current_user_domain_name == company.domain_name
+  end
+  current_user.save
+end
+
 private
 
 def set_company
