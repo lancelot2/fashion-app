@@ -18,14 +18,6 @@ class SearchesController < ApplicationController
   def create        # POST /searches
     @search = Search.new(search_params)
     @search.user = current_user
-    binding.pry
-    @search.save
-    redirect_to searches_path
-  end
-
-  def create_search(name) # POST /searches
-    @search = Search.new
-    @search.name = name
     @search.save
     redirect_to searches_path
   end
