@@ -45,17 +45,17 @@
             <td><%= company_user.access_level %></td>
             <td>
               <% if company_user.access_validated? %>
-                <a class="btn btn-primary btn-accesses" href="#">Freeze</a>
+                <%= link_to "Freeze", freeze_path(company_user), :class=>"btn btn-primary btn-accesses" %>
               <% else %>
-                <!-- <a class="btn btn-primary btn-accesses" href="#">Authorize</a> -->
                 <%= link_to "Authorize", validate_path(company_user), :class=>"btn btn-primary btn-accesses" %>
               <% end %>
               <% if company_user.access_level == 1 %>
-                <a class="btn btn-primary btn-accesses" href="#">Upgrade</a>
+                <%= link_to "Upgrade", upgrade_path(company_user), :class=>"btn btn-primary btn-accesses" %>
               <% else %>
-                <a class="btn btn-primary btn-accesses" href="#">Downgrade</a>
+                <%= link_to "downgrade", downgrade_path(company_user), :class=>"btn btn-primary btn-accesses" %>
               <% end %>
-              <a class="btn btn-primary btn-accesses" href="#">Delete</a>
+<!--               <a class="btn btn-primary btn-accesses" href="#">Delete</a> -->
+              <%= link_to "Delete", destroy_path(company_user), data: { confirm: "Are you sure?" }, :class=>"btn btn-danger btn-accesses" %>
             </td>
           </tr>
           <% end %>
