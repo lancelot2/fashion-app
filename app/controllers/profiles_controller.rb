@@ -13,6 +13,12 @@ class ProfilesController < ApplicationController
   def edit
   end
 
+  def validate
+     @user = User.find(params[:id])
+     @user.access_validated = true
+     @user.save
+  end
+
   def update
     current_user.update(user_params)
     current_user.save
