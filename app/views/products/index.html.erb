@@ -68,12 +68,11 @@
       <div class="index-page-header">
         <h1>Product main database</h1>
         <div class="extraction-buttons">
-          <form action="<%= searches_path %>",>
+          <%= simple_form_for @search, html: { class: 'form-inline' } do |f| %>
+            <%= f.input :url, as: :hidden, input_html: { value: request.original_url }  %>
+            <%= f.input :name %>
             <%= submit_tag "Save Search", name: nil, class: "btn btn-default" %>
-          </form>
-          <form action="<%= product_index_path %>">
-            <%= submit_tag "Generate Extraction", name: nil, class: "btn btn-default" %>
-          </form>
+          <% end %>
         </div>
       </div>
 

@@ -3,12 +3,12 @@ class SearchesController < ApplicationController
   before_action :set_search, except: [:create, :index, :new]
   before_action :display_subnavbar
 
-  def index         # GET /restaurants
+  def index
     @searches = Search.all
     @tab = 'search'
   end
 
-  def show          # GET /restaurants/:id
+  def show
   end
 
   def new           # GET /restaurants/new
@@ -17,13 +17,7 @@ class SearchesController < ApplicationController
 
   def create        # POST /searches
     @search = Search.new(search_params)
-    @search.save
-    redirect_to searches_path
-  end
-
-  def create_search(name) # POST /searches
-    @search = Search.new
-    @search.name = name
+    @search.user = current_user
     @search.save
     redirect_to searches_path
   end
@@ -36,18 +30,18 @@ class SearchesController < ApplicationController
 
   def destroy       # DELETE /restaurants/:id
   end
-end
 
-private
+  private
 
-def display_subnavbar
-  @display_subnavbar = true
-end
+  def display_subnavbar
+    @display_subnavbar = true
+  end
 
-def set_search
-  @search = Search.find(params[:id])
-end
+  def set_search
+    @search = Search.find(params[:id])
+  end
 
-def search_params
-  params.require(:search).permit(:name, :name_filter, :brand_filter, :collection_filter, :gender_filter, :category_1_filter, :category_2_filter, :category_3_filter)
+  def search_params
+    params.require(:search).permit(:name, :url)
+  end
 end
