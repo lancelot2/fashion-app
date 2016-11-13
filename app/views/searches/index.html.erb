@@ -39,10 +39,10 @@
                 </ul>
               </td>
               <td>
-                <a class="btn btn-primary" href="#">Download</a>
-                <a class="btn btn-primary" href="#">Duplicate</a>
-                <%#= link_to "Edit", edit_search_path(search), :class=>"btn btn-primary" %>
-                <%#= link_to "Delete", search_path(search), method: :delete, data: { confirm: "Are you sure?" }, :class=>"btn btn-danger" %>
+                <%= link_to "Show", search.url %> /
+                <a href="#">Extract</a> /
+                <a href="#">Duplicate</a> /
+                <a href="#">Delete</a>
               </td>
             </tr>
             <% end %>

@@ -8,6 +8,11 @@ class ProductsController < ApplicationController
     rest_reponse = client.call_all_items(api_params)
     @items = (rest_reponse ? [JSON.parse(rest_reponse.body), rest_reponse.headers] : nil)
     @search = Search.new
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data export_csv(@items[0]) }
+    end
   end
 
   def show
@@ -23,5 +28,16 @@ class ProductsController < ApplicationController
     api_params = '?'
     filters.each { |f| api_params += "#{f}=#{params[f]}&" if params[f] }
     api_params
+  end
+
+  def export_csv(items)
+    column_headers = ['numerator', 'denominator', 'calculation']
+
+    CSV.generate do |csv|
+      csv << column_headers
+      items.each do |item|
+        csv << item.values
+      end
+    end
   end
 end
