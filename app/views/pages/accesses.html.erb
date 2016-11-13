@@ -1,0 +1,70 @@
+<div class="container-large">
+
+  <!-- header -->
+  <div class="index-page-header">
+    <h1>Users from my company</h1>
+  </div>
+
+  <!-- user index -->
+  <div class="extraction-library">
+    <div class="extraction-library-row">
+      <table class="table table-condensed table-hover">
+        <col class="col-photo">
+        <col class="col-first-name">
+        <col class="col-last-name">
+        <col class="col-email">
+        <col class="col-status">
+        <col class="col-level">
+        <col class="col-action">
+        <thead>
+          <tr>
+            <th>Picture</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Level</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @company_users.each do |company_user| %>
+          <tr>
+            <td><%= cl_image_tag(company_user.profile_picture, :class => "avatar-large") %></td>
+            <td><%= company_user.first_name %></td>
+            <td><%= company_user.last_name %></td>
+            <td><%= company_user.email %></td>
+            <td>
+              <% if company_user.access_validated? %>
+                <p>Validated</p>
+              <% else %>
+                <p>Pending</p>
+              <% end %>
+            </td>
+            <td><%= company_user.access_level %></td>
+            <td>
+              <% if company_user.access_validated? %>
+                <%= link_to "Freeze", freeze_path(company_user), :class=>"btn btn-primary btn-accesses" %>
+              <% else %>
+                <%= link_to "Authorize", validate_path(company_user), :class=>"btn btn-primary btn-accesses" %>
+              <% end %>
+              <% if company_user.access_level == 1 %>
+                <%= link_to "Upgrade", upgrade_path(company_user), :class=>"btn btn-primary btn-accesses" %>
+              <% else %>
+                <%= link_to "downgrade", downgrade_path(company_user), :class=>"btn btn-primary btn-accesses" %>
+              <% end %>
+<!--               <a class="btn btn-primary btn-accesses" href="#">Delete</a> -->
+              <%= link_to "Delete", destroy_path(company_user), data: { confirm: "Are you sure?" }, :class=>"btn btn-danger btn-accesses" %>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+</div>
+

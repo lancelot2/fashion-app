@@ -11,6 +11,13 @@ Rails.application.routes.draw do
 
     root to: 'pages#home'
 
+    get 'accesses', to: 'pages#accesses', as: :accesses
+    get ':id/profile/validate', to: 'profiles#validate', as: :validate
+    get ':id/profile/freeze', to: 'profiles#freeze', as: :freeze
+    get ':id/profile/downgrade', to: 'profiles#downgrade', as: :downgrade
+    get ':id/profile/upgrade', to: 'profiles#upgrade', as: :upgrade
+    get ':id/profile/destroy', to: 'profiles#destroy', as: :destroy
+
     get 'product_index', to: 'products#index', as: :product_index
     get 'product_show/:id', to: 'products#show', as: :product_show
 
