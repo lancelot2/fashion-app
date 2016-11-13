@@ -3,12 +3,12 @@ class SearchesController < ApplicationController
   before_action :set_search, except: [:create, :index, :new]
   before_action :display_subnavbar
 
-  def index         # GET /restaurants
+  def index
     @searches = Search.all
     @tab = 'search'
   end
 
-  def show          # GET /restaurants/:id
+  def show
   end
 
   def new           # GET /restaurants/new

@@ -20,6 +20,7 @@
               <th>Search name</th>
               <th>Last update</th>
               <th>By</th>
+              <th>Query</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -30,6 +31,13 @@
               <td><strong><%= search.name %></strong></td>
               <td><%= search.updated_at.strftime('%e %b %Y %H:%M') %></td>
               <td><%= search.user.email %></td>
+              <td>
+                <ul>
+                  <% URI(search.url).query.split('&').each do |query| %>
+                  <li><%= query.gsub('=', ': ') %></li>
+                  <% end %>
+                </ul>
+              </td>
               <td>
                 <a class="btn btn-primary" href="#">Download</a>
                 <a class="btn btn-primary" href="#">Duplicate</a>
