@@ -1,18 +1,12 @@
 <div class="container-large">
+  <div class="row">
+    <div class="col-xs-12 col-md-4">
 
-  <!-- Header -->
-  <div class="index-page-header">
-    <h1>Template index page</h1>
-  </div>
-
-
-
-  <div class="template-index-body">
 
     <!-- Template creation form -->
-    <div class="template-creation-form">
+    <div id="template-creation-form">
       <h3>Template creation form</h3>
-      <p>Templates can have as many columns as you want. Just click the add more button to generate more column fields.</p>
+      <p>Templates can have as many columns as you want.</p>
         <%= simple_form_for @template do |f| %>
           <%= f.error_notification %>
           <div class="form-inputs">
@@ -21,53 +15,60 @@
             <%= f.input :column_1, label: "Column 1", collection: ["-", "Name","SKU", "Description", "Price", "Size", "Size", "Color"], selected: "-" %>
             <%= f.input :column_2, label: "Column 2", collection: ["-", "Name","SKU", "Description", "Price", "Size", "Size", "Color"], selected: "-" %>
             <%= f.input :column_3, label: "Column 3", collection: ["-", "Name","SKU", "Description", "Price", "Size", "Size", "Color"], selected: "-" %>
-            <%= f.button :submit, "Save", class: "btn btn-primary" %>
+            <%= f.button :submit, "Save", class: "btn btn-primary bottom-buttons" %>
+            <%= link_to "Add Column", "#", class: "btn btn-primary bottom-buttons" %>
           </div>
         <% end %>
 
     </div>
 
-
-    <!-- Template library -->
-    <div class="template-library">
-      <h2>Template Library</h2>
-      <div class="template-library-row">
-        <table class="table table-condensed table-hover">
-          <thead>
-            <tr>
-              <th>Template name</th>
-              <th>Last update</th>
-              <th>By</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <% @templates.each do |template| %>
-            <tr>
-              <td><strong><%= template.name  %></strong></td>
-              <td><%= template.updated_at %></td>
-              <td>Lancelot Salavert</td>
-              <td>
-                <a class="btn btn-primary" href="#">Download</a>
-                <a class="btn btn-primary" href="#">Duplicate</a>
-                <%= link_to "Edit", edit_template_path(template), :class=>"btn btn-primary" %>
-                <%= link_to "Delete", template_path(template), method: :delete, data: { confirm: "Are you sure?" }, :class=>"btn btn-danger" %>
-              </td>
-            </tr>
-            <% end %>
-          </tbody>
-        </table>
-      </div>
     </div>
+
+    <div class="col-xs-12 col-md-8">
+      <!-- Template library -->
+      <div class="template-library">
+        <h1>Template Library</h1>
+        <div class="template-library-row">
+          <table class="table table-condensed table-hover">
+            <thead>
+              <tr>
+                <th>Template name</th>
+                <th>Last update</th>
+                <th>By</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @templates.each do |template| %>
+              <tr>
+                <td><strong><%= template.name  %></strong></td>
+                <td><%= template.updated_at %></td>
+                <td>Lancelot Salavert</td>
+                <td>
+                  <a class="btn btn-primary" href="#">Download</a>
+                  <a class="btn btn-primary" href="#">Duplicate</a>
+                  <%= link_to "Edit", edit_template_path(template), :class=>"btn btn-primary" %>
+                  <%= link_to "Delete", template_path(template), method: :delete, data: { confirm: "Are you sure?" }, :class=>"btn btn-danger" %>
+                </td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+
+
   </div>
 </div>
 
 
 
 <!-- Script for adding more column fields -->
-<script>
-$(function()
+<!-- $(function()
 {
     $(document).on('click', '.btn-add', function(e)
     {
@@ -90,5 +91,6 @@ $(function()
     e.preventDefault();
     return false;
   });
-});
-</script>
+}); -->
+
+<!-- <i class="fa fa-minus-square" aria-hidden="true"></i> -->

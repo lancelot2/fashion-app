@@ -1,11 +1,5 @@
-.container-large {
-  width: 92%;
-  margin: auto;
-}
-
 #filtering-box {
   padding: 15px;
-  width: 100%;
   border: 1px solid black;
   background-color: #F1F1F1;
   margin: 15px 0;
@@ -24,6 +18,10 @@
 
   .form-group {
     margin-bottom: 6px;
+  }
+
+  .bottom-buttons {
+    margin-top: 10px;
   }
 }
 
