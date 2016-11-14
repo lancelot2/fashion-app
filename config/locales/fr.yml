@@ -89,6 +89,30 @@ fr:
       about_us: "Qui sommes-nous?"
       login: "S'identifier"
       sign_up: "S'inscrire"
+    sub_navbar:
+      products: "Produits"
+      searches: "Recherches"
+      templates: "Templates"
+      extractions: "Extractions"
+      accesses: "Accès"
+  products:
+    index:
+      product_index_title: "Index des produits"
+      filters: "Filtres"
+      item_name: "Nom"
+      category_1: "Catégorie principale"
+      min_price: "Prix min"
+      max_price: "Prix max"
+      save_search: "Sauvegarder"
+      search_results: "Nombre de résultats:"
+      results_per_page: "Resultats par page:"
+      cover: "Image"
+      name: "Nom"
+      brand: "Marque"
+      completeness: "Complétude"
+      price: "Prix"
+      color: "Couleur"
+      category: "Catégorie"
   searches:
     index:
       search_index_title: "Index des recherches"
