@@ -19,6 +19,7 @@ Rails.application.routes.draw do
     get ':id/profile/destroy', to: 'profiles#destroy', as: :destroy
 
     get 'product_index', to: 'products#index', as: :product_index
+    get 'product_export', to: 'products#export', as: :product_export
     get 'product_show/:id', to: 'products#show', as: :product_show
 
     resources :companies, only: [:index, :new, :create]

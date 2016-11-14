@@ -8,17 +8,29 @@ class ProductsController < ApplicationController
     rest_reponse = client.call_all_items(api_params)
     @items = (rest_reponse ? [JSON.parse(rest_reponse.body), rest_reponse.headers] : nil)
     @search = Search.new
-
-    respond_to do |format|
-      format.html
-      format.csv { send_data export_csv(@items[0]) }
-    end
   end
 
   def show
     @display_subnavbar = true
     client = DataApiClient.new
     @item = JSON.parse client.call_one_item(params[:id]).body
+  end
+
+  def export
+    client = DataApiClient.new
+    api_params = filter_params
+    i = 1
+    @items = []
+    loop do
+      rest_reponse = client.call_all_items(api_params + "page=#{i}")
+      @items << JSON.parse(rest_reponse.body)
+      i += 1
+      break if rest_reponse.body == '[]'
+    end
+    @items.flatten!
+    respond_to do |format|
+      format.csv { send_data export_csv(@items) }
+    end
   end
 
   private
@@ -31,12 +43,12 @@ class ProductsController < ApplicationController
   end
 
   def export_csv(items)
-    column_headers = ['numerator', 'denominator', 'calculation']
+    column_headers = ['numerator', 'denominator', 'calculation'] # Add dynamic headers here
 
     CSV.generate do |csv|
       csv << column_headers
       items.each do |item|
-        csv << item.values
+        csv << item.values # Add dynamic content here
       end
     end
   end
