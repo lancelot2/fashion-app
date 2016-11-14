@@ -89,9 +89,15 @@ en:
       about_us: "About us"
       login: "Login"
       sign_up: "Sign up"
-  product:
-    product_index:
+  products:
+    index:
       product_index_title: "Product main database"
+      filters: "Filters"
+      item_name: "Item Name"
+      category_1: "Main category"
+      min_price: "Min price"
+      max_price: "Max price"
+      save_search: "Save search"
       search_results: "Search results:"
       results_per_page: "Results per page:"
       cover: "Cover"

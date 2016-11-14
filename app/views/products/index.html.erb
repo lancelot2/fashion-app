@@ -3,22 +3,22 @@
     <div class="col-xs-12 col-md-3">
 
       <div id="filtering-box">
-        <h3>Filters</h3>
+        <h3><%= t('.filters') %></h3>
         <form action="<%= product_index_path %>" method="get" id="filterForm">
           <div class="form-group">
-            <%= label :full_name, 'Item Name' %>
+            <%= label :full_name, t('.item_name') %>
             <%= text_field_tag :full_name, params[:full_name], class: "form-control" %>
           </div>
           <div class="form-group">
-            <%= label :brand, 'Brand' %>
+            <%= label :brand, t('.brand') %>
             <%= text_field_tag :brand, params[:brand], class: "form-control" %>
           </div>
           <div class="form-group">
-            <%= label :sku, 'SKU' %>
+            <%= label :sku, 'GTIN' %>
             <%= text_field_tag :sku, params[:sku], class: "form-control" %>
           </div>
           <div class="form-group">
-            <%= label :category_1, 'Main Category' %>
+            <%= label :category_1, t('.category_1') %>
             <%= text_field_tag :category_1, params[:category_1], class: "form-control" %>
           </div>
           <div class="form-group">
@@ -34,13 +34,13 @@
             <%= text_field_tag :details, params[:details], class: "form-control" %>
           </div>
           <div class="form-group">
-            <%= label :color, 'Color' %>
+            <%= label :color, t('.color') %>
             <%= text_field_tag :color, params[:color], class: "form-control" %>
           </div>
           <div class="row">
             <div class="col-xs-6">
               <div class="form-group">
-                <%= label :min_price, 'Min Price' %>
+                <%= label :min_price, t('.min_price') %>
                 <div class="input-group">
                   <div class="input-group-addon">£</div>
                   <%= text_field_tag :min_price, params[:min_price], class: "form-control" %>
@@ -49,7 +49,7 @@
             </div>
             <div class="col-xs-6">
               <div class="form-group">
-                <%= label :max_price, 'Max Price' %>
+                <%= label :max_price, t('.max_price') %>
                 <div class="input-group">
                   <div class="input-group-addon">£</div>
                   <%= text_field_tag :max_price, params[:max_price], class: "form-control" %>
@@ -58,7 +58,7 @@
             </div>
           </div>
           <%= submit_tag "Filter", name: nil, class: "btn btn-default bottom-buttons", id: "filterFormBtn" %>
-          <%= link_to "Reset", product_index_path, class: "btn btn-default bottom-buttons" %>
+          <%= link_to t('.reset'), product_index_path, class: "btn btn-default bottom-buttons" %>
         </form>
       </div>
     </div>
@@ -71,7 +71,7 @@
           <%= simple_form_for @search, html: { class: 'form-inline' } do |f| %>
             <%= f.input :url, as: :hidden, input_html: { value: request.original_url }  %>
             <%= f.input :name %>
-            <%= submit_tag "Save Search", name: nil, class: "btn btn-default" %>
+            <%= submit_tag t('.save_search'), name: nil, class: "btn btn-default" %>
           <% end %>
         </div>
       </div>
