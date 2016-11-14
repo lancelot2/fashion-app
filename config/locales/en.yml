@@ -89,6 +89,23 @@ en:
       about_us: "About us"
       login: "Login"
       sign_up: "Sign up"
+  product:
+    product_index:
+      product_index_title: "Product main database"
+      search_results: "Search results:"
+      results_per_page: "Results per page:"
+      cover: "Cover"
+      name: "Name"
+      brand: "Brand"
+      completeness: "Completeness"
+      price: "Price"
+      color: "Color"
+      category: "Category"
   searches:
     index:
       search_index_title: "Search index page"
+      search_results: "Search results:"
+      results_per_page: "Results per page:"
+      error_message: "An error has occured."
+      no_result_message: "No results were found. Try different filters."
+
