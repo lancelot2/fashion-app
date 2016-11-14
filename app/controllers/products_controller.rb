@@ -43,7 +43,7 @@ class ProductsController < ApplicationController
   end
 
   def export_csv(items)
-    column_headers = ['numerator', 'denominator', 'calculation'] # Add dynamic headers here
+    column_headers = %w(numerator denominator calculation) # Add dynamic headers here
 
     CSV.generate do |csv|
       csv << column_headers
