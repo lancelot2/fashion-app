@@ -89,6 +89,12 @@ en:
       about_us: "About us"
       login: "Login"
       sign_up: "Sign up"
+    sub_navbar:
+      products: "Product database"
+      searches: "Searches"
+      templates: "Templates"
+      extractions: "Extractions"
+      accesses: "Accesses"
   products:
     index:
       product_index_title: "Product main database"

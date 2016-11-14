@@ -89,6 +89,12 @@ fr:
       about_us: "Qui sommes-nous?"
       login: "S'identifier"
       sign_up: "S'inscrire"
+    sub_navbar:
+      products: "Produits"
+      searches: "Recherches"
+      templates: "Templates"
+      extractions: "Extractions"
+      accesses: "Accès"
   products:
     index:
       product_index_title: "Index des produits"
