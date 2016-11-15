@@ -18,11 +18,13 @@
     <%= render 'shared/sub_navbar' if @display_subnavbar %>
     <%# render 'shared/flashes' %>
     <%= yield %>
-    <%= render 'shared/footer' %>
+    <% if current_page?('/') || current_page?('/fr') %>
+      <%= render 'shared/home-footer' %>
+    <% else %>
+      <%= render 'shared/footer' %>
+    <% end %>
     <%= javascript_include_tag 'application' %>
-
     <%= yield :after_js %>
-
     <%= render 'shared/drift' if current_page?('/') || current_page?('/fr') %>
   </body>
 </html>
