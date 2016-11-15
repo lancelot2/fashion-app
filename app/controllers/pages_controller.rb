@@ -8,7 +8,7 @@ class PagesController < ApplicationController
 
     # Assigning a company to a new user signing in
     if user_signed_in?
-      if current_user.company == nil
+      if current_user.company.nil?
         current_user_domain_name = current_user.email.split('@')[1]
         @companies = Company.all
         @companies.each do |company|
@@ -19,11 +19,9 @@ class PagesController < ApplicationController
     end
   end
 
-
   def accesses
     @display_subnavbar = true
     @tab = 'accesses'
     @company_users = User.where(company_id: current_user.company_id)
   end
-
 end

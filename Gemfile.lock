@@ -99,6 +99,7 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     execjs (2.7.0)
+    fastercsv (1.5.5)
     ffi (1.9.14)
     figaro (1.1.1)
       thor (~> 0.14)
@@ -267,6 +268,7 @@ DEPENDENCIES
   cloudinary (= 1.1.0)
   devise!
   devise-i18n
+  fastercsv
   figaro
   font-awesome-sass
   google-analytics-rails (= 1.1.0)

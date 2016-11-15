@@ -14,31 +14,31 @@ class ProfilesController < ApplicationController
   end
 
   def validate
-     @user = User.find(params[:id])
-     @user.access_validated = true
-     @user.save
-     redirect_to :back
+    @user = User.find(params[:id])
+    @user.access_validated = true
+    @user.save
+    redirect_to :back
   end
 
   def freeze
-     @user = User.find(params[:id])
-     @user.access_validated = false
-     @user.save
-     redirect_to :back
+    @user = User.find(params[:id])
+    @user.access_validated = false
+    @user.save
+    redirect_to :back
   end
 
   def upgrade
-     @user = User.find(params[:id])
-     @user.access_level = 2
-     @user.save
-     redirect_to :back
+    @user = User.find(params[:id])
+    @user.access_level = 2
+    @user.save
+    redirect_to :back
   end
 
   def downgrade
-     @user = User.find(params[:id])
-     @user.access_level = 1
-     @user.save
-     redirect_to :back
+    @user = User.find(params[:id])
+    @user.access_level = 1
+    @user.save
+    redirect_to :back
   end
 
   def update

@@ -33,12 +33,14 @@ gem 'rails_admin', '>= 1.0.0.rc'
 gem 'rails-i18n', '~> 5.0.0'
 gem 'devise-i18n'
 
-# better form selects
+# Better form selects
 gem 'chosen-rails'
+
+# Fast csv exporting
+gem 'fastercsv'
 
 # Google analytics
 gem 'google-analytics-rails', '1.1.0'
-
 
 group :development, :test do
   gem 'binding_of_caller'
