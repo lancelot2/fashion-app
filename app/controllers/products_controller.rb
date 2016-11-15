@@ -29,7 +29,7 @@ class ProductsController < ApplicationController
     end
     @items.flatten!
     respond_to do |format|
-      format.csv { send_data export_csv(@items) }
+      format.csv { send_data export_csv(@items, @headers = nil) }
     end
   end
 
@@ -42,13 +42,11 @@ class ProductsController < ApplicationController
     api_params
   end
 
-  def export_csv(items)
-    column_headers = %w(numerator denominator calculation) # Add dynamic headers here
-
+  def export_csv(items, headers)
     CSV.generate do |csv|
-      csv << column_headers
+      csv << headers unless column_headers.nil?
       items.each do |item|
-        csv << item.values # Add dynamic content here
+        csv << [item['full_name'], item['sku']] # Add dynamic content here
       end
     end
   end

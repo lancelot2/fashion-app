@@ -11,9 +11,30 @@
             <div class="form-inputs">
               <%= f.input :name, label: "Name" %>
               <%= f.input :format, label: "Format", collection: ["-", ".csv (Excel)", "XML"], selected: "-" %>
-              <%= f.input :column_1, label: "Column 1", collection: ["-", "Name","SKU", "Description", "Price", "Size", "Size", "Color"], selected: "-" %>
-              <%= f.input :column_2, label: "Column 2", collection: ["-", "Name","SKU", "Description", "Price", "Size", "Size", "Color"], selected: "-" %>
-              <%= f.input :column_3, label: "Column 3", collection: ["-", "Name","SKU", "Description", "Price", "Size", "Size", "Color"], selected: "-" %>
+              <div class="row">
+                <div class="col-xs-6">
+                  <%= f.input :column_1, label: "Column 1", collection: ["-", "Name","SKU", "Description", "Price", "Size", "Size", "Color"], selected: "-" %>
+                </div>
+                <div class="col-xs-6">
+                  <%= f.input :name, label: "Rename Column" %>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <%= f.input :column_2, label: "Column 2", collection: ["-", "Name","SKU", "Description", "Price", "Size", "Size", "Color"], selected: "-" %>
+                </div>
+                <div class="col-xs-6">
+                  <%= f.input :name, label: "Rename Column" %>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <%= f.input :column_3, label: "Column 3", collection: ["-", "Name","SKU", "Description", "Price", "Size", "Size", "Color"], selected: "-" %>
+                </div>
+                <div class="col-xs-6">
+                  <%= f.input :name, label: "Rename Column" %>
+                </div>
+              </div>
               <%= f.button :submit, "Save", class: "btn btn-primary bottom-buttons" %>
               <%= link_to "Add Col", "#", class: "btn btn-primary bottom-buttons" %>
               <%= link_to "Remove Col", "#", class: "btn btn-primary bottom-buttons" %>
@@ -41,7 +62,7 @@
               <tr>
                 <td><strong><%= template.name  %></strong></td>
                 <td><%= template.updated_at %></td>
-                <td>Lancelot Salavert</td>
+                <td><%= template.user.email %></td>
                 <td>
                   <a href="#">Extract</a> /
                   <a href="#">Duplicate</a> /
@@ -86,4 +107,4 @@
   });
 }); -->
 
-<!-- <i class="fa fa-minus-square" aria-hidden="true"></i> -->
+<!--  -->

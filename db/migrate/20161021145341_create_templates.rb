@@ -4,9 +4,9 @@ class CreateTemplates < ActiveRecord::Migration[5.0]
     create_table :templates do |t|
       t.string :name
       t.string :format
-      t.string :column_1
-      t.string :column_2
-      t.string :column_3
+      t.text :headers, array: true, default: []
+      t.text :item_fields, array: true, default: []
+      t.references :user, foreign_key: true
 
       t.timestamps
     end

@@ -49,11 +49,12 @@ ActiveRecord::Schema.define(version: 20161112113246) do
   create_table "templates", force: :cascade do |t|
     t.string   "name"
     t.string   "format"
-    t.string   "column_1"
-    t.string   "column_2"
-    t.string   "column_3"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "headers",     default: [],              array: true
+    t.text     "item_fields", default: [],              array: true
+    t.integer  "user_id"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["user_id"], name: "index_templates_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -85,5 +86,6 @@ ActiveRecord::Schema.define(version: 20161112113246) do
   add_foreign_key "extractions", "templates"
   add_foreign_key "extractions", "users"
   add_foreign_key "searches", "users"
+  add_foreign_key "templates", "users"
   add_foreign_key "users", "companies"
 end
