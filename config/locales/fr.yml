@@ -74,6 +74,12 @@ fr:
       feature_3_title: "Edition de fichiers media"
       feature_3_description: "Vous pouvez programmer l'édition les images directement via notre API afin de maintenir la consistence au travers de votre catalogue."
       get_started_for_free: "Essayez dès à présent"
+  devise:
+    registrations:
+      new:
+        sign_up: "S'inscrire"
+        profesional_email_only: "Vous devez utiliser votre adresse professionnelle afin d'être affilié à votre organisation."
+        login: "S'identifier"
   shared:
     navbar:
       how_it_works_section_header: "Solution"
@@ -116,3 +122,8 @@ fr:
   searches:
     index:
       search_index_title: "Index des recherches"
+      search_index_explanations: "Vous pouvez créer et sauvegarder une recherche directement depuis l'onglet produit."
+      search_name: "Nom de la recherche"
+      last_update: "Dernier update"
+      author: "Auteur"
+      query: "Requête"

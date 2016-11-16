@@ -1,20 +1,20 @@
 <div class="sub-navbar-box">
     <div class="sub-navbar-content tabs">
         <a class="tab" id="product_index" data-target="#product" href="/product_index">
-          <p><%= t('.products') %></p>
+          <%= t('.products') %>
         </a>
         <a class="tab" id="search" data-target="#search" href="/searches">
-          <p><%= t('.searches') %></p>
+          <%= t('.searches') %>
         </a>
         <a class="tab" id="template" data-target="#template" href="/templates">
-          <p><%= t('.templates') %></p>
+          <%= t('.templates') %>
         </a>
         <a class="tab" id="extraction" data-target="#extraction" href="/extractions">
-          <p><%= t('.extractions') %></p>
+          <%= t('.extractions') %>
         </a>
         <% if current_user != nil && current_user.access_level == 2 %>
           <a class="tab" id="accesses" data-target="#accesses" href="/accesses">
-            <p><%= t('.accesses') %></p>
+            <%= t('.accesses') %>
           </a>
         <% end %>
     </div>
