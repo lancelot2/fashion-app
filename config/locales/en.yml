@@ -74,6 +74,12 @@ en:
       feature_3_title: "Media file editing"
       feature_3_description: "You can edit images directly through our API call in order to maintain consistency across your products."
       get_started_for_free: "Start a free trial"
+  devise:
+    registrations:
+      new:
+        sign_up: "Sign up"
+        profesional_email_only: "You must register with your profesional email address to get affiliate to your organization"
+        login: "Login"
   shared:
     navbar:
       how_it_works_section_header: "How it works"
@@ -116,8 +122,15 @@ en:
   searches:
     index:
       search_index_title: "Search index page"
-      search_results: "Search results:"
-      results_per_page: "Results per page:"
-      error_message: "An error has occured."
-      no_result_message: "No results were found. Try different filters."
+      search_index_explanations: "You can create and save a new search directly from the product index page."
+      search_name: "Search name"
+      last_update: "Last update"
+      author: "Author"
+      query: "Query"
+
+
+      # search_results: "Search results:"
+      # results_per_page: "Results per page:"
+      # error_message: "An error has occured."
+      # no_result_message: "No results were found. Try different filters."
 
