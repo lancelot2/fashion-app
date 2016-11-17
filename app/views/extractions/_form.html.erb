@@ -2,7 +2,7 @@
   <%= f.error_notification %>
     <div class="row">
       <div class="form-group col-xs-4">
-        <%= f.input :search_id, :collection => @searches_name %>
+        <%= f.input :search_id, :label => t('.search'), :collection => @searches_name %>
         <%= options_from_collection_for_select(Search.all, :id, :name) %>
         <%#= select_tag 'search[name]', options_from_collection_for_select(@searches, :id, :name) %>
       </div>
@@ -12,7 +12,7 @@
 
       </div>
       <div class="col-xs-4 vcenter">
-        <button type="submit" class="btn btn-primary">Generate</button>
+        <button type="submit" class="btn btn-primary"><%= t('.generate') %></button>
       </div>
     </div>
 <% end %>

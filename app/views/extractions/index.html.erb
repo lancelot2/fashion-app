@@ -2,7 +2,7 @@
 
   <!-- Header -->
   <div class="index-page-header">
-    <h1>Extraction index page</h1>
+    <h1><%= t('.extraction_index_title') %></h1>
   </div>
 
 
@@ -11,22 +11,22 @@
 
     <!-- Extraction creation form -->
     <div class="extraction-creation-form">
-      <h3>Generating a new extraction</h3>
-      <p>Extractions are simply a combinaison of a saved search and a template.</p>
+      <h3><%= t('.new_extraction_title') %></h3>
+      <p><%= t('.new_extraction_tagline') %></p>
       <%= render 'form' %>
     </div>
 
 
     <!-- extraction library -->
     <div class="extraction-library">
-      <h2>Extraction logs</h2>
+      <h2><%= t('.extraction_logs') %></h2>
       <div class="extraction-library-row">
         <table class="table table-condensed table-hover">
           <thead>
             <tr>
-              <th>Extraction name</th>
-              <th>Last update</th>
-              <th>By</th>
+              <th><%= t('.name') %></th>
+              <th><%= t('.date') %></th>
+              <th><%= t('.author') %></th>
               <th>Actions</th>
             </tr>
           </thead>

@@ -101,6 +101,17 @@ fr:
       templates: "Templates"
       extractions: "Extractions"
       accesses: "Accès"
+    home-footer:
+      learn_more: "En savoir plus"
+      pricing: "Pricing"
+      features: "Fonctionnalités"
+      register: "S'inscrire"
+      resources: "Ressources"
+      contact_us: "Nous contacter"
+      address: "12 Villa Gaudelet - 75011 Paris"
+      call_us: "Call us: +33 (0)6 75 85 79 08"
+      terms: "Termes & Conditions"
+      cookies: "Cookies"
   products:
     index:
       product_index_title: "Index des produits"
@@ -123,7 +134,26 @@ fr:
     index:
       search_index_title: "Index des recherches"
       search_index_explanations: "Vous pouvez créer et sauvegarder une recherche directement depuis l'onglet produit."
-      search_name: "Nom de la recherche"
+      search_name: "Nom"
       last_update: "Dernier update"
       author: "Auteur"
       query: "Requête"
+  extractions:
+    index:
+      extraction_index_title: "Index des extractions"
+      new_extraction_title: "Générer une nouvelle extraction"
+      new_extraction_tagline: "Une extractions nécessite au préalable d'avoir sauvegardé une recherche et un template."
+      extraction_logs: "Historique des extractions"
+      name: "Nom"
+      date: "Date"
+      author: "Auteur"
+    form:
+      search: "Recherche"
+      generate: "Générer"
+
+
+
+
+
+
+

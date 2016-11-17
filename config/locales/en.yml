@@ -101,6 +101,17 @@ en:
       templates: "Templates"
       extractions: "Extractions"
       accesses: "Accesses"
+    home-footer:
+      learn_more: "Learn more"
+      pricing: "Pricing"
+      features: "Features"
+      register: "Register"
+      resources: "Resources"
+      contact_us: "Contact us"
+      address: "Tower Bridge Business Complex, Clements Rd, London SE16 4DG"
+      call_us: "Call us: +44 (0)7 804 972 902"
+      terms: "Terms"
+      cookies: "Cookies"
   products:
     index:
       product_index_title: "Product main database"
@@ -127,6 +138,19 @@ en:
       last_update: "Last update"
       author: "Author"
       query: "Query"
+  extractions:
+    index:
+      extraction_index_title: "Extraction index page"
+      new_extraction_title: "Generating a new extraction"
+      new_extraction_tagline: "Extractions are simply a combinaison of a saved search and a template."
+      extraction_logs: "Extraction logs"
+      name: "Name"
+      date: "Date"
+      author: "Author"
+    form:
+      search: "Search"
+      generate: "Generate"
+
 
 
       # search_results: "Search results:"
