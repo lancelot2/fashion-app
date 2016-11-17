@@ -138,7 +138,18 @@ fr:
       last_update: "Dernier update"
       author: "Auteur"
       query: "Requête"
-
+  extractions:
+    index:
+      extraction_index_title: "Index des extractions"
+      new_extraction_title: "Générer une nouvelle extraction"
+      new_extraction_tagline: "Une extractions nécessite au préalable d'avoir sauvegardé une recherche et un template."
+      extraction_logs: "Historique des extractions"
+      name: "Nom"
+      date: "Date"
+      author: "Auteur"
+    form:
+      search: "Recherche"
+      generate: "Générer"
 
 
 

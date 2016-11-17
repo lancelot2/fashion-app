@@ -138,6 +138,19 @@ en:
       last_update: "Last update"
       author: "Author"
       query: "Query"
+  extractions:
+    index:
+      extraction_index_title: "Extraction index page"
+      new_extraction_title: "Generating a new extraction"
+      new_extraction_tagline: "Extractions are simply a combinaison of a saved search and a template."
+      extraction_logs: "Extraction logs"
+      name: "Name"
+      date: "Date"
+      author: "Author"
+    form:
+      search: "Search"
+      generate: "Generate"
+
 
 
       # search_results: "Search results:"
