@@ -134,7 +134,7 @@ fr:
     index:
       search_index_title: "Index des recherches"
       search_index_explanations: "Vous pouvez créer et sauvegarder une recherche directement depuis l'onglet produit."
-      search_name: "Nom de la recherche"
+      search_name: "Nom"
       last_update: "Dernier update"
       author: "Auteur"
       query: "Requête"
