@@ -1,0 +1,21 @@
+<div class="sub-navbar-box">
+    <div class="sub-navbar-content tabs">
+      <a class="tab" id="suppliers" data-target="#suplier" href="/product_index">
+        <%= t('.my_suppliers') %>
+      </a>
+      <a class="tab" id="distributors" data-target="#distributors" href="/searches">
+        <%= t('.my_distributors') %>
+      </a>
+      <a class="tab" id="team" data-target="#team" href="/templates">
+        <%= t('.my_team') %>
+      </a>
+    </div>
+</div>
+
+<% content_for :after_js do %>
+  <%= javascript_tag do %>
+    $(document).ready(function () {
+      $(<%= @tab %>).addClass("active");
+    })
+  <% end %>
+<% end %>
