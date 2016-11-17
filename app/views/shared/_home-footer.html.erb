@@ -7,17 +7,17 @@
       <div class="col-sm-4 col-md-2">
         <ul class="footer-nav">
           <li>
-            <h3>LEARN MORE</h3>
+            <h3><%= t('.learn_more') %></h3>
           </li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="/users/sign_up">Register</a></li>
+          <li><a href="#pricing"><%= t('.pricing') %></a></li>
+          <li><a href="#features"><%= t('.features') %></a></li>
+          <li><a href="/users/sign_up"><%= t('.register') %></a></li>
         </ul>
       </div>
       <div class="col-sm-4 col-md-2">
         <ul class="footer-nav">
           <li>
-            <h3>Resources</h3>
+            <h3><%= t('.resources') %></h3>
           </li>
           <li><a href="">Support</a></li>
           <li><a href="">Blog</a></li>
@@ -27,10 +27,10 @@
       <div class="col-sm-4 col-md-3">
         <ul class="footer-nav">
           <li>
-            <h3>CONTACT US</h3>
+            <h3><%= t('.contact_us') %></h3>
           </li>
-          <li>12 Villa Gaudelet - 75011 Paris</li>
-          <li>Call us <a href="tel:+1856-236-1853">+44 (0)7 804 972 902</a></li>
+          <li><%= t('.address') %></li>
+          <li><%= t('.call_us') %></a></li>
           <li><a href="mailto:contact@getscalia.com">contact@getscalia.com</a></li>
         </ul>
       </div>
@@ -57,9 +57,8 @@
       <div class="col-sm-5 col-md-6"> <small> &copy; 2016 Scalia. All rights reserved.</small> </div>
       <div class="col-sm-7 col-md-6">
         <ul class="terms-privacy">
-          <li><a href="" data-toggle="modal" data-target="#modal-terms">Terms</a></li>
-          <li><a href="" data-toggle="modal" data-target="#modal-terms">Privacy</a></li>
-          <li><a href="" data-toggle="modal" data-target="#modal-terms">Cookies</a></li>
+          <li><a href="" data-toggle="modal" data-target="#modal-terms"><%= t('.terms') %></a></li>
+          <li><a href="" data-toggle="modal" data-target="#modal-terms"><%= t('.cookies') %></a></li>
         </ul>
       </div>
     </div>
