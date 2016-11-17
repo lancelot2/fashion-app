@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
     root to: 'pages#home'
 
+    get 'apphome', to: 'pages#apphome', as: :apphome
     get 'contacts', to: 'pages#contacts', as: :contacts
     get 'accesses', to: 'pages#accesses', as: :accesses
     get ':id/profile/validate', to: 'profiles#validate', as: :validate

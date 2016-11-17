@@ -19,6 +19,10 @@ class PagesController < ApplicationController
     end
   end
 
+  def apphome
+
+  end
+
   def accesses
     @display_subnavbar = true
     @tab = 'accesses'
