@@ -1,8 +1,7 @@
 .app-home-banner {
   color: white;
   text-align: center;
-  height: 97vh;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  height: calc(100vh - 50px);
   background-size: cover !important;
   display: flex;
   align-items: center;

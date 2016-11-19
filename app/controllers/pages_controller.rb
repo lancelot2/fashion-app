@@ -20,7 +20,6 @@ class PagesController < ApplicationController
   end
 
   def apphome
-
   end
 
   def accesses

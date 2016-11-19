@@ -7,21 +7,30 @@
         <% end %>
       </div>
       <div class="navbar-main-flex">
-        <% if user_signed_in? %>
-          <div class="badge-container" style="margin-left:20px">
-            <i class="fa fa-bell-o"></i>
-            <div class="badge badge-brand">3</div>
-          </div>
-          <div>
-            <%= link_to contacts_path do %>
-              <%= image_tag ("phone-book.svg") %>
-            <% end %>
-          </div>
-          <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-        <% else %>
-          <!-- Login text link -->
-          <%= link_to t(".login", default: "Login"), new_user_session_path %>
+      <% if user_signed_in? %>
+        <%= link_to '#', class:'navbar-link navbar-item', title: "Notifications" do %>
+        <div class="badge-container">
+          <i class="fa fa-bell-o"></i>
+          <div class="badge badge-brand badge-bordered">3</div>
+        </div>
         <% end %>
+        <%= link_to contacts_path, class:'navbar-link navbar-item', title: "Contacts" do %>
+        <div class="badge-container-no-badge">
+          <i class="fa fa-address-book-o"></i>
+        </div>
+        <% end %>
+        <%= link_to destroy_user_session_path, method: :delete, class:'navbar-link navbar-item', title: "Sign out" do %>
+        <div class="badge-container-no-badge">
+          <i class="fa fa-sign-out"></i>
+        </div>
+        <% end %>
+      <% else %>
+        <%= link_to new_user_session_path, class:'navbar-link navbar-item', title: "Sign in" do %>
+        <div class="badge-container-no-badge">
+          <i class="fa fa-sign-in"></i>
+        </div>
+        <% end %>
+      <% end %>
       </div>
     </div>
   </div>

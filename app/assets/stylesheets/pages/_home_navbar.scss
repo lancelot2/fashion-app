@@ -102,12 +102,12 @@
 .navbar-nav .active .fa-times:hover,
 .navbar-nav .active .fa-times:active,
 .navbar-nav .active .fa-times:focus {
-  color: #31aff5;
+  color: $brand-color;
   background-color: transparent;
 }
 
 .affix .navbar-nav > li > a.btn-nav {
-  background: #31aff5;
+  background: $brand-color;
   color: #fff;
 }
 

@@ -100,7 +100,6 @@
         <col class="col-name">
         <col class="col-brand">
         <col class="col-sku">
-        <col class="col-complete">
         <col class="col-price">
         <col class="col-stock">
         <col class="col-color">
@@ -118,9 +117,6 @@
             </th>
             <th>
               <stong>GTIN</stong>
-            </th>
-            <th>
-              <stong><%= t('.completeness') %></stong>
             </th>
             <th>
               <stong><%= t('.price') %></stong>
@@ -151,9 +147,6 @@
               </td>
               <td>
                 <p><%= item['sku'] %></p>
-              </td>
-              <td>
-                <p>80%</p>
               </td>
               <td>
                 <p><%= item['price'] %></p>

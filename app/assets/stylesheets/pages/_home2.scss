@@ -75,7 +75,7 @@ h6 {
 }
 
 a {
-  color: #31aff5;
+  color: $brand-color;
   transition: all 0.3s ease-in-out;
 }
 
@@ -152,7 +152,7 @@ strong { font-weight: 700; }
   font-size: 14px;
   text-align: center;
   text-decoration: none;
-  background-color: #31aff5;
+  background-color: $brand-color;
   line-height: 1.5;
   border: none;
   border-radius: 4px;
@@ -260,12 +260,12 @@ strong { font-weight: 700; }
 .navbar-nav .active .fa-times:hover,
 .navbar-nav .active .fa-times:active,
 .navbar-nav .active .fa-times:focus {
-  color: #31aff5;
+  color: $brand-color;
   background-color: transparent;
 }
 
 .affix-customized .navbar-nav > li > a.btn-nav {
-  background: #31aff5;
+  background: $brand-color;
   color: #fff;
 }
 
@@ -398,7 +398,7 @@ strong { font-weight: 700; }
 .step-number {
   width: 68px;
   height: 68px;
-  background: #31aff5;
+  background: $brand-color;
   border-radius: 50%;
   color: #fff;
   font-size: 24px;
@@ -580,7 +580,7 @@ strong { font-weight: 700; }
 .center-block[class^="col-"] { float: none; }
 
 .user-reviews,
-.cta-footer { background-color: #31aff5; }
+.cta-footer { background-color: $brand-color; }
 
 blockquote {
   padding: 0;
@@ -692,8 +692,8 @@ blockquote cite i { font-weight: 400; }
 }
 
 .cta h2 em {
-  color: #31aff5;
-  border-bottom: 3px solid #31aff5;
+  color: $brand-color;
+  border-bottom: 3px solid $brand-color;
 }
 
 .cta h2 em,
@@ -705,7 +705,7 @@ blockquote cite i { font-weight: 400; }
 
 .cta .btn {
   background: transparent;
-  border: 2px solid #31aff5;
+  border: 2px solid $brand-color;
   color: #091d25;
 }
 
@@ -714,7 +714,7 @@ blockquote cite i { font-weight: 400; }
 .cta .btn:focus,
 .cta .btn:active:hover,
 .cta .btn:active:focus {
-  background: #31aff5;
+  background: $brand-color;
   color: #fff;
 }
 
@@ -745,7 +745,7 @@ blockquote cite i { font-weight: 400; }
 .pointer {
   width: 30px;
   height: 30px;
-  background: #31aff5;
+  background: $brand-color;
   font-size: 16px;
   cursor: pointer;
   color: #fff;
@@ -871,7 +871,7 @@ blockquote cite i { font-weight: 400; }
    ========================================================================== */
 
 .cta-info .section-spacing {
-  background: #31aff5;
+  background: $brand-color;
   padding: 3.75em 2em;
 }
 
@@ -903,7 +903,7 @@ blockquote cite i { font-weight: 400; }
 .btn-secondary:active:hover,
 .btn-secondary:active:focus {
   background: #fff;
-  color: #31aff5;
+  color: $brand-color;
 }
 
 /* ==========================================================================
@@ -944,7 +944,7 @@ blockquote cite i { font-weight: 400; }
 
 .plan-price h5 {
   font-size: 54px;
-  color: #31aff5;
+  color: $brand-color;
   text-transform: uppercase;
   margin: 36px 0 24px;
 }
@@ -986,11 +986,11 @@ blockquote cite i { font-weight: 400; }
 
 .tooltip-inner {
   box-shadow: 0 0 5px 0 rgba(148,148,148,0.5);
-  background-color: #31aff5;
+  background-color: $brand-color;
   padding: 6px 8px;
 }
 
-.tooltip.top .tooltip-arrow { border-top-color: #31aff5; }
+.tooltip.top .tooltip-arrow { border-top-color: $brand-color; }
 
 /* ==========================================================================
    14.Testimonial
@@ -1034,7 +1034,7 @@ blockquote cite i { font-weight: 400; }
 }
 
 .faq-support {
-  background-color: #31aff5;
+  background-color: $brand-color;
   padding: 3.75em 0;
 }
 
@@ -1073,7 +1073,7 @@ blockquote cite i { font-weight: 400; }
 
 .cta-dark .section-header h2 { color: #fff; }
 
-.cta-dark .section-header h3 { color: #31aff5; }
+.cta-dark .section-header h3 { color: $brand-color; }
 
 .cta-form .form-group { margin-bottom: 24px; }
 
@@ -1225,7 +1225,7 @@ blockquote cite i { font-weight: 400; }
 
 .product-statistics i {
   font-size: 40px;
-  color: #31aff5;
+  color: $brand-color;
   transition: all .3s ease;
 }
 
@@ -1424,8 +1424,8 @@ blockquote cite i { font-weight: 400; }
   background: transparent;
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  color: #31aff5;
-  border: 1px solid #31aff5;
+  color: $brand-color;
+  border: 1px solid $brand-color;
 }
 
 .team-details .owl-theme .owl-controls.clickable .owl-buttons div:hover {
@@ -1468,7 +1468,7 @@ blockquote cite i { font-weight: 400; }
 
 .twitter-reviews .owl-theme .owl-controls { margin-top: 24px; }
 
-.twitter-reviews .owl-theme .owl-controls .owl-page span { background: #31aff5; }
+.twitter-reviews .owl-theme .owl-controls .owl-page span { background: $brand-color; }
 
 /* ==========================================================================
     23.App download
@@ -1547,7 +1547,7 @@ blockquote cite i { font-weight: 400; }
 }
 
 .sub-form .form-control:focus {
-  border-color: #31aff5;
+  border-color: $brand-color;
   background-color: #fff;
 }
 
@@ -1611,9 +1611,9 @@ blockquote cite i { font-weight: 400; }
   width: 53px;
   height: 53px;
   line-height: 53px;
-  border: 1px solid #31aff5;
+  border: 1px solid $brand-color;
   font-size: 30px;
-  color: #31aff5;
+  color: $brand-color;
   border-radius: 50%;
 }
 
@@ -1649,7 +1649,7 @@ blockquote cite i { font-weight: 400; }
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: #31aff5 url(http://res.cloudinary.com/dpy7x8rgs/image/upload/v1478530034/chat-icon_pvsrj0.svg) center center no-repeat;
+  background: $brand-color url(http://res.cloudinary.com/dpy7x8rgs/image/upload/v1478530034/chat-icon_pvsrj0.svg) center center no-repeat;
   position: fixed;
   bottom: 120px;
   right: 30px;
@@ -1833,7 +1833,7 @@ blockquote cite i { font-weight: 400; }
   background: url(http://res.cloudinary.com/dpy7x8rgs/image/upload/v1478535307/bg-form-page_ysjirf.jpg) center center no-repeat;
   background-size: cover;
   position: relative;
-  min-height: 100%;
+  min-height: calc(100vh - 50px);
 }
 
 .content-wrapper::before { background: rgba(0, 0, 0, 0.45); }
@@ -1862,7 +1862,7 @@ blockquote cite i { font-weight: 400; }
   color: #848e92;
 }
 
-.cta-light .form-control:focus { border-color: #31aff5; }
+.cta-light .form-control:focus { border-color: $brand-color; }
  .cta-light input::-webkit-input-placeholder, .cta-light textarea::-webkit-input-placeholder {
  color: #6b777c;
  font-weight: 400;
