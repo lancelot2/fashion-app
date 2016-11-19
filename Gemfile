@@ -2,13 +2,13 @@
 source 'https://rubygems.org'
 ruby '2.3.0'
 
-gem 'rails', '5.0.0'
+gem 'rails'
 gem 'puma'
 gem 'pg'
 gem 'figaro'
-gem 'jbuilder', '~> 2.0'
-gem 'devise', github: 'plataformatec/devise'
-gem 'redis'
+# gem 'jbuilder'
+gem 'devise'
+# gem 'redis'
 
 gem 'sass-rails'
 gem 'jquery-rails'
@@ -26,21 +26,14 @@ gem 'carrierwave'
 gem 'rest-client'
 
 # Rails admin
-gem 'remotipart', github: 'mshibuya/remotipart'
-gem 'rails_admin', '>= 1.0.0.rc'
+gem 'rails_admin'
 
 # i18n Integration
 gem 'rails-i18n', '~> 5.0.0'
 gem 'devise-i18n'
 
 # Better form selects
-gem 'chosen-rails'
-
-# Fast csv exporting
-gem 'fastercsv'
-
-# Google analytics
-gem 'google-analytics-rails', '1.1.0'
+# gem 'chosen-rails'
 
 group :development, :test do
   gem 'binding_of_caller'
