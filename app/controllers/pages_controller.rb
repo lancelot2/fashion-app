@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
+  skip_before_action :authenticate_user!, only: [:home, :faq]
 
   def home
     @home_subnavar = true
@@ -19,7 +19,7 @@ class PagesController < ApplicationController
     end
   end
 
-  def apphome
+  def faq
   end
 
   def accesses
